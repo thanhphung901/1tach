@@ -1,0 +1,10 @@
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\bin\Website_My.dll
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\bin\Website_My.pdb
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\bin\Controller.dll
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\bin\Model.dll
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\bin\Controller.pdb
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\bin\Model.pdb
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\obj\Debug\Website_My.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\obj\Debug\Website_My.dll.licenses
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\obj\Debug\Website_My.dll
+D:\TRUNG\Web\Website_My\Website_My.Web\MVC_Kutun\obj\Debug\Website_My.pdb

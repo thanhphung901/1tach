@@ -1,0 +1,10 @@
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\bin\Controller.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\bin\Model.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\bin\Controller.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\bin\Model.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\obj\Debug\Khach_san_Hoa_Sen.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\bin\Khach_san_Hoa_Sen.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\bin\Khach_san_Hoa_Sen.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\obj\Debug\Khach_san_Hoa_Sen.dll.licenses
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\obj\Debug\Khach_san_Hoa_Sen.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\MVC_Kutun\obj\Debug\Khach_san_Hoa_Sen.pdb

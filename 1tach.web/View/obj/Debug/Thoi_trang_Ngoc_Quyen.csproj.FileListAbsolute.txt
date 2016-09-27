@@ -1,0 +1,10 @@
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\bin\Thoi_trang_Ngoc_Quyen.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\bin\Thoi_trang_Ngoc_Quyen.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\bin\Controller.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\bin\Model.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\bin\Controller.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\bin\Model.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\obj\Debug\Thoi_trang_Ngoc_Quyen.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\obj\Debug\Thoi_trang_Ngoc_Quyen.dll.licenses
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\obj\Debug\Thoi_trang_Ngoc_Quyen.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\MVC_Kutun\obj\Debug\Thoi_trang_Ngoc_Quyen.pdb

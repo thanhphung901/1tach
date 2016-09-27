@@ -1,0 +1,10 @@
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\bin\Vuong_Hoang_Nghi.dll
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\bin\Vuong_Hoang_Nghi.pdb
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\bin\Controller.dll
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\bin\Model.dll
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\bin\Controller.pdb
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\bin\Model.pdb
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\obj\Debug\Vuong_Hoang_Nghi.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\obj\Debug\Vuong_Hoang_Nghi.dll.licenses
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\obj\Debug\Vuong_Hoang_Nghi.dll
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\MVC_Kutun\obj\Debug\Vuong_Hoang_Nghi.pdb

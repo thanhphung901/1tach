@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="vpro.eshop.cpanel.SiteMaster" %>
+
+<%@ Register Src="UIs/Menu.ascx" TagName="Menu" TagPrefix="uc1" %>
+<%@ Register Src="UIs/Userinfo.ascx" TagName="Userinfo" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Cpanel</title>
+    <asp:Literal ID="ltrFavicon" runat="server" EnableViewState="false"></asp:Literal>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Customboot.css" rel="stylesheet" type="text/css" />
+    <style>
+        input[type=checkbox]:not(old), input[type=radio]:not(old)
+        {
+            width: 28px;
+            margin: 0;
+            padding: 0;
+        }
+        input[type=checkbox]:not(old) + label, input[type=radio]:not(old) + label
+        {
+            display: inline-block;
+            margin-left: -28px;
+            padding-left: 28px;
+            background: url('../Images/checks.png') no-repeat 0 0;
+            line-height: 24px;
+        }
+        
+        input[type=checkbox]:not(old):checked + label
+        {
+            background-position: 0 -24px;
+        }
+        
+        input[type=radio]:not(old):checked + label
+        {
+            background-position: 0 -48px;
+        }
+        .form-group input[type=checkbox]:not(old) + label, input[type=radio]:not(old) + label
+        {
+            display: inline-block;
+            margin-left: -28px;
+            padding-left: 28px;
+            background: url('../Images/checks.png') no-repeat 0 0;
+            line-height: 24px;
+            margin-top: 6px;
+        }
+        .close
+        {
+            opacity: 1 !important;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script type="text/javascript">
+         $(function () {
+             setInterval(function () { $.get("KeepAlive.ashx"); }, 1000 * 30);
+         });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar"
+            aria-expanded="false" aria-controls="sidebar" id="menu_sidebar">
+            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+             <a class="navbar-brand" href="default.aspx" style="padding:5px 15px !important">
+                <img src="../Images/Logo/logo.png" height="45px" />
+              </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-btn">
+          <div class="nav navbar-nav navbar-right">
+           <uc2:Userinfo ID="Userinfo1" runat="server" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar collapse removeActiveSidebar" id="sidebar">
+                <asp:PlaceHolder ID="Plmenu" runat="server"></asp:PlaceHolder>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Scripts/UtilitiesCpanel.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#menu_sidebar').click(function () {
+                if ($('#sidebar').hasClass("activeSidebar")) {
+                    $('#sidebar').removeClass("activeSidebar");
+                }
+                else {
+                    $('#sidebar').addClass("activeSidebar");
+                   
+                }
+            });
+        });
+    </script>
+    </form>
+</body>
+</html>

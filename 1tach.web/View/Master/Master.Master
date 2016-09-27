@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="sanzo.Master.Master" %>
+
+<%@ Register src="../UIs/Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="../UIs/Footer.ascx" tagname="Footer" tagprefix="uc2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=1200, maximum-scale=1.0, user-scalable=yes" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/vi-vn/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/vi-vn/css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="/vi-vn/css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="/vi-vn/css/desktop.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:Header ID="Header1" runat="server" />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <uc2:Footer ID="Footer1" runat="server" />
+        
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="/vi-vn/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/vi-vn/js/materialize.min.js"></script>
+        <script type="text/javascript" src="/vi-vn/js/main.js"></script>
+        <script>
+            $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 240
+                edge: 'right', // Choose the horizontal origin
+                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            }
+);
+        </script>
+        <script type="text/javascript" src="/vi-vn/js/jquery.bxslider.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.slide1').bxSlider({
+                    mode: 'fade',
+                    speed: 100,
+                    auto: false,
+                    controls: true,
+                    pause: 4000,
+                    pager: true,
+                    pagerCustom: '#thumslide'
+                });
+            });
+
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.slide_comment').bxSlider({
+                    mode: 'vertical',
+                    speed: 500,
+                    auto: false,
+                    controls: true,
+                    pause: 4000,
+                    pager: false,
+                    minSlides: 3,
+                    maxSlides: 3,
+                    moveSlides: 3
+                });
+            });
+
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.sld_rand').bxSlider({
+                    speed: 500,
+                    auto: false,
+                    controls: true,
+                    pause: 4000,
+                    pager: false,
+                    maxSlides: 4,
+                    moveSlides: 4,
+                    slideWidth: 183,
+                    slideMargin: 20
+                });
+            });
+
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.sld_rand_2').bxSlider({
+                    speed: 500,
+                    auto: false,
+                    controls: true,
+                    pause: 4000,
+                    pager: false,
+                    maxSlides: 6,
+                    moveSlides: 6,
+                    slideWidth: 183,
+                    slideMargin: 20
+                });
+            });
+
+        </script>
+    </form>
+</body>
+</html>

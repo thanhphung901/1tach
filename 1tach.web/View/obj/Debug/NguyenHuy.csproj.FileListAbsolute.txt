@@ -1,0 +1,10 @@
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\bin\MVC_Kutun.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\bin\MVC_Kutun.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\bin\Controller.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\bin\Model.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\bin\Controller.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\bin\Model.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\obj\Debug\NguyenHuy.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\obj\Debug\MVC_Kutun.dll.licenses
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\obj\Debug\MVC_Kutun.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\MVC_Kutun\obj\Debug\MVC_Kutun.pdb

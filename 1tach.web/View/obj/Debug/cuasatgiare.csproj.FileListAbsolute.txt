@@ -1,0 +1,10 @@
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\bin\cuasatgiare.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\bin\cuasatgiare.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\bin\Controller.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\bin\Model.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\bin\Controller.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\bin\Model.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\obj\Debug\cuasatgiare.csprojResolveAssemblyReference.cache
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\obj\Debug\cuasatgiare.dll.licenses
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\obj\Debug\cuasatgiare.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\View\obj\Debug\cuasatgiare.pdb

@@ -1,0 +1,10 @@
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\bin\Hang_My_sieu_re.dll
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\bin\Hang_My_sieu_re.pdb
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\bin\Controller.dll
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\bin\Model.dll
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\bin\Controller.pdb
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\bin\Model.pdb
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\obj\Debug\Hang_My_sieu_re.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\obj\Debug\Hang_My_sieu_re.dll.licenses
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\obj\Debug\Hang_My_sieu_re.dll
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\MVC_Kutun\obj\Debug\Hang_My_sieu_re.pdb

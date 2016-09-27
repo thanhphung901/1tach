@@ -1,0 +1,11 @@
+H:\Project\SoftWeb\1tach\1tach.web\View\obj\Debug\1tach.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\1tach\1tach.web\View\obj\Debug\1tach.dll.licenses
+H:\Project\SoftWeb\1tach\1tach.web\View\bin\1tach.dll.config
+H:\Project\SoftWeb\1tach\1tach.web\View\bin\1tach.dll
+H:\Project\SoftWeb\1tach\1tach.web\View\bin\1tach.pdb
+H:\Project\SoftWeb\1tach\1tach.web\View\bin\Controller.dll
+H:\Project\SoftWeb\1tach\1tach.web\View\bin\Model.dll
+H:\Project\SoftWeb\1tach\1tach.web\View\bin\Controller.pdb
+H:\Project\SoftWeb\1tach\1tach.web\View\bin\Model.pdb
+H:\Project\SoftWeb\1tach\1tach.web\View\obj\Debug\1tach.dll
+H:\Project\SoftWeb\1tach\1tach.web\View\obj\Debug\1tach.pdb

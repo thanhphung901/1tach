@@ -1,0 +1,10 @@
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\bin\KLN.dll
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\bin\KLN.pdb
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\bin\Controller.dll
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\bin\Model.dll
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\bin\Controller.pdb
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\bin\Model.pdb
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\obj\Debug\KLN.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\obj\Debug\KLN.dll.licenses
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\obj\Debug\KLN.dll
+D:\TRUNG\Web\KLN\KLN.Web\MVC_Kutun\obj\Debug\KLN.pdb

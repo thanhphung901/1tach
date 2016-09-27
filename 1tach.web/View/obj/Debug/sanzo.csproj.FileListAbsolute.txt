@@ -1,0 +1,11 @@
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\bin\sanzo.dll.config
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\bin\sanzo.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\bin\sanzo.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\bin\Controller.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\bin\Model.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\bin\Controller.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\bin\Model.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\obj\Debug\sanzo.dll.licenses
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\obj\Debug\sanzo.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\obj\Debug\sanzo.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\View\obj\Debug\sanzo.csprojResolveAssemblyReference.cache

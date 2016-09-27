@@ -1,0 +1,116 @@
+.picker
+{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.calendar_button
+{
+    border: none;
+    font-size: 8pt;
+    background-color: #FA9898;
+    font-family: Tahoma, Verdana, 'Times New Roman' , Arial;
+    cursor: hand;
+}
+
+.calendar td
+{
+    font-size: 8pt;
+    font-family: Tahoma, Verdana, 'Times New Roman' , Arial;
+}
+
+.title
+{
+    font-weight: bold;
+    background-color: #D7D7E5;
+}
+
+.day
+{
+    width: 25px;
+    cursor: pointer;
+    text-align: center;
+    border-width: 1px;
+    border-color: #F6F6F6;
+    border-style: solid;
+}
+
+.dayhover
+{
+    width: 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: underline;
+    border-width: 1px;
+    border-color: #F6F6F6;
+    border-style: solid;
+}
+
+.dayheader
+{
+    width: 25px;
+    text-align: center;
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+.othermonthday
+{
+    color: #999999;
+}
+
+.selectedday
+{
+    width: 25px;
+    background-color: #FBE694;
+    color: #000000;
+    border-width: 1px;
+    border-color: #BB5503 !important;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.calendar
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    cursor: default;
+}
+
+.month
+{
+    background-color: #F6F6F6;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.nextprev
+{
+    cursor: pointer;
+    height: 25px;
+    vertical-align: center;
+    padding: 0px 3px 0px 3px;
+}
+

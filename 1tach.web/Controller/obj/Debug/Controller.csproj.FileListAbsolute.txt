@@ -1,0 +1,259 @@
+D:\Truong\MVC_Kutun\Controller\bin\Debug\Controller.dll
+D:\Truong\MVC_Kutun\Controller\bin\Debug\Controller.pdb
+D:\Truong\MVC_Kutun\Controller\obj\Debug\Controller.dll
+D:\Truong\MVC_Kutun\Controller\obj\Debug\Controller.pdb
+D:\Truong\MVC_Kutun\Controller\bin\Debug\Model.dll
+D:\Truong\MVC_Kutun\Controller\bin\Debug\Model.pdb
+D:\Truong\MVC_Kutun\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Controller\bin\Debug\Controller.dll
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Controller\bin\Debug\Controller.pdb
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Controller\bin\Debug\Model.dll
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Controller\bin\Debug\Model.pdb
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Controller\obj\Debug\Controller.dll
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Controller\obj\Debug\Controller.pdb
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Controller\obj\Debug\Controller.dll
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Controller\obj\Debug\Controller.pdb
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Controller\bin\Debug\Controller.dll
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Controller\bin\Debug\Controller.pdb
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Controller\bin\Debug\Model.dll
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Controller\bin\Debug\Model.pdb
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Controller\bin\Debug\Controller.dll
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Controller\bin\Debug\Controller.pdb
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Controller\bin\Debug\Model.dll
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Controller\bin\Debug\Model.pdb
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Controller\obj\Debug\Controller.dll
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Controller\obj\Debug\Controller.pdb
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Controller\bin\Debug\Controller.dll
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Controller\bin\Debug\Controller.pdb
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Controller\bin\Debug\Model.dll
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Controller\bin\Debug\Model.pdb
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Controller\obj\Debug\Controller.dll
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Controller\obj\Debug\Controller.pdb
+D:\Truong\BELLO\MVC_Kutun_BELLO\Controller\bin\Debug\Controller.dll
+D:\Truong\BELLO\MVC_Kutun_BELLO\Controller\bin\Debug\Controller.pdb
+D:\Truong\BELLO\MVC_Kutun_BELLO\Controller\bin\Debug\Model.dll
+D:\Truong\BELLO\MVC_Kutun_BELLO\Controller\bin\Debug\Model.pdb
+D:\Truong\BELLO\MVC_Kutun_BELLO\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\Truong\BELLO\MVC_Kutun_BELLO\Controller\obj\Debug\Controller.dll
+D:\Truong\BELLO\MVC_Kutun_BELLO\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Controller\obj\Debug\Controller.pdb
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Controller.dll
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Controller.pdb
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Model.dll
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Controller\bin\Debug\Model.pdb
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Controller\obj\Debug\Controller.dll
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\TFA\TFA.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\TFA\TFA.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\TFA\TFA.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\TFA\TFA.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\TFA\TFA.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\TFA\TFA.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\TFA\TFA.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\LinhAnhMorris\LinhAnhMorris.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\LinhAnhMorris\LinhAnhMorris.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\LinhAnhMorris\LinhAnhMorris.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\LinhAnhMorris\LinhAnhMorris.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\LinhAnhMorris\LinhAnhMorris.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\LinhAnhMorris\LinhAnhMorris.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\LinhAnhMorris\LinhAnhMorris.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\KLN\KLN.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\KLN\KLN.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\KLN\KLN.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\KLN\KLN.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\KLN\KLN.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\KLN\KLN.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\KLN\KLN.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\Controller\obj\Debug\Controller.pdb
+D:\TRUNG\Web\Vuong_Hoang_Nghi\Vuong_Hoang_Nghi.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\Controller\bin\Debug\Controller.dll
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\Controller\bin\Debug\Controller.pdb
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\Controller\bin\Debug\Model.dll
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\Controller\bin\Debug\Model.pdb
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\Controller\obj\Debug\Controller.dll
+D:\TRUNG\Web\Hang_My_sieu_re\Hang_My_sieu_re.Web\Controller\obj\Debug\Controller.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Controller\bin\Debug\Controller.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Controller\bin\Debug\Controller.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Controller\bin\Debug\Model.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Controller\bin\Debug\Model.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Controller\obj\Debug\Controller.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Controller\obj\Debug\Controller.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\Controller\bin\Debug\Controller.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\Controller\bin\Debug\Controller.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\Controller\bin\Debug\Model.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\Controller\bin\Debug\Model.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+H:\SoftWeb\webtot24h.com\webtot24h.com\Controller\obj\Debug\Controller.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\Controller\obj\Debug\Controller.pdb
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Controller\bin\Debug\Controller.dll
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Controller\bin\Debug\Controller.pdb
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Controller\bin\Debug\Model.dll
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Controller\bin\Debug\Model.pdb
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Controller\obj\Debug\Controller.dll
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Controller\obj\Debug\Controller.pdb
+H:\Project\SoftWeb\banghego\banghe_02\banghe02.web\Controller\bin\Debug\Controller.dll
+H:\Project\SoftWeb\banghego\banghe_02\banghe02.web\Controller\bin\Debug\Controller.pdb
+H:\Project\SoftWeb\banghego\banghe_02\banghe02.web\Controller\bin\Debug\Model.dll
+H:\Project\SoftWeb\banghego\banghe_02\banghe02.web\Controller\bin\Debug\Model.pdb
+H:\Project\SoftWeb\banghego\banghe_02\banghe02.web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\banghego\banghe_02\banghe02.web\Controller\obj\Debug\Controller.dll
+H:\Project\SoftWeb\banghego\banghe_02\banghe02.web\Controller\obj\Debug\Controller.pdb
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Controller\bin\Debug\Controller.dll
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Controller\bin\Debug\Controller.pdb
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Controller\bin\Debug\Model.dll
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Controller\bin\Debug\Model.pdb
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Controller\obj\Debug\Controller.dll
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Controller\obj\Debug\Controller.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\Controller\bin\Debug\Controller.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\Controller\bin\Debug\Controller.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\Controller\bin\Debug\Model.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\Controller\bin\Debug\Model.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\sanzo3\sanzo.web\Controller\obj\Debug\Controller.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\Controller\obj\Debug\Controller.pdb
+H:\Project\SoftWeb\1tach\1tach.web\Controller\bin\Debug\Controller.dll
+H:\Project\SoftWeb\1tach\1tach.web\Controller\bin\Debug\Controller.pdb
+H:\Project\SoftWeb\1tach\1tach.web\Controller\bin\Debug\Model.dll
+H:\Project\SoftWeb\1tach\1tach.web\Controller\bin\Debug\Model.pdb
+H:\Project\SoftWeb\1tach\1tach.web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\1tach\1tach.web\Controller\obj\Debug\Controller.dll
+H:\Project\SoftWeb\1tach\1tach.web\Controller\obj\Debug\Controller.pdb

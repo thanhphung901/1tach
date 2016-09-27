@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {
+	min-width: 1200px;
+	overflow-x:hidden
+}
+.container{ width:1200px !important}
+.menu-pc li {
+	list-style: none;
+	display: inline-block;
+	padding: 15px 9px;
+}
+.menu-pc a {
+	color: #fff;
+	font-size:1.1em
+}
+.submenu li {
+	width: 20% !important
+}
+.row-brd .col1{ width:16%;}
+.row-brd .col2{ width:83%;}
+.submenu { margin-bottom:30px}

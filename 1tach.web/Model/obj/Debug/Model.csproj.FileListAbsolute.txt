@@ -1,0 +1,197 @@
+D:\Truong\MVC_Kutun\Model\bin\Debug\Model.dll
+D:\Truong\MVC_Kutun\Model\bin\Debug\Model.pdb
+D:\Truong\MVC_Kutun\Model\obj\Debug\Model.dll
+D:\Truong\MVC_Kutun\Model\obj\Debug\Model.pdb
+D:\Truong\MVC_Kutun\Model\bin\Debug\Model.dll.config
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Model\bin\Debug\Model.dll.config
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Model\bin\Debug\Model.dll
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Model\bin\Debug\Model.pdb
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Model\obj\Debug\Model.dll
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Model\obj\Debug\Model.pdb
+D:\Truong\chuyenchothue.com.web\MVC_Kutun_chothue\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Model\bin\Debug\Model.dll.config
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Model\bin\Debug\Model.dll
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Model\bin\Debug\Model.pdb
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Model\obj\Debug\Model.dll
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Model\obj\Debug\Model.pdb
+D:\Truong\tuvannetviet.com.web\MVC_Kutun_TUVAN\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Model\bin\Debug\Model.dll.config
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Model\bin\Debug\Model.dll
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Model\bin\Debug\Model.pdb
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Model\obj\Debug\Model.dll
+D:\Truong\CONGNGHIEP\MVC_Kutun_CONGNGHIEP\Model\obj\Debug\Model.pdb
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Model\bin\Debug\Model.dll.config
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Model\bin\Debug\Model.dll
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Model\bin\Debug\Model.pdb
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Model\obj\Debug\Model.dll
+D:\Truong\THOIDAIMOI\MVC_Kutun_THOIDAIMOI\Model\obj\Debug\Model.pdb
+D:\Truong\BELLO\MVC_Kutun_BELLO\Model\bin\Debug\Model.dll.config
+D:\Truong\BELLO\MVC_Kutun_BELLO\Model\bin\Debug\Model.dll
+D:\Truong\BELLO\MVC_Kutun_BELLO\Model\bin\Debug\Model.pdb
+D:\Truong\BELLO\MVC_Kutun_BELLO\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Truong\BELLO\MVC_Kutun_BELLO\Model\obj\Debug\Model.dll
+D:\Truong\BELLO\MVC_Kutun_BELLO\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\QUANG_HUY\MVC_QUANG HUY\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NAM TAM\NAMTAM\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SHOP BAC SI\SHOP BAC SI\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\HAPPY BUY\HAPPY BUY\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\KET NOI TRUC TUYEN\KET NOI TRUC TUYEN\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SOURE_SEO_BANHANG\SOURCE\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\SOURCE_SEO_NOFULL_QUYTRINH\SOURCE_NOFULL_QUYTRINH\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\SOURCE_NOFULL_QUYTRINH\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NUOC MAM HUONG VIET\NUOC MAM HUONG VIET\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\BAO VE YUKI\BAO VE YUKI\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\THACH PHUONG\THACH PHUONG\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\NIEM TIN NHANH\NIEM TIN EXPRESS\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Model\bin\Debug\Model.dll
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Model\obj\Debug\Model.dll
+D:\TRUONGNT\SOURCE\247 EXPRESS\247 EXPRESS\Model\obj\Debug\Model.pdb
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Model\bin\Debug\Model.dll.config
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Model\bin\Debug\Model.dll
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Model\bin\Debug\Model.pdb
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Model\obj\Debug\Model.dll
+D:\TRUONGNT\truongnt.web\WEB OLD COMMIT\247 EXPRESS\247 EXPRESS\Model\obj\Debug\Model.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Model\bin\Debug\Model.dll.config
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Model\bin\Debug\Model.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Model\bin\Debug\Model.pdb
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Model\obj\Debug\Model.dll
+D:\TRUNG\Web\NguyenHuy\NguyenHuy.Web\Model\obj\Debug\Model.pdb
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Model\bin\Debug\Model.dll.config
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Model\bin\Debug\Model.dll
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Model\bin\Debug\Model.pdb
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Model\obj\Debug\Model.dll
+D:\TRUNG\Web\Hello_Hoi_An_V2\HoiAn.Web\Model\obj\Debug\Model.pdb
+D:\TRUNG\Web\TFA\TFA.Web\Model\bin\Debug\Model.dll.config
+D:\TRUNG\Web\TFA\TFA.Web\Model\bin\Debug\Model.dll
+D:\TRUNG\Web\TFA\TFA.Web\Model\bin\Debug\Model.pdb
+D:\TRUNG\Web\TFA\TFA.Web\Model\obj\Debug\Model.dll
+D:\TRUNG\Web\TFA\TFA.Web\Model\obj\Debug\Model.pdb
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Model\bin\Debug\Model.dll.config
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Model\bin\Debug\Model.dll
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Model\bin\Debug\Model.pdb
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Model\obj\Debug\Model.dll
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Model\obj\Debug\Model.pdb
+D:\TRUNG\Web\BDS_PhucLong\BDS_PhucLong.Web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\TRUNG\Web\KLN\KLN.Web\Model\bin\Debug\Model.dll.config
+D:\TRUNG\Web\KLN\KLN.Web\Model\bin\Debug\Model.dll
+D:\TRUNG\Web\KLN\KLN.Web\Model\bin\Debug\Model.pdb
+D:\TRUNG\Web\KLN\KLN.Web\Model\obj\Debug\Model.dll
+D:\TRUNG\Web\KLN\KLN.Web\Model\obj\Debug\Model.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Model\bin\Debug\Model.dll.config
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Model\bin\Debug\Model.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Model\bin\Debug\Model.pdb
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Model\obj\Debug\Model.dll
+D:\TRUNG\Web\Khach_san_Hoa_Sen\Khach_san_Hoa_Sen.Web\Model\obj\Debug\Model.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Model\bin\Debug\Model.dll.config
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Model\bin\Debug\Model.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Model\bin\Debug\Model.pdb
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Model\obj\Debug\Model.dll
+D:\TRUNG\Web\Thoi_trang_Ngoc_Quyen\Thoi_trang_Ngoc_Quyen.Web\Model\obj\Debug\Model.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Model\bin\Debug\Model.dll.config
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Model\bin\Debug\Model.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Model\bin\Debug\Model.pdb
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Model\obj\Debug\Model.dll
+H:\SoftWeb\cuasatgiare.net\cuasatgiare.net\Model\obj\Debug\Model.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\Model\bin\Debug\Model.dll.config
+H:\SoftWeb\webtot24h.com\webtot24h.com\Model\bin\Debug\Model.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\Model\bin\Debug\Model.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\SoftWeb\webtot24h.com\webtot24h.com\Model\obj\Debug\Model.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\Model\obj\Debug\Model.pdb
+G:\SoftWeb\webtot24h.com\webtot24h.com\Model\bin\Debug\Model.dll.config
+G:\SoftWeb\webtot24h.com\webtot24h.com\Model\bin\Debug\Model.dll
+G:\SoftWeb\webtot24h.com\webtot24h.com\Model\bin\Debug\Model.pdb
+G:\SoftWeb\webtot24h.com\webtot24h.com\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+G:\SoftWeb\webtot24h.com\webtot24h.com\Model\obj\Debug\Model.dll
+G:\SoftWeb\webtot24h.com\webtot24h.com\Model\obj\Debug\Model.pdb
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Model\bin\Debug\Model.dll.config
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Model\bin\Debug\Model.dll
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Model\bin\Debug\Model.pdb
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Model\obj\Debug\Model.dll
+H:\Project\SoftWeb\banghego\banghe_01\banghe01.web\Model\obj\Debug\Model.pdb
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Model\bin\Debug\Model.dll.config
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Model\bin\Debug\Model.dll
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Model\bin\Debug\Model.pdb
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Model\obj\Debug\Model.dll
+H:\Project\SoftWeb\banghego\banghe_03\banghe03.web\Model\obj\Debug\Model.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\Model\bin\Debug\Model.dll.config
+H:\Project\SoftWeb\sanzo3\sanzo.web\Model\bin\Debug\Model.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\Model\bin\Debug\Model.pdb
+H:\Project\SoftWeb\sanzo3\sanzo.web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\sanzo3\sanzo.web\Model\obj\Debug\Model.dll
+H:\Project\SoftWeb\sanzo3\sanzo.web\Model\obj\Debug\Model.pdb
+H:\Project\SoftWeb\1tach\1tach.web\Model\bin\Debug\Model.dll.config
+H:\Project\SoftWeb\1tach\1tach.web\Model\bin\Debug\Model.dll
+H:\Project\SoftWeb\1tach\1tach.web\Model\bin\Debug\Model.pdb
+H:\Project\SoftWeb\1tach\1tach.web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\Project\SoftWeb\1tach\1tach.web\Model\obj\Debug\Model.dll
+H:\Project\SoftWeb\1tach\1tach.web\Model\obj\Debug\Model.pdb

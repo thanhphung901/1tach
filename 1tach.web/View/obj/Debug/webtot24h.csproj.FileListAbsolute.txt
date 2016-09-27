@@ -1,0 +1,10 @@
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\obj\Debug\webtot24h.csprojResolveAssemblyReference.cache
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\obj\Debug\webtot24h.dll.licenses
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\bin\webtot24h.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\bin\webtot24h.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\bin\Controller.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\bin\Model.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\bin\Controller.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\bin\Model.pdb
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\obj\Debug\webtot24h.dll
+H:\SoftWeb\webtot24h.com\webtot24h.com\View\obj\Debug\webtot24h.pdb
