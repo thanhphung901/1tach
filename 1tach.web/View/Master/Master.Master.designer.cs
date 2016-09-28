@@ -31,13 +31,13 @@ namespace sanzo.Master {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Header1 control.
+        /// Header control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::sanzo.UIs.Header Header1;
+        protected global::OneTach.UIs.Header Header;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
@@ -49,12 +49,12 @@ namespace sanzo.Master {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
         
         /// <summary>
-        /// Footer1 control.
+        /// Footer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::sanzo.UIs.Footer Footer1;
+        protected global::OneTach.UIs.Footer Footer;
     }
 }

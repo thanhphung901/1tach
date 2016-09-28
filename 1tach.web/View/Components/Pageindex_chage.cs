@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using vpro.functions;
+﻿using vpro.functions;
 
-namespace sanzo.Components
+namespace OneTach.Components
 {
     public class Pageindex_chage
     {

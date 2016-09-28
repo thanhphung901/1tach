@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Controller;
 using System.Web.Services;
+using Controller;
+using OneTach.Components;
 using vpro.functions;
-using sanzo.Components;
 
-namespace sanzo.vi_vn
+namespace OneTach
 {
     public partial class Ajax_customer : System.Web.UI.Page
     {

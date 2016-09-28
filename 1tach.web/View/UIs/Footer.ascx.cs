@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
-namespace sanzo.UIs
+namespace OneTach.UIs
 {
     public partial class Footer : System.Web.UI.UserControl
     {

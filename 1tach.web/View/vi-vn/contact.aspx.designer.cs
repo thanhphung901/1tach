@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sanzo.vi_vn {
+namespace OneTach {
     
     
     public partial class contact {

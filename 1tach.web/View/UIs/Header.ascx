@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="sanzo.UIs.Header" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="OneTach.UIs.Header" %>
 
 <div id="main-menu">
     <div class="container">

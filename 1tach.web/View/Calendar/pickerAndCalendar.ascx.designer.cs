@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sanzo.Calendar {
+namespace OneTach.Calendar {
     
     
     public partial class pickerAndCalendar {

@@ -257,3 +257,10 @@ H:\Project\SoftWeb\1tach\1tach.web\Controller\bin\Debug\Model.pdb
 H:\Project\SoftWeb\1tach\1tach.web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 H:\Project\SoftWeb\1tach\1tach.web\Controller\obj\Debug\Controller.dll
 H:\Project\SoftWeb\1tach\1tach.web\Controller\obj\Debug\Controller.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Debug\Controller.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Debug\Controller.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Debug\Model.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Debug\Model.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\obj\Debug\Controller.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\obj\Debug\Controller.pdb

@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using sanzo.Components;
-using System.IO;
-using vpro.functions;
 using System.Web.UI.HtmlControls;
 using Controller;
+using OneTach.Components;
+using vpro.functions;
 
-namespace sanzo.vi_vn
+namespace OneTach
 {
     public partial class ThongBao : System.Web.UI.Page
     {

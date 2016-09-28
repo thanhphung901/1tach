@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HomeContent.ascx.cs" Inherits="sanzo.UIs.HomeContent" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HomeContent.ascx.cs" Inherits="OneTach.UIs.HomeContent" %>
 
 <div class="content">
     <div class="container">

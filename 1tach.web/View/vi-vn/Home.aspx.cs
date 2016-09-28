@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
-using vpro.functions;
 using Controller;
-using sanzo.Components;
+using OneTach.Components;
+using vpro.functions;
 
-namespace sanzo.vi_vn
+namespace OneTach
 {
     public partial class Home : System.Web.UI.Page
     {

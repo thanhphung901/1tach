@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sanzo.vi_vn {
+namespace OneTach {
     
     
     public partial class Home {
@@ -28,6 +28,6 @@ namespace sanzo.vi_vn {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl HomeContent1;
+        protected global::OneTach.UIs.HomeContent HomeContent1;
     }
 }

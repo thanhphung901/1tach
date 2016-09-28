@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Net;
-using System.Net.Mail;
-using System.Net.Configuration;
 using System.Configuration;
+using System.Net.Configuration;
+using System.Net.Mail;
 using vpro.functions;
-namespace sanzo.Components
+
+namespace OneTach.Components
 {
     public class SendMail
     {

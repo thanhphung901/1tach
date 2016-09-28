@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 
-namespace sanzo.Components
+namespace OneTach.Components
 {
     public class Getcookie
     {

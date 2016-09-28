@@ -1,13 +1,9 @@
-﻿using Controller;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using Controller;
 using vpro.functions;
 
-namespace sanzo.UIs
+namespace OneTach.UIs
 {
     public partial class Header : System.Web.UI.UserControl
     {

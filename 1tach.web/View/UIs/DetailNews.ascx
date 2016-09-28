@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DetailNews.ascx.cs" Inherits="sanzo.UIs.DetailNews" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DetailNews.ascx.cs" Inherits="OneTach.UIs.DetailNews" %>
 
 <div class="content">
     <div class="container">

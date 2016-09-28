@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="path.ascx.cs" Inherits="sanzo.UIs.path" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="path.ascx.cs" Inherits="OneTach.UIs.path" %>
 
 <nav class="container breadcrumb">
     <ul>

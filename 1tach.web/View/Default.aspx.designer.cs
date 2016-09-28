@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sanzo {
+namespace OneTach {
     
     
     public partial class Default {
@@ -28,6 +28,6 @@ namespace sanzo {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::sanzo.UIs.HomeContent HomeContent1;
+        protected global::OneTach.UIs.HomeContent HomeContent1;
     }
 }

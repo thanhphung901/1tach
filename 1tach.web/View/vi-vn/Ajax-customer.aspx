@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ajax-customer.aspx.cs" Inherits="sanzo.vi_vn.Ajax_customer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ajax-customer.aspx.cs" Inherits="OneTach.Ajax_customer" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

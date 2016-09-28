@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using sanzo.Components;
-using System.IO;
-using vpro.functions;
 using System.Web.UI.HtmlControls;
 using Controller;
+using OneTach.Components;
+using vpro.functions;
 
-namespace sanzo.vi_vn
+namespace OneTach
 {
     public partial class contact : System.Web.UI.Page
     {

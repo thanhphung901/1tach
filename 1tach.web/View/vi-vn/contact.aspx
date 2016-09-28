@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Master.Master" AutoEventWireup="true"
-    CodeBehind="contact.aspx.cs" Inherits="sanzo.vi_vn.contact" %>
+    CodeBehind="contact.aspx.cs" Inherits="OneTach.contact" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">

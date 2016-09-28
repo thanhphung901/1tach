@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sanzo.UIs
+namespace OneTach.UIs
 {
 
 

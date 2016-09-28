@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Master.Master" AutoEventWireup="true"
-    CodeBehind="ThongBao.aspx.cs" Inherits="sanzo.vi_vn.ThongBao" %>
+    CodeBehind="ThongBao.aspx.cs" Inherits="OneTach.ThongBao" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal ID="ltrFavicon" runat="server" EnableViewState="false"></asp:Literal>

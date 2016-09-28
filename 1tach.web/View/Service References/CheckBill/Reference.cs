@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sanzo.CheckBill {
-    using System.Data;
-    
-    
+namespace OneTach.Service_References.CheckBill {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CheckBill.WsTrackAndTraceSoap")]
     public interface WsTrackAndTraceSoap {
@@ -22,12 +19,12 @@ namespace sanzo.CheckBill {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface WsTrackAndTraceSoapChannel : sanzo.CheckBill.WsTrackAndTraceSoap, System.ServiceModel.IClientChannel {
+    public interface WsTrackAndTraceSoapChannel : WsTrackAndTraceSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WsTrackAndTraceSoapClient : System.ServiceModel.ClientBase<sanzo.CheckBill.WsTrackAndTraceSoap>, sanzo.CheckBill.WsTrackAndTraceSoap {
+    public partial class WsTrackAndTraceSoapClient : System.ServiceModel.ClientBase<WsTrackAndTraceSoap>, WsTrackAndTraceSoap {
         
         public WsTrackAndTraceSoapClient() {
         }

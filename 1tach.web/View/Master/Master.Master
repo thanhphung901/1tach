@@ -1,7 +1,11 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="sanzo.Master.Master" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="OneTach.Master.Master" %>
 
 <%@ Register src="../UIs/Header.ascx" tagname="Header" tagprefix="uc1" %>
 <%@ Register src="../UIs/Footer.ascx" tagname="Footer" tagprefix="uc2" %>
+<%@ Register Src="~/UIs/Header.ascx" TagPrefix="uc2" TagName="Header" %>
+<%@ Register Src="~/UIs/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+
+
 
 <!DOCTYPE html>
 
@@ -19,10 +23,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <uc1:Header ID="Header1" runat="server" />
+        <uc2:Header runat="server" ID="Header" />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-        <uc2:Footer ID="Footer1" runat="server" />
+        <uc1:Footer runat="server" ID="Footer" />
         
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="/vi-vn/js/jquery-2.1.1.min.js"></script>
