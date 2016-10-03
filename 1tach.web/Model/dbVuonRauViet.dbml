@@ -691,6 +691,13 @@
       <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TBL_NEWS_LIKE" Member="TBL_NEWS_LIKEs">
+    <Type Name="TBL_NEWS_LIKE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
   <Function Name="dbo.fClearUnicode" Method="fClearUnicode" IsComposable="true">
     <Parameter Name="strInput" Type="System.String" DbType="NVarChar(4000)" />
     <Return Type="System.String" />

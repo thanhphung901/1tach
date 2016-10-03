@@ -168,6 +168,9 @@ namespace Model
     partial void InsertTBL_NEWS_CONTENT(TBL_NEWS_CONTENT instance);
     partial void UpdateTBL_NEWS_CONTENT(TBL_NEWS_CONTENT instance);
     partial void DeleteTBL_NEWS_CONTENT(TBL_NEWS_CONTENT instance);
+    partial void InsertTBL_NEWS_LIKE(TBL_NEWS_LIKE instance);
+    partial void UpdateTBL_NEWS_LIKE(TBL_NEWS_LIKE instance);
+    partial void DeleteTBL_NEWS_LIKE(TBL_NEWS_LIKE instance);
     #endregion
 		
 		public dbVuonRauVietDataContext() : 
@@ -565,6 +568,14 @@ namespace Model
 			get
 			{
 				return this.GetTable<TBL_NEWS_CONTENT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_NEWS_LIKE> TBL_NEWS_LIKEs
+		{
+			get
+			{
+				return this.GetTable<TBL_NEWS_LIKE>();
 			}
 		}
 		
@@ -14697,6 +14708,116 @@ namespace Model
 					this._Order = value;
 					this.SendPropertyChanged("Order");
 					this.OnOrderChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_NEWS_LIKE")]
+	public partial class TBL_NEWS_LIKE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private int _NewsID;
+		
+		private int _Type;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnNewsIDChanging(int value);
+    partial void OnNewsIDChanged();
+    partial void OnTypeChanging(int value);
+    partial void OnTypeChanged();
+    #endregion
+		
+		public TBL_NEWS_LIKE()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewsID", DbType="Int NOT NULL")]
+		public int NewsID
+		{
+			get
+			{
+				return this._NewsID;
+			}
+			set
+			{
+				if ((this._NewsID != value))
+				{
+					this.OnNewsIDChanging(value);
+					this.SendPropertyChanging();
+					this._NewsID = value;
+					this.SendPropertyChanged("NewsID");
+					this.OnNewsIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Int NOT NULL")]
+		public int Type
+		{
+			get
+			{
+				return this._Type;
+			}
+			set
+			{
+				if ((this._Type != value))
+				{
+					this.OnTypeChanging(value);
+					this.SendPropertyChanging();
+					this._Type = value;
+					this.SendPropertyChanged("Type");
+					this.OnTypeChanged();
 				}
 			}
 		}

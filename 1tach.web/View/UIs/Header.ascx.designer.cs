@@ -40,6 +40,15 @@ namespace OneTach.UIs {
         protected global::System.Web.UI.WebControls.ListView lstRandom;
         
         /// <summary>
+        /// pnDangBai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnDangBai;
+        
+        /// <summary>
         /// pnNotLogined control.
         /// </summary>
         /// <remarks>

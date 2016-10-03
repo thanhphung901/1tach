@@ -94,6 +94,15 @@ namespace OneTach.UIs {
         protected global::System.Web.UI.WebControls.ListView lstVoteContent;
         
         /// <summary>
+        /// LikeForNews control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OneTach.UIs.LikeForNews LikeForNews;
+        
+        /// <summary>
         /// ltl_fanpage control.
         /// </summary>
         /// <remarks>

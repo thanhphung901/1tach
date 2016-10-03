@@ -355,5 +355,11 @@
         <elementListCompartment Id="04ede265-4cdd-4a44-9150-58ab52a78328" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="de0043de-ab22-4a22-abb8-6954bd4b9a03" absoluteBounds="3.375, 3.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbVuonRauVietDataContext/TBL_NEWS_LIKE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ceaaef84-b594-48c6-8076-87c8430c4ef6" absoluteBounds="3.39, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

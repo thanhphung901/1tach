@@ -357,34 +357,34 @@ namespace vpro.eshop.cpanel.page
                     //    trImage1.Visible = false;
                     //}
 
-                    ////image2
-                    //if (!string.IsNullOrEmpty(G_info.ToList()[0].n.NEWS_IMAGE2))
-                    //{
-                    //    trUploadImage2.Visible = false;
-                    //    trImage2.Visible = true;
-                    //    Image2.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE2;
-                    //    hplImage2.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE2;
-                    //    hplImage2.Text = G_info.ToList()[0].n.NEWS_IMAGE2;
-                    //}
-                    //else
-                    //{
-                    //    trUploadImage2.Visible = true;
-                    //    trImage2.Visible = false;
-                    //}
+                    //image2
+                    if (!string.IsNullOrEmpty(G_info.ToList()[0].n.NEWS_IMAGE2))
+                    {
+                        trUploadImage2.Visible = false;
+                        trImage2.Visible = true;
+                        Image2.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE2;
+                        hplImage2.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE2;
+                        hplImage2.Text = G_info.ToList()[0].n.NEWS_IMAGE2;
+                    }
+                    else
+                    {
+                        trUploadImage2.Visible = true;
+                        trImage2.Visible = false;
+                    }
 
                     //image3
                     if (!string.IsNullOrEmpty(G_info.ToList()[0].n.NEWS_IMAGE3))
                     {
-                        //trUploadImage3.Visible = false;
-                        //trImage3.Visible = true;
-                        //Image3.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
-                        //hplImage3.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
-                        //hplImage3.Text = G_info.ToList()[0].n.NEWS_IMAGE3;
+                        trUploadImage3.Visible = false;
+                        trImage3.Visible = true;
+                        Image3.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
+                        hplImage3.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
+                        hplImage3.Text = G_info.ToList()[0].n.NEWS_IMAGE3;
                     }
                     else
                     {
-                        //trUploadImage3.Visible = true;
-                        //trImage3.Visible = false;
+                        trUploadImage3.Visible = true;
+                        trImage3.Visible = false;
                     }
 
 
@@ -538,8 +538,8 @@ namespace vpro.eshop.cpanel.page
                         //news_insert.UNIT_ID3 = Utils.CIntDef(txtcountbuy.Value);
 
                         //news_insert.NEWS_IMAGE1 = News_Image1;
-                        //news_insert.NEWS_IMAGE2 = News_Image2;
-                        //news_insert.NEWS_IMAGE3 = News_Image3;
+                        news_insert.NEWS_IMAGE2 = News_Image2;
+                        news_insert.NEWS_IMAGE3 = News_Image3;
 
                         news_insert.USER_ID = Utils.CIntDef(Session["USER_ID"]);
                         news_insert.NEWS_PUBLISHDATE = DateTime.Now;
@@ -618,8 +618,8 @@ namespace vpro.eshop.cpanel.page
                             //c_update.ToList()[0].UNIT_ID2 = Utils.CIntDef(Drhangsx.SelectedValue);
                             //c_update.ToList()[0].UNIT_ID3 = Utils.CIntDef(txtcountbuy.Value);
                             //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
-                            //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
-                            //c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
+                            c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
+                            c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
 
                             DB.SubmitChanges();
 

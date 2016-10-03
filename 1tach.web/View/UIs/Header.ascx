@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="OneTach.UIs.Header" %>
-
+<style type="text/css">
+  
+</style>
 <div id="main-menu">
     <div class="container">
         <asp:Repeater ID="Rpmenu" runat="server">
@@ -47,6 +49,7 @@
                 </ul> 
             </FooterTemplate>
         </asp:Repeater>
+
     </div>
 </div>
 
@@ -64,7 +67,7 @@
 <nav id="breadcrumb">
     <div class="container">
         <div class="row">
-            <div class="col s8 ">
+            <div class="col s8">
                 <div class="row row-brd">
                     <div class="col col1"><a href="#!" class="breadcrumb">Bài ngẫu nhiên</a> </div>
                     <div class="col col2 mq">
@@ -79,6 +82,10 @@
                             </asp:ListView>
                         </marquee>
                     </div>
+                    <asp:Panel runat="server" ID="pnDangBai" Visible="False">
+                        <div class="col col1"><a href="/dang-bai.html" class="btnDangBai"><i class="material-icons">mode_edit</i>&nbsp;ĐĂNG BÀI MỚI</a>
+                            </div>
+                    </asp:Panel>
                 </div>
             </div>
             <asp:Panel runat="server" ID="pnNotLogined" Visible="True">
@@ -89,9 +96,8 @@
             </asp:Panel>
             <asp:Panel runat="server" ID="pnLogined" Visible="False">
                 <div class="col s1 logcol right">
-                    Hi
-                    <br />
-                    <asp:Label runat="server" ID="lblEmail"></asp:Label>
+                    <span style="display: none">Hi,
+                        <asp:Label runat="server" ID="lblEmail"></asp:Label></span>
                 </div>
             </asp:Panel>
             <div class="col s3 right">
@@ -110,6 +116,7 @@
         <li class="col"><a href="/tranh-luan.html"><i class="material-icons">question_answer</i>Tranh luận</a></li>
         <li class="col"><a href="/bau-chon.html"><i class="material-icons">thumb_up</i>Bầu chọn</a></li>
         <li class="col"><a href="/doanh-nghiep.html"><i class="material-icons">mode_edit</i>Doanh nghiệp</a></li>
+
     </ul>
 </div>
 

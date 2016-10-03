@@ -2,6 +2,7 @@
 
 <%@ Register Src="path.ascx" TagName="path" TagPrefix="uc1" %>
 <%@ Register Src="RightSide.ascx" TagName="RightSide" TagPrefix="uc2" %>
+<%@ Register Src="~/UIs/LikeForNews.ascx" TagPrefix="uc1" TagName="LikeForNews" %>
 
 <div class="content">
     <div class="container">
@@ -149,29 +150,7 @@
                 <div class="addbtnews">
                     <img src="data/adsbottom.jpg" alt="">
                 </div>
-                <div class="feelicon clearfix">
-                    <div class="icon_item">
-                        <p class="icon_f icon_f1"><span>Rất hữu ích</span></p>
-                    </div>
-                    <div class="icon_item">
-                        <p class="icon_f icon_f2"><span>Yêu thích</span></p>
-                    </div>
-                    <div class="icon_item">
-                        <p class="icon_f icon_f3"><span>Ha ha</span></p>
-                    </div>
-                    <div class="icon_item">
-                        <p class="icon_f icon_f4"><span>Dễ thương</span></p>
-                    </div>
-                    <div class="icon_item">
-                        <p class="icon_f icon_f5"><span>Đáng suy ngẫm</span></p>
-                    </div>
-                    <div class="icon_item">
-                        <p class="icon_f icon_f6"><span>Thú vị</span></p>
-                    </div>
-                    <div class="icon_item">
-                        <p class="icon_f icon_f7"><span>WOW</span></p>
-                    </div>
-                </div>
+                <uc1:LikeForNews runat="server" ID="LikeForNews" />
                 <div class="fbcm">
                     <div id="fb-root"></div>
                     <script>(function (d, s, id) {

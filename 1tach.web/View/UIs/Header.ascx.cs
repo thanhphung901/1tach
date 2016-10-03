@@ -14,6 +14,10 @@ namespace OneTach.UIs
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["User_Name"] != null)
+            {
+                pnDangBai.Visible = true;
+            }
             if (!IsPostBack)
             {
                 load_logo();

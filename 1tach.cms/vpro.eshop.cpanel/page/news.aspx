@@ -290,7 +290,7 @@
                             <div id="trUploadImage3" runat="server">
                                 <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-file" aria-hidden="true">
                                 </span>&nbsp;Chọn ảnh
-                                    <input id="fileImage3" type="file" name="fileImage3" size="50" runat="server" /></span>
+                                    <input id="fileImage3" type="file" name="fileImage3" size="50" runat="server" Visible="True" /></span>
                             </div>
                             <div id="trImage3" runat="server">
                                 <div class="col-sm-3">
@@ -312,7 +312,7 @@
                             <div id="trUploadImage2" runat="server">
                                 <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-file" aria-hidden="true">
                                 </span>&nbsp;Chọn ảnh
-                                    <input id="fileImage2" type="file" name="fileImage2" size="50" runat="server" /></span>
+                                    <input id="fileImage2" type="file" name="fileImage2" size="50" runat="server" Visible="True" /></span>
                             </div>
                             <div id="trImage2" runat="server">
                                 <div class="col-sm-3">
