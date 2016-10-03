@@ -99,7 +99,13 @@
     <Content Include="UIs\Footer.ascx" />
     <Content Include="UIs\HomeContent.ascx" />
     <Content Include="UIs\Header.ascx" />
+    <Content Include="UIs\ListBusiness.ascx" />
+    <Content Include="UIs\ListDebate.ascx" />
     <Content Include="UIs\ListNew.ascx" />
+    <Content Include="UIs\ListProfessional.ascx" />
+    <Content Include="UIs\ListVotes.ascx" />
+    <Content Include="UIs\Register.ascx" />
+    <Content Include="UIs\Login.ascx" />
     <Content Include="UIs\path.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Default.aspx" />
@@ -113,6 +119,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Robots.txt" />
+    <Content Include="UIs\RightSide.ascx" />
     <Content Include="vi-vn\Ajax-customer.aspx" />
     <Content Include="vi-vn\Ajax\Addtocart.js" />
     <Content Include="vi-vn\Ajax\Ajax-prohighlight.js" />
@@ -130,6 +137,44 @@
     <Content Include="vi-vn\Complete\jquery-ui-1.10.4.custom.min.css" />
     <Content Include="vi-vn\Complete\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="vi-vn\contact.aspx" />
+    <Content Include="vi-vn\images\arrow_slide.jpg" />
+    <Content Include="vi-vn\images\bg0.jpg" />
+    <Content Include="vi-vn\images\bg1.jpg" />
+    <Content Include="vi-vn\images\bg2.jpg" />
+    <Content Include="vi-vn\images\bg_tth1.png" />
+    <Content Include="vi-vn\images\brnews-bg1.png" />
+    <Content Include="vi-vn\images\btn-slice-blue.png" />
+    <Content Include="vi-vn\images\btn-slice-green.png" />
+    <Content Include="vi-vn\images\btn-slice-lt-lt-blue.png" />
+    <Content Include="vi-vn\images\btn_search.png" />
+    <Content Include="vi-vn\images\dot.png" />
+    <Content Include="vi-vn\images\favicon.png" />
+    <Content Include="vi-vn\images\fb.png" />
+    <Content Include="vi-vn\images\flag.png" />
+    <Content Include="vi-vn\images\gp.png" />
+    <Content Include="vi-vn\images\icon_chuyen_gia.png" />
+    <Content Include="vi-vn\images\icon_doanh_nghiep.png" />
+    <Content Include="vi-vn\images\icon_f\icon_f1.png" />
+    <Content Include="vi-vn\images\icon_f\icon_f2.png" />
+    <Content Include="vi-vn\images\icon_f\icon_f3.png" />
+    <Content Include="vi-vn\images\icon_f\icon_f4.png" />
+    <Content Include="vi-vn\images\icon_f\icon_f5.png" />
+    <Content Include="vi-vn\images\icon_f\icon_f6.png" />
+    <Content Include="vi-vn\images\icon_f\icon_f7.png" />
+    <Content Include="vi-vn\images\icon_q.png" />
+    <Content Include="vi-vn\images\icon_share_img\share_img_01.png" />
+    <Content Include="vi-vn\images\icon_share_img\share_img_02.png" />
+    <Content Include="vi-vn\images\icon_share_img\share_img_03.png" />
+    <Content Include="vi-vn\images\icon_share_img\share_img_04.png" />
+    <Content Include="vi-vn\images\icon_share_img\share_img_05.png" />
+    <Content Include="vi-vn\images\icon_share_img\share_img_06.png" />
+    <Content Include="vi-vn\images\icon_top.png" />
+    <Content Include="vi-vn\images\lk.png" />
+    <Content Include="vi-vn\images\pt.png" />
+    <Content Include="vi-vn\images\tt.png" />
+    <Content Include="vi-vn\images\tw.png" />
+    <Content Include="vi-vn\Login.aspx" />
+    <Content Include="vi-vn\Register.aspx" />
     <Content Include="vi-vn\ThongBao.aspx" />
     <Content Include="vi-vn\Home.aspx" />
     <Content Include="vi-vn\modalbox\all_index.css" />
@@ -197,12 +242,54 @@
     <Compile Include="UIs\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UIs\ListBusiness.ascx.cs">
+      <DependentUpon>ListBusiness.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\ListBusiness.ascx.designer.cs">
+      <DependentUpon>ListBusiness.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ListDebate.ascx.cs">
+      <DependentUpon>ListDebate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\ListDebate.ascx.designer.cs">
+      <DependentUpon>ListDebate.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UIs\ListNew.ascx.cs">
       <DependentUpon>ListNew.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UIs\ListNew.ascx.designer.cs">
       <DependentUpon>ListNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ListProfessional.ascx.cs">
+      <DependentUpon>ListProfessional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\ListProfessional.ascx.designer.cs">
+      <DependentUpon>ListProfessional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ListVotes.ascx.cs">
+      <DependentUpon>ListVotes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\ListVotes.ascx.designer.cs">
+      <DependentUpon>ListVotes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
     <Compile Include="UIs\path.ascx.cs">
       <DependentUpon>path.ascx</DependentUpon>
@@ -226,6 +313,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\RightSide.ascx.cs">
+      <DependentUpon>RightSide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\RightSide.ascx.designer.cs">
+      <DependentUpon>RightSide.ascx</DependentUpon>
     </Compile>
     <Compile Include="vi-vn\Ajax-customer.aspx.cs">
       <DependentUpon>Ajax-customer.aspx</DependentUpon>
@@ -251,6 +345,20 @@
     </Compile>
     <Compile Include="vi-vn\contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vi-vn\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vi-vn\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vi-vn\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vi-vn\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="vi-vn\ThongBao.aspx.cs">
       <DependentUpon>ThongBao.aspx</DependentUpon>
@@ -304,7 +412,6 @@
     <Folder Include="vi-vn\css\" />
     <Folder Include="vi-vn\data\" />
     <Folder Include="vi-vn\fonts\" />
-    <Folder Include="vi-vn\images\" />
     <Folder Include="vi-vn\js\" />
   </ItemGroup>
   <PropertyGroup>

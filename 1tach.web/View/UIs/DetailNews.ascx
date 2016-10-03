@@ -1,70 +1,151 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DetailNews.ascx.cs" Inherits="OneTach.UIs.DetailNews" %>
 
+<%@ Register Src="path.ascx" TagName="path" TagPrefix="uc1" %>
+<%@ Register Src="RightSide.ascx" TagName="RightSide" TagPrefix="uc2" %>
+
 <div class="content">
     <div class="container">
         <!-- InstanceBeginEditable name="content" -->
         <div class="row">
             <div class="col l9">
                 <div class="detail-news">
-                    <h1><span>Lectus non rutrum pulvinar urna leo 
-						dignissim lorem</span> </h1>
+                    <h1>
+                        <asp:Label ID="lbNewsTitle" runat="server"></asp:Label></h1>
                     <div class="top-post-dt clearfix">
-                        <div class="left">Trang chủ / <a href="#">Chuyên mục</a> </div>
-                        <div class="right"><span><i class="material-icons">supervisor_account</i><a href="#"> Người đăng</a></span> <span><i class="material-icons">visibility</i> 1.345</span> <span>Posted on Aug. 6, 2016</span> </div>
-                    </div>
-                    <div class="share-post clearfix"><a href="">
-                        <img src="images/fb.png" alt=""></a> <a href="">
-                            <img src="images/pt.png"></a> <a href="">
-                                <img src="images/lk.png"></a> <a href="">
-                                    <img src="images/tt.png"></a> <a href="">
-                                        <img src="images/tw.png"></a> <a href="">
-                                            <img src="images/gp.png"></a> </div>
-                    <div class="block">
-                        <h2>Nunc quis turpis vel ipsum bibendum fringilla id et risus</h2>
-                        <h3>Praesent dignissim ante ac tincidunt molestie</h3>
-                        <p class="fstlt">Nam nibh arcu, tristique eget pretium sed, porta id quam. Praesent dignissim ante ac tincidunt molestie. Nunc quis turpis vel ipsum bibendum fringilla id et risus. In ultricies, eros quis viverra pretium, neque purus tincidunt neque, at egestas est lectus non ante. Phasellus imperdiet laoreet sapien, quis consectetur urna adipiscing placerat.</p>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc euismod purus purus, in commodo risus facilisis in. Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie.</p>
-                        <div class="center">
-                            <p class="center pst-r"><span class="imgsocial"><a href="" class="icon_share_img icon_share_img1"></a><a href="" class="icon_share_img icon_share_img2"></a><a href="" class="icon_share_img icon_share_img3"></a><a href="" class="icon_share_img icon_share_img4"></a><a href="" class="icon_share_img icon_share_img5"></a><a href="" class="icon_share_img icon_share_img6"></a></span>
-                                <img src="data/img01news.jpg" alt="">
-                            </p>
+                        <uc1:path ID="path1" runat="server" />
+                        <div class="right">
+                            <span><i class="material-icons">supervisor_account</i><a href="#"> Người đăng</a></span> <span><i class="material-icons">visibility</i>
+                                <asp:Literal ID="liCount" runat="server"></asp:Literal></span> <span>
+                                    <asp:Literal ID="lbDate" runat="server"></asp:Literal></span>
                         </div>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc euismod purus purus, in commodo risus facilisis in. Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie.</p>
-                        <div class="quote-dt">
-                            <p><q>Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie. Cras in massa venenatis, venenatis nibh nec, rutrum ante. </q></p>
-                            <p><q>Donec adipiscing iaculis dolor, quis porta lorem iaculis non. Nulla viverra enim vel eleifend molestie.</q></p>
-                        </div>
-                        <h3>Praesent dignissim ante ac tincidunt molestie</h3>
-                        <p class="fstlt">Nam nibh arcu, tristique eget pretium sed, porta id quam. Praesent dignissim ante ac tincidunt molestie. Nunc quis turpis vel ipsum bibendum fringilla id et risus. In ultricies, eros quis viverra pretium, neque purus tincidunt neque, at egestas est lectus non ante. Phasellus imperdiet laoreet sapien, quis consectetur urna adipiscing placerat.</p>
                     </div>
-                    <!-- end block -->
-                    <div class="block">
-                        <h2>Nunc quis turpis vel ipsum bibendum fringilla id et risus</h2>
-                        <h3>Praesent dignissim ante ac tincidunt molestie</h3>
-                        <p class="fstlt">Ham nibh arcu, tristique eget pretium sed, porta id quam. Praesent dignissim ante ac tincidunt molestie. Nunc quis turpis vel ipsum bibendum fringilla id et risus. In ultricies, eros quis viverra pretium, neque purus tincidunt neque, at egestas est lectus non ante. Phasellus imperdiet laoreet sapien, quis consectetur urna adipiscing placerat.</p>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc euismod purus purus, in commodo risus facilisis in. Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie.</p>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc euismod purus purus, in commodo risus facilisis in. Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie.</p>
-                        <div class="quote-dt">
-                            <p><q>Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie. Cras in massa venenatis, venenatis nibh nec, rutrum ante. </q></p>
-                            <p><q>Donec adipiscing iaculis dolor, quis porta lorem iaculis non. Nulla viverra enim vel eleifend molestie.</q></p>
-                        </div>
-                        <h3>Praesent dignissim ante ac tincidunt molestie</h3>
-                        <p class="fstlt">Nam nibh arcu, tristique eget pretium sed, porta id quam. Praesent dignissim ante ac tincidunt molestie. Nunc quis turpis vel ipsum bibendum fringilla id et risus. In ultricies, eros quis viverra pretium, neque purus tincidunt neque, at egestas est lectus non ante. Phasellus imperdiet laoreet sapien, quis consectetur urna adipiscing placerat.</p>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc euismod purus purus, in commodo risus facilisis in. Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie.</p>
+                    <div class="share-post clearfix">
+                        <a href="">
+                            <img src="/vi-vn/images/fb.png" alt=""></a> <a href="">
+                                <img src="/vi-vn/images/pt.png"></a> <a href="">
+                                    <img src="/vi-vn/images/lk.png"></a> <a href="">
+                                        <img src="/vi-vn/images/tt.png"></a> <a href="">
+                                            <img src="/vi-vn/images/tw.png"></a> <a href="">
+                                                <img src="/vi-vn/images/gp.png"></a>
                     </div>
-                    <!-- end block -->
+                    <asp:Literal ID="liHtml" runat="server"></asp:Literal>
+
+                    <asp:ListView ID="lstContentNews" runat="server">
+                        <LayoutTemplate>
+                            <div class="block">
+                                <div id="itemPlaceholder" runat="server">
+                                </div>
+                            </div>
+                        </LayoutTemplate>
+                        <ItemTemplate>
+                            <div>
+                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 0 %>'>
+                                    <h2><%# Eval("Paragraph")%></h2>
+                                </asp:Panel>
+                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 1 %>'>
+                                    <h3><%# Eval("Title")%></h3>
+                                    <p class="fstlt"><%# Eval("Paragraph")%></p>
+                                    <p></p>
+                                </asp:Panel>
+                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 2 %>'>
+                                    <div class="center">
+                                        <p class="center pst-r">
+                                            <span class="imgsocial">
+                                                <a href="" class="icon_share_img icon_share_img1"></a>
+                                                <a href="" class="icon_share_img icon_share_img2"></a>
+                                                <a href="" class="icon_share_img icon_share_img3"></a>
+                                                <a href="" class="icon_share_img icon_share_img4"></a>
+                                                <a href="" class="icon_share_img icon_share_img5"></a>
+                                                <a href="" class="icon_share_img icon_share_img6"></a>
+                                            </span>
+                                            <img src='<%# Eval("Image")%>' alt="">
+                                        </p>
+                                    </div>
+                                </asp:Panel>
+                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 3 %>'>
+                                    <div class="quote-dt">
+                                        <p>
+                                            <q>
+                                                <%# Eval("Box")%>
+                                            </q>
+                                        </p>
+                                    </div>
+                                </asp:Panel>
+                            </div>
+                        </ItemTemplate>
+                    </asp:ListView>
+                    <asp:Panel runat="server" ID="pnForVote">
+                        <div class="block">
+                            <div class="detail-vote" style="margin-top: 30px; font-size: 18px">
+                                <div class="short-des-dt">
+                                    <asp:Literal runat="server" ID="ltr_NewsDesc"></asp:Literal>
+                                </div>
+                                <%--<div class="content-hide hidden" style="display: none;">
+                                        <!-- begin -->
+                                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc euismod purus purus, in commodo risus facilisis in. Vestibulum at enim pulvinar, feugiat metus vitae, consectetur leo. Nulla viverra enim vel eleifend molestie. 
+							 
+							<!-- end -->
+                                    </div>
+                                    <p class="center-align"><a class="waves-effect blue darken-1 btn   btn_show_dt">Xem thêm..</a> </p>--%>
+                            </div>
+                            <asp:ListView ID="lstVoteContent" runat="server">
+                                <LayoutTemplate>
+                                    <table class="tbl_vote">
+                                        <tbody>
+                                            <tr>
+                                                <th></th>
+                                                <th>
+                                                    <p class="center">Vote</p>
+                                                </th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                            <tr id="itemPlaceholder" runat="server"></tr>
+                                        </tbody>
+                                    </table>
+                                </LayoutTemplate>
+                                <ItemTemplate>
+                                    <tr>
+                                        <td>
+                                            <p class="center"><span class="ord"><%#Container.DisplayIndex + 1 %></span></p>
+                                        </td>
+                                        <td>
+                                            <p class="center">
+                                                <input type="checkbox" id="test5">
+                                                <label for="test5"></label>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <img class="a-img" src='<%#Eval("Image") %>'>
+                                            <h3 class="tth3"><%#Eval("Content") %></h3>
+                                        </td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="determinate" style="width: 70%">70%</div>
+                                            </div>
+                                            <div class="comm-count"><i class="material-icons">question_answer</i> <span>3 comments</span></div>
+                                        </td>
+                                    </tr>
+                                </ItemTemplate>
+                            </asp:ListView>
+                        </div>
+                    </asp:Panel>
+
 
                 </div>
                 <div class="share02">
                     <img src="data/share02.jpg" alt="">
                 </div>
-                <div class="share-post clearfix"><a href="">
-                    <img src="images/fb.png" alt=""></a> <a href="">
-                        <img src="images/pt.png"></a> <a href="">
-                            <img src="images/lk.png"></a> <a href="">
-                                <img src="images/tt.png"></a> <a href="">
-                                    <img src="images/tw.png"></a> <a href="">
-                                        <img src="images/gp.png"></a> </div>
+                <div class="share-post clearfix">
+                    <a href="">
+                        <img src="/vi-vn/images/fb.png" alt=""></a>
+                    <a href="">
+                        <img src="/vi-vn/images/pt.png"></a> <a href="">
+                            <img src="/vi-vn/images/lk.png"></a> <a href="">
+                                <img src="/vi-vn/images/tt.png"></a> <a href="">
+                                    <img src="/vi-vn/images/tw.png"></a> <a href="">
+                                        <img src="/vi-vn/images/gp.png"></a>
+                </div>
                 <div class="addbtnews">
                     <img src="data/adsbottom.jpg" alt="">
                 </div>
@@ -92,234 +173,35 @@
                     </div>
                 </div>
                 <div class="fbcm">
-                    <img src="data/fbcm.jpg" alt="">
+                    <div id="fb-root"></div>
+                    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+                    <asp:Literal ID="ltl_fanpage" runat="server"></asp:Literal>
                 </div>
             </div>
-            <!-- end col9 -->
-            <div class="col l3">
-                <div class="fbright">
-                    <img src="data/fbright.jpg" alt=""></div>
-                <div class="adsright1 hide-on-med-and-down">
-                    <img src="data/adsright1.jpg" alt=""></div>
-                <div class="adsright2 hide-on-med-and-down">
-                    <img src="data/adsright2.jpg" alt=""></div>
-                <div class="post-right ">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                    <!--end post-->
-
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-
-                    <!--end post-->
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-
-                    <!--end post-->
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                    <!--end post-->
-
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                    <!--end post-->
-
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-
-                    <!--end post-->
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-
-                    <!--end post-->
-
-                </div>
-            </div>
-            <!-- end col 3  -->
+            <uc2:RightSide ID="RightSide1" runat="server" />
 
         </div>
-        <div class="orther-post">
-            <!--<h3 class="ttcate2"><span>Kinh doanh</span></h3>-->
+        <div class="orther-post" id="dvOtherNews" runat="server">
             <div class="row row_post2">
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col l3 m3 s6">
-                    <div class="post_item">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo... </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">71% chọn YES</span> </p>
-                        </a>
-                    </div>
-                </div>
+                <asp:Repeater ID="Rptinkhac" runat="server">
+                    <ItemTemplate>
+                        <div class="col l3 m3 s6">
+                            <div class="post_item">
+                                <a href="<%#GetLinkNews(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"))%>" title="<%#Eval("NEWS_TITLE")%>">
+                                    <p class="img" style="background-image: url(<%#GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3"))%>)"></p>
+                                    <h2 class="tt-post"><%#Eval("NEWS_TITLE")%></h2>
+                                    <p class="info_post clearfix"><span class="date"><%#Eval("NEWS_PUBLISHDATE","{0:dd/MM/yyyy}")%></span> <span class="cmm_result">71% chọn YES(doc ra sau)</span> </p>
+                                </a>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </div>
         <!-- InstanceEndEditable -->

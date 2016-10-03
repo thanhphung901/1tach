@@ -198,6 +198,5 @@ H:\Project\SoftWeb\1tach\1tach.web\Model\obj\Debug\Model.pdb
 E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\bin\Debug\Model.dll.config
 E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\bin\Debug\Model.dll
 E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\bin\Debug\Model.pdb
-E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\obj\Debug\Model.dll
 E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\obj\Debug\Model.pdb

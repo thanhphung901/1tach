@@ -1,0 +1,32 @@
+[Date 03/10/2016 12:10:13]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at OneTach.page_default.Page_Load(Object sender, EventArgs e) in E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\vi-vn\page_default.aspx.cs:line 111
+-----------------------------------------------
+[Date 02/10/2016 11:36:32]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at OneTach.page_default.Page_Load(Object sender, EventArgs e) in E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\vi-vn\page_default.aspx.cs:line 99
+-----------------------------------------------
+[Date 30/09/2016 12:08:39]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at OneTach.page_default.Page_Load(Object sender, EventArgs e) in E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\vi-vn\page_default.aspx.cs:line 101
+-----------------------------------------------
+[Date 29/09/2016 10:05:20]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at OneTach.page_default.Page_Load(Object sender, EventArgs e) in E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\vi-vn\page_default.aspx.cs:line 92
+-----------------------------------------------

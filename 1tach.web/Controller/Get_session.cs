@@ -12,10 +12,9 @@ namespace Controller
 {
     public class Get_session
     {
-        #region Decclare
         dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
         Product_Details pro_detail = new Product_Details();
-        #endregion
+        
         public void Load_All_Cuss(string email)
         {
             try

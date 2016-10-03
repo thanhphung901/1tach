@@ -8,8 +8,8 @@
             <span class="glyphicon glyphicon-star-empty text-info"></span>
             <%#Eval("MENU_NAME") %><span class="glyphicon glyphicon-flash text-success pull-right"></span></a>
         </li>
-        <ul id="collapseMenu_<%#Eval("ID") %>" class="collapse <%#getActiveMenu(Eval("ID")) %> ">
-            <asp:Repeater ID="Repeater2" runat="server" DataSource='<%#loadmenuRank2(Eval("ID")) %>'>
+        <ul id="collapseMenu_<%#Eval("ID") %>" class="collapse <%#GetActiveMenu(Eval("ID")) %> ">
+            <asp:Repeater ID="Repeater2" runat="server" DataSource='<%#LoadmenuRank2(Eval("ID")) %>'>
                 <ItemTemplate>
                     <li style="padding: 5px 0 5px 0"><a href="<%#Eval("MENU_LINK") %>">
                         <%#Eval("MENU_NAME") %></a></li></ItemTemplate>

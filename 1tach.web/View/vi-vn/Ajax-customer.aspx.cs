@@ -105,6 +105,9 @@ namespace OneTach
             }
             return res;
         }
+
+        //[WebMethod]
+        //public static string get
         public static string GetPrice1(object News_Price1, object News_Price2)
         {
             try

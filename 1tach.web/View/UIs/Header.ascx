@@ -69,12 +69,31 @@
                     <div class="col col1"><a href="#!" class="breadcrumb">Bài ngẫu nhiên</a> </div>
                     <div class="col col2 mq">
                         <marquee>
-            <a href="#!" ><span>&raquo;</span> Fusce aliquet non ipsum vitae scelerisque...</a> <a href="#!" ><span>&raquo;</span> Fusce aliquet non ipsum vitae scelerisque...</a>
-            </marquee>
+                            <asp:ListView runat="server" ID="lstRandom">
+                                <LayoutTemplate>
+                                    <a id="itemPlaceholder" runat="server"></a>
+                                </LayoutTemplate>
+                                <ItemTemplate>
+                                    <a href='<%#Eval("NEWS_SEO_URL") %>.html'><span>&raquo;</span><%#Eval("NEWS_TITLE") %></a>
+                                </ItemTemplate>
+                            </asp:ListView>
+                        </marquee>
                     </div>
                 </div>
             </div>
-            <div class="col s1 logcol right"><a href="join.htm">Đăng ký</a><a href="login.htm">Đăng nhập</a></div>
+            <asp:Panel runat="server" ID="pnNotLogined" Visible="True">
+                <div class="col s1 logcol right">
+                    <a href="dang-ky.html">Đăng ký</a>
+                    <a href="dang-nhap.html">Đăng nhập</a>
+                </div>
+            </asp:Panel>
+            <asp:Panel runat="server" ID="pnLogined" Visible="False">
+                <div class="col s1 logcol right">
+                    Hi
+                    <br />
+                    <asp:Label runat="server" ID="lblEmail"></asp:Label>
+                </div>
+            </asp:Panel>
             <div class="col s3 right">
                 <div class="fr search">
                     <input type="text">
@@ -86,11 +105,11 @@
 </nav>
 <div class="container">
     <ul class="row submenu clearfix">
-        <li class="col"><a href="index.htm"><i class="material-icons">home</i>Trang chủ</a></li>
-        <li class="col"><a href="#"><i class="material-icons">mode_edit</i>Chuyên gia</a></li>
-        <li class="col"><a href="list_debate.htm"><i class="material-icons">question_answer</i>Tranh luận</a></li>
-        <li class="col"><a href="list_vote.htm"><i class="material-icons">thumb_up</i>Bầu chọn</a></li>
-        <li class="col"><a href="#"><i class="material-icons">mode_edit</i>Doanh nghiệp</a></li>
+        <li class="col"><a href="/"><i class="material-icons">home</i>Trang chủ</a></li>
+        <li class="col"><a href="/chuyen-gia.html"><i class="material-icons">mode_edit</i>Chuyên gia</a></li>
+        <li class="col"><a href="/tranh-luan.html"><i class="material-icons">question_answer</i>Tranh luận</a></li>
+        <li class="col"><a href="/bau-chon.html"><i class="material-icons">thumb_up</i>Bầu chọn</a></li>
+        <li class="col"><a href="/doanh-nghiep.html"><i class="material-icons">mode_edit</i>Doanh nghiệp</a></li>
     </ul>
 </div>
 

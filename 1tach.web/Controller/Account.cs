@@ -11,9 +11,7 @@ namespace Controller
 {
     public class Account
     {
-        #region Decclare
         dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
-        #endregion
         public bool Login(string Email, string MatKhau)
         {
             var dangnhap = from a in db.ESHOP_CUSTOMERs

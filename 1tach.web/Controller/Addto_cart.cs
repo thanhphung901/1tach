@@ -9,9 +9,7 @@ namespace Controller
 {
     public class Addto_cart
     {
-        #region Decclare
         dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
-        #endregion
         public bool Add_To_Cart(int News_id, object Guid, int quantity)
         {
             decimal _dPrice = 0;

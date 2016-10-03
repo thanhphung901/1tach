@@ -48,7 +48,7 @@ namespace vpro.eshop.cpanel.page
 
         public string getPosition(object obj_position)
         {
-            List<string[]> l = CpanelUtils.listAds();
+            List<string[]> l = CpanelUtils.ListAds();
             var list = from obj in l
                        select new
                        {

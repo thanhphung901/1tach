@@ -311,7 +311,7 @@
         <classShapeMoniker Id="8b179a23-a191-4589-8926-a3619311a786" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.65625 : 5.98232259114583); (5.65625 : 6.96875); (6.5 : 6.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.65625 : 5.98232259114583); (5.65625 : 9.83937575520833); (6.5 : 9.83937575520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/eshopdbDataContext/ESHOP_ORDER/ESHOP_ORDER_ESHOP_ORDER_ITEM" />
       <nodes>
         <classShapeMoniker Id="4c2cc659-b467-4307-a6a7-05de1a0fc454" />
@@ -335,6 +335,24 @@
       <DataClassMoniker Name="/eshopdbDataContext/TU_VAN" />
       <nestedChildShapes>
         <elementListCompartment Id="24b8d338-765a-4056-b265-48a93ab69cb8" absoluteBounds="6.89, 3.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc686863-651e-44df-8bf6-f5e7ae476601" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/eshopdbDataContext/TBL_VOTE_COMMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca8f3a26-4871-484f-aa64-a79791dbbc29" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="18e017a8-436d-49e9-bf6f-d1626b87c1d7" absoluteBounds="9.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/eshopdbDataContext/TBL_NEWS_CONTENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="feb1315b-b28b-40d0-b256-7913b31bf069" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8745a72a-05d7-42c4-8e81-54919835dc9e" absoluteBounds="0.5, 3.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/eshopdbDataContext/TBL_VOTE_NEW" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44aed492-c9cd-49de-b744-a73826c48365" absoluteBounds="0.51500000000000012, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

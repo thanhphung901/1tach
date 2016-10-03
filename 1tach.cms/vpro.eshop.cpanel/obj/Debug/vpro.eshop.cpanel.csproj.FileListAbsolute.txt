@@ -117,3 +117,9 @@ H:\Project\SoftWeb\sanzo3\sanzo.cms\vpro.eshop.cpanel\obj\Debug\vpro.eshop.cpane
 H:\Project\SoftWeb\sanzo3\sanzo.cms\vpro.eshop.cpanel\bin\vpro.eshop.cpanel.dll.config
 H:\Project\SoftWeb\sanzo3\sanzo.cms\vpro.eshop.cpanel\bin\vpro.eshop.cpanel.dll
 H:\Project\SoftWeb\sanzo3\sanzo.cms\vpro.eshop.cpanel\bin\vpro.eshop.cpanel.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.cms\vpro.eshop.cpanel\obj\Debug\vpro.eshop.cpanel.csprojResolveAssemblyReference.cache
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.cms\vpro.eshop.cpanel\bin\vpro.eshop.cpanel.dll.config
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.cms\vpro.eshop.cpanel\bin\vpro.eshop.cpanel.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.cms\vpro.eshop.cpanel\bin\vpro.eshop.cpanel.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.cms\vpro.eshop.cpanel\obj\Debug\vpro.eshop.cpanel.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.cms\vpro.eshop.cpanel\obj\Debug\vpro.eshop.cpanel.pdb

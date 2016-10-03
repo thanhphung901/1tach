@@ -10,6 +10,7 @@ namespace OneTach.UIs
         #region Declare
         Propertity per = new Propertity();
         Function fun = new Function();
+        List_news lnews = new List_news();
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,6 +18,30 @@ namespace OneTach.UIs
             {
                 load_logo();
                 Load_Menu1();
+                Load_Random();
+            }
+            ShowLoginPanel();
+        }
+
+        private void Load_Random()
+        {
+            lstRandom.DataSource = lnews.LoadRandom_listnews();
+            lstRandom.DataBind();
+        }
+
+        private void ShowLoginPanel()
+        {
+            if (IsLogined())
+            {
+                pnLogined.Visible = true;
+                pnNotLogined.Visible = false;
+                lblEmail.Text = GetLoginedEmail();
+            }
+            else
+            {
+                pnLogined.Visible = false;
+                pnNotLogined.Visible = true;
+                lblEmail.Text = "";
             }
         }
 
@@ -95,6 +120,22 @@ namespace OneTach.UIs
                 clsVproErrorHandler.HandlerError(ex);
                 return null;
             }
+        }
+
+        public bool IsLogined()
+        {
+            if (Session["User_Name"] != null && !ReferenceEquals(Session["User_Name"], string.Empty))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string GetLoginedEmail()
+        {
+            string email = "";
+            email = Session["User_Email"]?.ToString() ?? "";
+            return email;
         }
         #endregion
     }

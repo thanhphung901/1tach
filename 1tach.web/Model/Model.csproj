@@ -44,7 +44,7 @@
     <Compile Include="Attfile_entity.cs" />
     <Compile Include="Cart_result_entity.cs" />
     <Compile Include="CategoryEntityComplete.cs" />
-    <Compile Include="dbVuonRauViet.designer.cs">
+    <Compile Include="dbVuonRauViet1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbVuonRauViet.dbml</DependentUpon>
@@ -67,8 +67,8 @@
     </None>
     <None Include="dbVuonRauViet.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>dbVuonRauViet.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>dbVuonRauViet1.designer.cs</LastGenOutput>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

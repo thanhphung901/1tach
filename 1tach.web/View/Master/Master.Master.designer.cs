@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sanzo.Master {
+namespace OneTach.Master {
     
     
     public partial class Master {

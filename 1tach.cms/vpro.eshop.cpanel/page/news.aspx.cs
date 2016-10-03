@@ -19,6 +19,8 @@ namespace vpro.eshop.cpanel.page
         int _type = 0;
         eshopdbDataContext DB = new eshopdbDataContext();
         int _gtype, _gid;
+        List<NewsContent> _lstNewsContent = new List<NewsContent>();
+        List<VoteContent> _lstVote = new List<VoteContent>();
         #endregion
 
         #region form event
@@ -32,32 +34,42 @@ namespace vpro.eshop.cpanel.page
             Hyperback.NavigateUrl = "news_list.aspx?type=" + _type;
             if (_type == 1)
             {
-                div_price.Visible = true;
+                //div_price.Visible = true;
                 div_productinfo.Visible = true;
                 hangsx.Visible = true;
                 tinhtrang.Visible = true;
+
+                btnBox.Visible = false;
+                btnThemDoanVan.Visible = false;
+                btnThemHinhAnh.Visible = false;
+
+                lstContentNews.Visible = false;
             }
             else if (_type == 2)
             {
-                div_price.Visible = false;
+                //div_price.Visible = false;
                 div_productinfo.Visible = false;
                 hangsx.Visible = false;
                 tinhtrang.Visible = false;
+
+                pnNoiDung.Visible = false;
             }
             else
             {
-                div_price.Visible = false;
+                //div_price.Visible = false;
                 div_productinfo.Visible = false;
                 hangsx.Visible = false;
                 tinhtrang.Visible = false;
+                lstContentVote.Visible = false;
+                btnThemLuaChon.Visible = false;
             }
-            
+
             if (m_news_id == 0)
             {
                 //dvDelete.Visible = false;
                 //trImage1.Visible = false;
                 trNewsFunction.Visible = false;
-                trImage3.Visible = false;
+                //trImage3.Visible = false;
             }
             else
             {
@@ -79,7 +91,6 @@ namespace vpro.eshop.cpanel.page
                 LoadCate(2, ref Drhangsx);
                 getInfo();
                 LoadCategoryParent();
-               
             }
         }
 
@@ -149,8 +160,6 @@ namespace vpro.eshop.cpanel.page
         #endregion
 
         #region My functions
-
-
         private List<string> getCatid()
         {
             List<string> l = new List<string>();
@@ -167,10 +176,13 @@ namespace vpro.eshop.cpanel.page
             {
                 var CatList = (
                                 from t2 in DB.ESHOP_CATEGORies
-                                where t2.CAT_RANK > 0 && (_type==1 ? t2.CAT_TYPE==1 : t2.CAT_TYPE==0 || t2.CAT_TYPE==2) && t2.CAT_STATUS==1
+                                where t2.CAT_RANK > 0
+                                //&& t2.CAT_TYPE == 0 || ?t2.CAT_TYPE?
+                                //&& (_type == 1 ? t2.CAT_TYPE == 1 : t2.CAT_TYPE==0 || t2.CAT_TYPE==2) 
+                                && t2.CAT_STATUS == 1
                                 //t2.CAT_TYPE==_type
-                                
-                                  //&& (_gtype != 1 ? (getCatid().Contains(t2.CAT_ID.ToString()) || getCatid().Contains(t2.CAT_PARENT_ID.ToString())) : true)
+
+                                //&& (_gtype != 1 ? (getCatid().Contains(t2.CAT_ID.ToString()) || getCatid().Contains(t2.CAT_PARENT_ID.ToString())) : true)
                                 select new
                                 {
                                     CAT_ID = t2.CAT_NAME == "------- Root -------" ? 0 : t2.CAT_ID,
@@ -196,7 +208,7 @@ namespace vpro.eshop.cpanel.page
                     DataTable CatTable = ds.Tables[0];
 
                     DataUtil.TransformTableWithSpace(ref CatTable, dsCat.Tables[0], relCat, null);
-                 
+
                     ddlCategory.DataSource = dsCat.Tables[0];
                     ddlCategory.DataTextField = "CAT_NAME";
                     ddlCategory.DataValueField = "CAT_ID";
@@ -292,13 +304,11 @@ namespace vpro.eshop.cpanel.page
 
                 if (G_info.ToList().Count > 0)
                 {
-
-                   
                     trCat.Visible = false;
                     txtTitle.Value = G_info.ToList()[0].n.NEWS_TITLE;
                     txtcode.Value = G_info.ToList()[0].n.NEWS_CODE;
                     Drhangsx.SelectedValue = G_info.ToList()[0].n.UNIT_ID2.ToString();
-                    txtVideo.Value = G_info.ToList()[0].n.NEWS_VIDEO_URL;
+                    //txtVideo.Value = G_info.ToList()[0].n.NEWS_VIDEO_URL;
                     //Kho
                     //txtquantity.Value = G_info.ToList()[0].n.NEWS_QUANTITY.ToString();
                     //txtton.Value = G_info.ToList()[0].n.NEWS_INVENTORY.ToString();
@@ -306,22 +316,13 @@ namespace vpro.eshop.cpanel.page
                     txtDesc.Value = G_info.ToList()[0].n.NEWS_DESC;
                     txtUrl.Value = G_info.ToList()[0].n.NEWS_URL;
                     ddlTarget.SelectedValue = G_info.ToList()[0].n.NEWS_TARGET;
-                    txtPrice.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE1));
-                    //Txtprice_promos.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE2));
-                    //drNhanHieu.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.UNIT_ID1);
-                    //Drhangsx.SelectedValue=G_info.ToList()[0].n.UNIT_ID2.ToString();
-                    //txtcountbuy.Value = G_info.ToList()[0].n.UNIT_ID3.ToString();
-                    //rblNewsType.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_TYPE);
                     rblStatus.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_SHOWTYPE);
                     rblNewsPeriod.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_PERIOD);
                     //rblField1.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_FIELD1);
                     rblFeefback.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_FEEDBACKTYPE);
                     txtOrder.Value = Utils.CStrDef(G_info.ToList()[0].n.NEWS_ORDER, "1");
                     txtOrderPeriod.Value = Utils.CStrDef(G_info.ToList()[0].n.NEWS_ORDER_PERIOD, "1");
-                    //txtCount.Value = Utils.CStrDef(G_info.ToList()[0].n.NEWS_COUNT);
-                    //lblCount.Text = string.IsNullOrEmpty(Utils.CStrDef(G_info.ToList()[0].n.NEWS_COUNT)) ? "0" : Utils.CStrDef(G_info.ToList()[0].n.NEWS_COUNT);
-                    //lblSendEmail.Text = G_info.ToList()[0].n.NEWS_SENDDATE == null ? "Chưa gửi" : "Gửi lần cuối vào " + string.Format("{0:dd/MM/yyyy HH:mm:ss}", G_info.ToList()[0].n.NEWS_SENDDATE);
-                    //txtbaohanh.Value = G_info.ToList()[0].n.NEWS_FIELD2;
+
                     Rdstatus.SelectedValue = Utils.CIntDef(G_info.ToList()[0].n.NEWS_FIELD3).ToString();
                     //txtdesc_bot.Value = G_info.ToList()[0].n.NEWS_FIELD4;
                     //txtvideo.Value = G_info.ToList()[0].n.NEWS_DIET;
@@ -374,18 +375,26 @@ namespace vpro.eshop.cpanel.page
                     //image3
                     if (!string.IsNullOrEmpty(G_info.ToList()[0].n.NEWS_IMAGE3))
                     {
-                        trUploadImage3.Visible = false;
-                        trImage3.Visible = true;
-                        Image3.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
-                        hplImage3.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
-                        hplImage3.Text = G_info.ToList()[0].n.NEWS_IMAGE3;
+                        //trUploadImage3.Visible = false;
+                        //trImage3.Visible = true;
+                        //Image3.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
+                        //hplImage3.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE3;
+                        //hplImage3.Text = G_info.ToList()[0].n.NEWS_IMAGE3;
                     }
                     else
                     {
-                        trUploadImage3.Visible = true;
-                        trImage3.Visible = false;
+                        //trUploadImage3.Visible = true;
+                        //trImage3.Visible = false;
                     }
 
+
+                    // Load content
+                    var newsType = G_info.ToList()[0].n.NEWS_TYPE;
+                    int newsId = G_info.ToList()[0].n.NEWS_ID;
+                    if (newsType != null)
+                    {
+                        LoadContent(newsId, newsType.Value);
+                    }
                 }
                 else
                 {
@@ -393,10 +402,18 @@ namespace vpro.eshop.cpanel.page
                     //trImage1.Visible = false;
                     //trUploadImage2.Visible = true;
                     //trImage2.Visible = false;
-                    trUploadImage3.Visible = true;
-                    trImage3.Visible = false;
+                    //trUploadImage3.Visible = true;
+                    //trImage3.Visible = false;
                     LoadCategoryParent();
                     trCat.Visible = true;
+
+                    // Create new list content of news
+                    lstContentNews.DataSource = _lstNewsContent;
+                    lstContentNews.DataBind();
+
+                    // Create new list content of news
+                    lstContentVote.DataSource = _lstVote;
+                    lstContentVote.DataBind();
                 }
 
             }
@@ -405,33 +422,62 @@ namespace vpro.eshop.cpanel.page
                 clsVproErrorHandler.HandlerError(ex);
             }
         }
+        private void LoadContent(int _newsId, int _type)
+        {
+            switch (_type)
+            {
+                // Load kieu tin tuc
+                case 0:
+                    List<NewsContent> lst = GetContentNews(_newsId);
+                    lstContentNews.Visible = true;
+                    lstContentNews.DataSource = lst;
+                    lstContentNews.DataBind();
+                    lstContentVote.Visible = false;
 
+                    btnThemLuaChon.Visible = false;
+                    break;
+                // Load kieu Bau chon
+                case 1:
+                    List<VoteContent> lst2 = GetVoteNewsContent(_newsId);
+                    lstContentVote.Visible = true;
+                    lstContentNews.Visible = false;
+                    lstContentVote.DataSource = lst2;
+                    lstContentVote.DataBind();
+
+                    btnBox.Visible = false;
+                    btnThemDoanVan.Visible = false;
+                    btnThemHinhAnh.Visible = false;
+                    btnboxChuDe.Visible = false;
+                    break;
+                // Load kieu tranh luan
+                case 2:
+                    break;
+                default: break;
+
+            }
+        }
         private void SaveInfo(string strLink = "")
         {
             try
             {
                 //get image
+                string News_Image2;
 
-
-
-
-                //string News_Image2;
-
-                //if (trUploadImage2.Visible == true)
-                //{
-                //    if (fileImage2.PostedFile != null)
-                //    {
-                //        News_Image2 = Path.GetFileName(fileImage2.PostedFile.FileName);
-                //    }
-                //    else
-                //    {
-                //        News_Image2 = "";
-                //    }
-                //}
-                //else
-                //{
-                //    News_Image2 = hplImage2.Text;
-                //}
+                if (trUploadImage2.Visible == true)
+                {
+                    if (fileImage2.PostedFile != null)
+                    {
+                        News_Image2 = Path.GetFileName(fileImage2.PostedFile.FileName);
+                    }
+                    else
+                    {
+                        News_Image2 = "";
+                    }
+                }
+                else
+                {
+                    News_Image2 = hplImage2.Text;
+                }
 
                 string News_Image3;
 
@@ -461,7 +507,7 @@ namespace vpro.eshop.cpanel.page
                         news_insert.NEWS_TITLE = txtTitle.Value;
                         news_insert.NEWS_CODE = txtcode.Value;
                         news_insert.UNIT_ID2 = Utils.CIntDef(Drhangsx.SelectedValue);
-                        news_insert.NEWS_VIDEO_URL = txtVideo.Value;                        
+                        //news_insert.NEWS_VIDEO_URL = txtVideo.Value;                        
                         news_insert.NEWS_COUNT = 1;
                         //Kho
                         //news_insert.NEWS_QUANTITY = Utils.CIntDef(txtquantity.Value);
@@ -486,14 +532,14 @@ namespace vpro.eshop.cpanel.page
                         //news_insert.NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                         news_insert.NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                         news_insert.NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                        news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
+                        //news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
                         //news_insert.NEWS_PRICE2 = Utils.CDecDef(Txtprice_promos.Value);
-                       // news_insert.UNIT_ID2 = Utils.CIntDef(Drhangsx.SelectedValue);
+                        // news_insert.UNIT_ID2 = Utils.CIntDef(Drhangsx.SelectedValue);
                         //news_insert.UNIT_ID3 = Utils.CIntDef(txtcountbuy.Value);
 
                         //news_insert.NEWS_IMAGE1 = News_Image1;
                         //news_insert.NEWS_IMAGE2 = News_Image2;
-                        news_insert.NEWS_IMAGE3 = News_Image3;
+                        //news_insert.NEWS_IMAGE3 = News_Image3;
 
                         news_insert.USER_ID = Utils.CIntDef(Session["USER_ID"]);
                         news_insert.NEWS_PUBLISHDATE = DateTime.Now;
@@ -505,6 +551,7 @@ namespace vpro.eshop.cpanel.page
                         //news_insert.NEWS_FIELD4 = txtdesc_bot.Value;
                         //news_insert.NEWS_FIELD4 = txtManufacture.Value;
                         //news_insert.NEWS_FIELD5 = txtWeight.Value;
+                        
 
                         DB.ESHOP_NEWs.InsertOnSubmit(news_insert);
                         DB.SubmitChanges();
@@ -514,6 +561,18 @@ namespace vpro.eshop.cpanel.page
 
                         m_news_id = _new.Single().NEWS_ID;
                         SaveNewsCategory(_new.Single().NEWS_ID);
+
+                        if (_type == 0)
+                        {
+                            SaveNews(m_news_id);
+                        }
+                        else
+                        {
+                            if (_type == 1)
+                            {
+                                SaveVote(m_news_id);
+                            }
+                        }
 
                         strLink = string.IsNullOrEmpty(strLink) ? "news.aspx?type=" + _type + "&news_id=" + m_news_id : strLink;
                     }
@@ -527,7 +586,7 @@ namespace vpro.eshop.cpanel.page
                             c_update.ToList()[0].NEWS_TITLE = txtTitle.Value;
                             c_update.ToList()[0].NEWS_CODE = txtcode.Value;
                             c_update.ToList()[0].UNIT_ID2 = Utils.CIntDef(Drhangsx.SelectedValue);
-                            c_update.ToList()[0].NEWS_VIDEO_URL = txtVideo.Value;
+                            //c_update.ToList()[0].NEWS_VIDEO_URL = txtVideo.Value;
                             c_update.ToList()[0].NEWS_COUNT = 1;
                             //Kho
                             //c_update.ToList()[0].NEWS_QUANTITY =Utils.CIntDef(txtquantity.Value);
@@ -554,18 +613,35 @@ namespace vpro.eshop.cpanel.page
                             //c_update.ToList()[0].NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                             c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                             c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                            c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
+                            //c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
                             //c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(Txtprice_promos.Value);
                             //c_update.ToList()[0].UNIT_ID2 = Utils.CIntDef(Drhangsx.SelectedValue);
                             //c_update.ToList()[0].UNIT_ID3 = Utils.CIntDef(txtcountbuy.Value);
-
                             //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
                             //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
-                            c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
+                            //c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
 
                             DB.SubmitChanges();
 
                             strLink = string.IsNullOrEmpty(strLink) ? "news_list.aspx?type=" + _type + "" : strLink;
+
+                            if (_type == 0)
+                            {
+
+                                DB.TBL_NEWS_CONTENTs.DeleteAllOnSubmit(DB.TBL_NEWS_CONTENTs.Where(t=>t.NewsID == m_news_id).ToList());
+                                DB.SubmitChanges();
+                                SaveNews(m_news_id);
+                            }
+                            else
+                            {
+                                if (_type == 1)
+                                {
+                                    DB.TBL_VOTE_NEWs.DeleteAllOnSubmit(DB.TBL_VOTE_NEWs.Where(t => t.NewsID == m_news_id).ToList());
+                                    DB.SubmitChanges();
+                                    SaveVote(m_news_id);
+                                }
+                            }
+
                         }
                     }
 
@@ -587,21 +663,21 @@ namespace vpro.eshop.cpanel.page
 
                     //}
 
-                    //if (trUploadImage2.Visible)
-                    //{
-                    //    if (!string.IsNullOrEmpty(fileImage2.PostedFile.FileName))
-                    //    {
-                    //        string pathfile = Server.MapPath("/data/news/" + m_news_id);
-                    //        string fullpathfile = pathfile + "/" + News_Image2;
+                    if (trUploadImage2.Visible)
+                    {
+                        if (!string.IsNullOrEmpty(fileImage2.PostedFile.FileName))
+                        {
+                            string pathfile = Server.MapPath("/data/news/" + m_news_id);
+                            string fullpathfile = pathfile + "/" + News_Image2;
 
-                    //        if (!Directory.Exists(pathfile))
-                    //        {
-                    //            Directory.CreateDirectory(pathfile);
-                    //        }
+                            if (!Directory.Exists(pathfile))
+                            {
+                                Directory.CreateDirectory(pathfile);
+                            }
 
-                    //        fileImage2.PostedFile.SaveAs(fullpathfile);
-                    //    }
-                    //}
+                            fileImage2.PostedFile.SaveAs(fullpathfile);
+                        }
+                    }
 
                     if (trUploadImage3.Visible)
                     {
@@ -620,7 +696,7 @@ namespace vpro.eshop.cpanel.page
 
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -740,6 +816,7 @@ namespace vpro.eshop.cpanel.page
 
         #endregion
 
+        #region button Function
         protected void btnDelete2_Click(object sender, ImageClickEventArgs e)
         {
             string strLink = "";
@@ -772,9 +849,6 @@ namespace vpro.eshop.cpanel.page
                     Response.Redirect(strLink);
             }
         }
-
-
-
         protected void btnDelete3_Click(object sender, ImageClickEventArgs e)
         {
             string strLink = "";
@@ -807,8 +881,291 @@ namespace vpro.eshop.cpanel.page
                     Response.Redirect(strLink);
             }
         }
+        protected void btnboxChuDe_OnClick(object sender, EventArgs e)
+        {
+            NewsContent con = new NewsContent(0);
+            _lstNewsContent = GetListContent();
+            _lstNewsContent.Add(con);
+            lstContentNews.DataSource = null;
 
-       
-       
+            lstContentNews.DataSource = _lstNewsContent;
+            lstContentNews.DataBind();
+        }
+        protected void btnThemDoanVan_OnClick(object sender, EventArgs e)
+        {
+            NewsContent con = new NewsContent(1);
+            _lstNewsContent = GetListContent();
+            _lstNewsContent.Add(con);
+            lstContentNews.DataSource = null;
+
+            lstContentNews.DataSource = _lstNewsContent;
+            lstContentNews.DataBind();
+        }
+        protected void btnThemHinhAnh_OnClick(object sender, EventArgs e)
+        {
+            NewsContent con = new NewsContent(2);
+            _lstNewsContent = GetListContent();
+            _lstNewsContent.Add(con);
+            lstContentNews.DataSource = null;
+
+            lstContentNews.DataSource = _lstNewsContent;
+            lstContentNews.DataBind();
+        }
+        protected void btnBox_OnClick(object sender, EventArgs e)
+        {
+            NewsContent con = new NewsContent(3);
+            _lstNewsContent = GetListContent();
+            _lstNewsContent.Add(con);
+            lstContentNews.DataSource = null;
+
+            lstContentNews.DataSource = _lstNewsContent;
+            lstContentNews.DataBind();
+        }
+        private List<NewsContent> GetListContent()
+        {
+            List<NewsContent> lst = new List<NewsContent>();
+            int i = 0;
+            foreach (ListViewDataItem lv in lstContentNews.Items)
+            {
+                TextBox txtTitlePara = lv.FindControl("txtTitlePara") as TextBox;
+                TextBox txtNoiDung = lv.FindControl("txtNoiDung") as TextBox;
+                TextBox txtBoxChuDe = lv.FindControl("txtBoxChuDe") as TextBox;
+                TextBox hdImage = lv.FindControl("hdImage") as TextBox;
+                TextBox txtBox = lv.FindControl("txtBox") as TextBox;
+                HiddenField hdType = lv.FindControl("hdType") as HiddenField;
+
+                NewsContent con = new NewsContent(0);
+                if (txtTitlePara != null) con.Title = txtTitlePara.Text;
+                if (txtBox != null) con.Box = txtBox.Text;
+                con.Id = i;
+                if (hdImage != null) con.Image = hdImage.Text.ToString();
+                if (hdType != null)
+                    con.Type = int.Parse(hdType.Value);
+                if (txtNoiDung != null && txtBoxChuDe != null)
+                {
+                    con.Paragraph = con.Type == 0 ? txtBoxChuDe.Text : txtNoiDung.Text;
+                }
+                lst.Add(con);
+                i++;
+            }
+            return lst;
+        }
+
+
+        #region ListView content News
+        protected void lstContent_OnItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+
+        }
+        protected void lstContent_OnItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            if (e.CommandName == "XoaDong")
+            {
+                int i = int.Parse(e.CommandArgument.ToString());
+                List<NewsContent> lst = GetListContent();
+                NewsContent news = lst.FirstOrDefault(p => p.Id == i);
+                if (news != null)
+                    lst.Remove(news);
+                lstContentNews.DataSource = null;
+
+                lstContentNews.DataSource = lst;
+                lstContentNews.DataBind();
+            }
+        }
+        #endregion
+        #region Listview Vote
+        protected void lstContentVote_OnItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+        }
+
+        protected void lstContentVote_OnItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            if (e.CommandName == "XoaDong")
+            {
+                int i = int.Parse(e.CommandArgument.ToString());
+                List<VoteContent> lst = GetListVote();
+                VoteContent news = lst.FirstOrDefault(p => p.ID == i);
+                if (news != null)
+                    lst.Remove(news);
+                lstContentVote.DataSource = null;
+
+                lstContentVote.DataSource = lst;
+                lstContentVote.DataBind();
+            }
+        }
+
+        private List<VoteContent> GetListVote()
+        {
+            List<VoteContent> lst = new List<VoteContent>();
+            int i = 0;
+            foreach (ListViewDataItem lv in lstContentVote.Items)
+            {
+                TextBox txtContent = lv.FindControl("txtContent") as TextBox;
+                HiddenField hdId = lv.FindControl("hdID") as HiddenField;
+                TextBox hdImage = lv.FindControl("hdImage") as TextBox;
+                HiddenField hdVoteCount = lv.FindControl("hdVoteCount") as HiddenField;
+
+                VoteContent con = new VoteContent();
+                if (txtContent != null) con.Content = txtContent.Text;
+                if (hdId != null) con.ID = int.Parse(hdId.Value);
+                if (hdImage != null) con.Image = hdImage.Text.ToString();
+                //if (hdVoteCount != null) con.Type = int.Parse(hdType.Value);
+                lst.Add(con);
+                i++;
+            }
+            return lst;
+        }
+        #endregion
+
+        private List<VoteContent> GetVoteNewsContent(int newsId)
+        {
+            List<VoteContent> lst = new List<VoteContent>();
+            List<TBL_VOTE_NEW> lstContent = DB.TBL_VOTE_NEWs.Where(t => t.NewsID == newsId).ToList();
+            foreach (var value in lstContent)
+            {
+                VoteContent vote = new VoteContent();
+                vote.ID = value.ID;
+                vote.Image = value.Image;
+                vote.Content = value.Content;
+                if (value.Order != null) vote.Order = value.Order.Value;
+                lst.Add(vote);
+            }
+            return lst;
+        }
+
+        private List<NewsContent> GetContentNews(int newsId)
+        {
+            List<NewsContent> lst = new List<NewsContent>();
+            List<TBL_NEWS_CONTENT> lstContent = DB.TBL_NEWS_CONTENTs.Where(t => t.NewsID == newsId).OrderBy(t => t.ID).ToList();
+            foreach (var value in lstContent)
+            {
+                NewsContent con = new NewsContent(0);
+                con.Type = value.Type;
+                switch (value.Type)
+                {
+                    case 0:
+                        con.Paragraph = value.Value_;
+                        con.Id = value.ID;
+                        break;
+                    case 1:
+                        con.Title = value.Title;
+                        con.Id = value.ID;
+                        con.Paragraph = value.Value_;
+                        break;
+                    case 2:
+                        con.Image = value.Value_;
+                        con.Title = value.Title;
+                        con.Id = value.ID;
+                        break;
+                    case 3:
+                        con.Box = value.Value_;
+                        con.Id = value.ID;
+                        break;
+                }
+                lst.Add(con);
+            }
+            return lst;
+        }
+        protected void btnThemLuaChon_OnClick(object sender, EventArgs e)
+        {
+            VoteContent con = new VoteContent();
+            _lstVote = GetListVote();
+            _lstVote.Add(con);
+            lstContentVote.DataSource = null;
+
+            lstContentVote.DataSource = _lstVote;
+            lstContentVote.DataBind();
+        }
+        #endregion
+
+        #region Save Content function
+        private void SaveNews(int _m_news_ID)
+        {
+            List<NewsContent> lst = GetListContent();
+            int i = 0;
+            foreach (NewsContent con in lst)
+            {
+                TBL_NEWS_CONTENT news = new TBL_NEWS_CONTENT();
+                //news.Title
+                news.NewsID = _m_news_ID;
+                news.Title = con.Title;
+                news.Order = i;
+                news.Type = con.Type;
+                switch (con.Type)
+                {
+                    case 0:
+                        news.Value_ = con.Paragraph;
+                        break;
+                    case 1:
+                        news.Value_ = con.Paragraph;
+                        break;
+                    case 2:
+                        news.Value_ = con.Image;
+                        break;
+                    case 3:
+                        news.Value_ = con.Box;
+                        break;
+                }
+                i++;
+
+                DB.TBL_NEWS_CONTENTs.InsertOnSubmit(news);
+                DB.SubmitChanges();
+            }
+        }
+        private void SaveVote(int _m_news_ID)
+        {
+            List<VoteContent> lst = GetListVote();
+
+            int i = 0;
+            foreach (VoteContent con in lst)
+            {
+                TBL_VOTE_NEW news = new TBL_VOTE_NEW
+                {
+                    NewsID = _m_news_ID,
+                    Content = con.Content,
+                    Order = i,
+                    Image = con.Image
+                };
+                //news.Title
+                //news.Type = con.Type;
+                i++;
+
+                DB.TBL_VOTE_NEWs.InsertOnSubmit(news);
+                DB.SubmitChanges();
+            }
+        }
+        private void SaveContent()
+        {
+        }
+        #endregion
+    }
+
+    class NewsContent
+    {
+        public int Id { get; set; }
+        public int Type { get; set; }
+        public string Title { get; set; }
+        public string Paragraph { get; set; }
+        public string Image { get; set; }
+        public string Box { get; set; }
+
+        public NewsContent(int _type)
+        {
+            this.Id = 0;
+            this.Type = _type;
+            this.Title = "";
+            this.Box = "";
+            this.Image = "";
+            this.Paragraph = "";
+        }
+    }
+    class VoteContent
+    {
+        public int ID { get; set; }
+        public int NewsID { get; set; }
+        public string Content { get; set; }
+        public string Image { get; set; }
+        public int VotedCount { get; set; }
+        public int Order { get; set; }
     }
 }

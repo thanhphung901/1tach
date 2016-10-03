@@ -331,5 +331,29 @@
         <classShapeMoniker Id="2c8eaa0c-cb01-4cd1-971f-6b24b18c14b6" />
       </nodes>
     </associationConnector>
+    <classShape Id="5f05c7c8-81c6-458d-ac11-49c2649b4d4f" absoluteBounds="0.875, 3.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dbVuonRauVietDataContext/TBL_USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f1f279f-430b-4ced-a5c1-f9253e718330" absoluteBounds="0.89000000000000012, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="679396f3-a234-404a-923d-52b21b5a8a78" absoluteBounds="6.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/dbVuonRauVietDataContext/TBL_VOTE_NEW" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfbac4f5-d2f1-4a2c-a3ff-14d694c1e0b3" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="981beb8f-94d4-483a-a479-c925af15da17" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbVuonRauVietDataContext/TBL_VOTE_COMMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58693f98-98ef-41f0-97f1-ea424d0083d5" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a8c60ad0-3529-4eea-89bb-db4042324b4a" absoluteBounds="9.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/dbVuonRauVietDataContext/TBL_NEWS_CONTENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04ede265-4cdd-4a44-9150-58ab52a78328" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

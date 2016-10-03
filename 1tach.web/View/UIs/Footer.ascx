@@ -3,20 +3,51 @@
 <footer>
     <div class="container">
         <div class="row link_ft">
-            <ul class="clearfix">
-                <li><a href="news.htm">Khoa học</a> </li>
-                <li><a href="news.htm">Cuộc sống muôn màu</a> </li>
-                <li><a href="news.htm">Sức khỏe</a> </li>
-                <li><a href="news.htm">Ăn chơi</a> </li>
-                <li><a href="news.htm">Giải trí</a> </li>
-                <li><a href="news.htm">Mẹo hay</a> </li>
-                <li><a href="news.htm">Kinh doanh</a> </li>
-                <li><a href="news.htm">Công nghệ</a> </li>
-                <li><a href="news.htm">Thời trang và làm đẹp</a> </li>
-                <li><a href="news.htm">Hài hước</a> </li>
-                <li><a href="news.htm">Học tiếng Anh</a> </li>
-                <li><a href="news.htm">Truyện ngắn</a> </li>
-            </ul>
+            <asp:Repeater ID="Ftmenu" runat="server">
+                <HeaderTemplate>
+                    <ul class="menu-pc">
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <li class="<%# GetStyleActive(Eval("cat_seo_url"),Eval("cat_url"))%>">
+                        <a href="<%# GetLink(Eval("cat_url"),Eval("cat_seo_url")) %>" title="<%#Eval("cat_name")%>">
+                            <h3><%#Eval("cat_name")%></h3>
+                        </a>
+                        <asp:Repeater ID="Repeater1" runat="server" DataSource='<%# Load_Menu2(Eval("Cat_ID")) %>'>
+                            <HeaderTemplate>
+                                <ul>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <li>
+                                    <a title="<%#Eval("cat_name")%>" href="<%# GetLink(Eval("cat_url"),Eval("cat_seo_url")) %>">
+                                        <h4><%#Eval("cat_name")%></h4>
+                                    </a>
+                                    <asp:Repeater ID="Repeater2" runat="server" DataSource='<%# Load_Menu2(Eval("Cat_ID")) %>'>
+                                        <HeaderTemplate>
+                                            <ul>
+                                        </HeaderTemplate>
+                                        <ItemTemplate>
+                                            <li>
+                                                <a title="<%#Eval("cat_name")%>" href="<%# GetLink(Eval("cat_url"),Eval("cat_seo_url")) %>">
+                                                    <h5><%#Eval("cat_name")%></h5>
+                                                </a>
+                                            </li>
+                                        </ItemTemplate>
+                                        <FooterTemplate>
+                                            </ul>
+                                        </FooterTemplate>
+                                    </asp:Repeater>
+                                </li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </li>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </ul> 
+                </FooterTemplate>
+            </asp:Repeater>
         </div>
         <div class="row row2_ft">
             <div class="logo_ft col s3">

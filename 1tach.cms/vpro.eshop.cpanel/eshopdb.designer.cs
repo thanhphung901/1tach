@@ -159,6 +159,15 @@ namespace vpro.eshop.cpanel
     partial void InsertTU_VAN(TU_VAN instance);
     partial void UpdateTU_VAN(TU_VAN instance);
     partial void DeleteTU_VAN(TU_VAN instance);
+    partial void InsertTBL_VOTE_COMMENT(TBL_VOTE_COMMENT instance);
+    partial void UpdateTBL_VOTE_COMMENT(TBL_VOTE_COMMENT instance);
+    partial void DeleteTBL_VOTE_COMMENT(TBL_VOTE_COMMENT instance);
+    partial void InsertTBL_NEWS_CONTENT(TBL_NEWS_CONTENT instance);
+    partial void UpdateTBL_NEWS_CONTENT(TBL_NEWS_CONTENT instance);
+    partial void DeleteTBL_NEWS_CONTENT(TBL_NEWS_CONTENT instance);
+    partial void InsertTBL_VOTE_NEW(TBL_VOTE_NEW instance);
+    partial void UpdateTBL_VOTE_NEW(TBL_VOTE_NEW instance);
+    partial void DeleteTBL_VOTE_NEW(TBL_VOTE_NEW instance);
     #endregion
 		
 		public eshopdbDataContext() : 
@@ -532,6 +541,30 @@ namespace vpro.eshop.cpanel
 			get
 			{
 				return this.GetTable<TU_VAN>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_VOTE_COMMENT> TBL_VOTE_COMMENTs
+		{
+			get
+			{
+				return this.GetTable<TBL_VOTE_COMMENT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_NEWS_CONTENT> TBL_NEWS_CONTENTs
+		{
+			get
+			{
+				return this.GetTable<TBL_NEWS_CONTENT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_VOTE_NEW> TBL_VOTE_NEWs
+		{
+			get
+			{
+				return this.GetTable<TBL_VOTE_NEW>();
 			}
 		}
 		
@@ -14334,6 +14367,480 @@ namespace vpro.eshop.cpanel
 					this._DATE = value;
 					this.SendPropertyChanged("DATE");
 					this.OnDATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_VOTE_COMMENT")]
+	public partial class TBL_VOTE_COMMENT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private int _VoteID;
+		
+		private string _Content;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnVoteIDChanging(int value);
+    partial void OnVoteIDChanged();
+    partial void OnContentChanging(string value);
+    partial void OnContentChanged();
+    #endregion
+		
+		public TBL_VOTE_COMMENT()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VoteID", DbType="Int NOT NULL")]
+		public int VoteID
+		{
+			get
+			{
+				return this._VoteID;
+			}
+			set
+			{
+				if ((this._VoteID != value))
+				{
+					this.OnVoteIDChanging(value);
+					this.SendPropertyChanging();
+					this._VoteID = value;
+					this.SendPropertyChanged("VoteID");
+					this.OnVoteIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="NVarChar(MAX)")]
+		public string Content
+		{
+			get
+			{
+				return this._Content;
+			}
+			set
+			{
+				if ((this._Content != value))
+				{
+					this.OnContentChanging(value);
+					this.SendPropertyChanging();
+					this._Content = value;
+					this.SendPropertyChanged("Content");
+					this.OnContentChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_NEWS_CONTENT")]
+	public partial class TBL_NEWS_CONTENT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private int _NewsID;
+		
+		private int _Type;
+		
+		private string _Title;
+		
+		private string _Value_;
+		
+		private System.Nullable<int> _Order;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnNewsIDChanging(int value);
+    partial void OnNewsIDChanged();
+    partial void OnTypeChanging(int value);
+    partial void OnTypeChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnValue_Changing(string value);
+    partial void OnValue_Changed();
+    partial void OnOrderChanging(System.Nullable<int> value);
+    partial void OnOrderChanged();
+    #endregion
+		
+		public TBL_NEWS_CONTENT()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewsID", DbType="Int NOT NULL")]
+		public int NewsID
+		{
+			get
+			{
+				return this._NewsID;
+			}
+			set
+			{
+				if ((this._NewsID != value))
+				{
+					this.OnNewsIDChanging(value);
+					this.SendPropertyChanging();
+					this._NewsID = value;
+					this.SendPropertyChanged("NewsID");
+					this.OnNewsIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Int NOT NULL")]
+		public int Type
+		{
+			get
+			{
+				return this._Type;
+			}
+			set
+			{
+				if ((this._Type != value))
+				{
+					this.OnTypeChanging(value);
+					this.SendPropertyChanging();
+					this._Type = value;
+					this.SendPropertyChanged("Type");
+					this.OnTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this.OnTitleChanging(value);
+					this.SendPropertyChanging();
+					this._Title = value;
+					this.SendPropertyChanged("Title");
+					this.OnTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Value ]", Storage="_Value_", DbType="NVarChar(MAX)")]
+		public string Value_
+		{
+			get
+			{
+				return this._Value_;
+			}
+			set
+			{
+				if ((this._Value_ != value))
+				{
+					this.OnValue_Changing(value);
+					this.SendPropertyChanging();
+					this._Value_ = value;
+					this.SendPropertyChanged("Value_");
+					this.OnValue_Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Order]", Storage="_Order", DbType="Int")]
+		public System.Nullable<int> Order
+		{
+			get
+			{
+				return this._Order;
+			}
+			set
+			{
+				if ((this._Order != value))
+				{
+					this.OnOrderChanging(value);
+					this.SendPropertyChanging();
+					this._Order = value;
+					this.SendPropertyChanged("Order");
+					this.OnOrderChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_VOTE_NEWS")]
+	public partial class TBL_VOTE_NEW : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private int _NewsID;
+		
+		private string _Content;
+		
+		private string _Image;
+		
+		private System.Nullable<int> _VotedCount;
+		
+		private System.Nullable<int> _Order;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnNewsIDChanging(int value);
+    partial void OnNewsIDChanged();
+    partial void OnContentChanging(string value);
+    partial void OnContentChanged();
+    partial void OnImageChanging(string value);
+    partial void OnImageChanged();
+    partial void OnVotedCountChanging(System.Nullable<int> value);
+    partial void OnVotedCountChanged();
+    partial void OnOrderChanging(System.Nullable<int> value);
+    partial void OnOrderChanged();
+    #endregion
+		
+		public TBL_VOTE_NEW()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewsID", DbType="Int NOT NULL")]
+		public int NewsID
+		{
+			get
+			{
+				return this._NewsID;
+			}
+			set
+			{
+				if ((this._NewsID != value))
+				{
+					this.OnNewsIDChanging(value);
+					this.SendPropertyChanging();
+					this._NewsID = value;
+					this.SendPropertyChanged("NewsID");
+					this.OnNewsIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="NVarChar(MAX)")]
+		public string Content
+		{
+			get
+			{
+				return this._Content;
+			}
+			set
+			{
+				if ((this._Content != value))
+				{
+					this.OnContentChanging(value);
+					this.SendPropertyChanging();
+					this._Content = value;
+					this.SendPropertyChanged("Content");
+					this.OnContentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Image", DbType="VarChar(300)")]
+		public string Image
+		{
+			get
+			{
+				return this._Image;
+			}
+			set
+			{
+				if ((this._Image != value))
+				{
+					this.OnImageChanging(value);
+					this.SendPropertyChanging();
+					this._Image = value;
+					this.SendPropertyChanged("Image");
+					this.OnImageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VotedCount", DbType="Int")]
+		public System.Nullable<int> VotedCount
+		{
+			get
+			{
+				return this._VotedCount;
+			}
+			set
+			{
+				if ((this._VotedCount != value))
+				{
+					this.OnVotedCountChanging(value);
+					this.SendPropertyChanging();
+					this._VotedCount = value;
+					this.SendPropertyChanged("VotedCount");
+					this.OnVotedCountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Order]", Storage="_Order", DbType="Int")]
+		public System.Nullable<int> Order
+		{
+			get
+			{
+				return this._Order;
+			}
+			set
+			{
+				if ((this._Order != value))
+				{
+					this.OnOrderChanging(value);
+					this.SendPropertyChanging();
+					this._Order = value;
+					this.SendPropertyChanged("Order");
+					this.OnOrderChanged();
 				}
 			}
 		}

@@ -7,30 +7,19 @@
                 <div class="slide-post">
                     <div class="slidemain">
                         <ul class="slide1">
-                            <li style="background-image: url(data/img01.jpg)">
-                                <div class="innerli">
-                                    <h3 class="tt-post"><a href="detail.htm">1 Phasellus scelerisque massa mol...</a> </h3>
-                                    <p class="des-post">Fusce aliquet non ipsum vitae scelerisque. Nullam ultricies adipiscing...</p>
-                                </div>
-                            </li>
-                            <li style="background-image: url(data/img02.jpg)">
-                                <div class="innerli">
-                                    <h3 class="tt-post"><a>2 Phasellus scelerisque massa mol...</a> </h3>
-                                    <p class="des-post">Fusce aliquet non ipsum vitae scelerisque. Nullam ultricies adipiscing... </p>
-                                </div>
-                            </li>
-                            <li style="background-image: url(data/img03.jpg)">
-                                <div class="innerli">
-                                    <h3 class="tt-post"><a>3 Phasellus scelerisque massa mol...</a> </h3>
-                                    <p class="des-post">Fusce aliquet non ipsum vitae scelerisque. Nullam ultricies adipiscing...</p>
-                                </div>
-                            </li>
-                            <li style="background-image: url(data/img04.jpg)">
-                                <div class="innerli">
-                                    <h3 class="tt-post"><a>4 Phasellus scelerisque massa mol...</a> </h3>
-                                    <p class="des-post">Fusce aliquet non ipsum vitae scelerisque. Nullam ultricies adipiscing... </p>
-                                </div>
-                            </li>
+                            <asp:ListView runat="server" ID="lstFeature">
+                                <LayoutTemplate>
+                                    <li id="itemPlaceholder" runat="server"></li>
+                                </LayoutTemplate>
+                                <ItemTemplate>
+                                    <li data-bg='<%#Eval("NEWS_IMAGE1") %>'>
+                                        <div class="innerli">
+                                            <h3 class="tt-post"><a href='<%#Eval("NEWS_SEO_URL") %>.html'><%#Eval("NEWS_TITLE") %></a></h3>
+                                            <p class="des-post"><%#Eval("NEWS_DESC") %></p>
+                                        </div>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:ListView>
                         </ul>
                     </div>
                     <div id="thumslide" class="clearfix">
@@ -50,10 +39,14 @@
             <div class="col s3">
                 <h3 class="ttcate">Bài mới</h3>
                 <ul class="new_post">
-                    <li><a href="detail.htm">Lectus non rutrum pulvinar urna leo dignissim lore... </a></li>
-                    <li><a href="#">Lectus non rutrum pulvinar urna leo dignissim lore... </a></li>
-                    <li><a href="#">Lectus non rutrum pulvinar urna leo dignissim lore... </a></li>
-                    <li><a href="#">Lectus non rutrum pulvinar urna leo dignissim lore... </a></li>
+                    <asp:ListView runat="server" ID="lstNewsLastest">
+                        <LayoutTemplate>
+                            <li id="itemPlaceholder" runat="server"></li>
+                        </LayoutTemplate>
+                        <ItemTemplate>
+                            <li><a href='<%#Eval("NEWS_SEO_URL") %>.html'><%#Eval("NEWS_TITLE") %></a></li>
+                        </ItemTemplate>
+                    </asp:ListView>
                 </ul>
             </div>
             <div class="col s4">
@@ -65,72 +58,45 @@
                     <div class="tab_index tab1 slide_com slide">
                         <div class="inner_tab">
                             <ul class="slide_comment">
-                                <li><a href="" class="clearfix"><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href="" class="clearfix"><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href="" class="clearfix"><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href="" class="clearfix"><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href="" class="clearfix"><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result txt_red">60% chọn NO</p>
-                                </span></a></li>
-                                <li><a href="" class="clearfix"><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
+                                <asp:ListView runat="server" ID="lstRightVote">
+                                    <LayoutTemplate>
+                                        <li id="itemPlaceholder" runat="server"></li>
+                                    </LayoutTemplate>
+                                    <ItemTemplate>
+                                        <li>
+                                            <a href="" class="clearfix"><span class="cmm_img"></span>
+                                                <span class="cmm_body">
+                                                    <h2><%#Eval("NEWS_TITLE") %></h2>
+                                                    <p class="cmm_date">Updated: 23 Hours ago</p>
+                                                    <p class="cmm_result">60% chọn YES</p>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:ListView>
                             </ul>
                         </div>
                     </div>
                     <div class="tab_index tab2">
                         <div class="inner_tab slide_com slide">
                             <ul class="slide_comment ">
-                                <li><a href=""><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href=""><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href=""><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href=""><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
-                                <li><a href=""><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result txt_red">60% chọn NO</p>
-                                </span></a></li>
-                                <li><a href=""><span class="cmm_img"></span><span class="cmm_body">
-                                    <h2>Collectivism ought to be preffered to Individualism</h2>
-                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                    <p class="cmm_result">60% chọn YES</p>
-                                </span></a></li>
+                                <asp:ListView runat="server" ID="lstDebateRight">
+                                    <LayoutTemplate>
+                                        <li id="itemPlaceholder" runat="server"></li>
+                                    </LayoutTemplate>
+                                    <ItemTemplate>
+                                        <li>
+                                            <a href="" class="clearfix">
+                                                <span class="cmm_img"></span>
+                                                <span class="cmm_body">
+                                                    <h2><%#Eval("NEWS_TITLE") %></h2>
+                                                    <p class="cmm_date">Updated: 23 Hours ago</p>
+                                                    <p class="cmm_result">60% chọn YES</p>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:ListView>
                             </ul>
                         </div>
                     </div>
@@ -713,7 +679,6 @@
                 </div>
             </div>
         </div>
-
         <!--end 3 lg row-->
 
     </div>

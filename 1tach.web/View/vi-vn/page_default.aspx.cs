@@ -21,8 +21,8 @@ namespace OneTach
         #region Page Event
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            _type = Utils.CIntDef(Request["type"]);//Bỏ qua cái này đi
-            _catSeoUrl = Utils.CStrDef(Request.QueryString["curl"]);//Đây là đường dẫn toyota.byte.vn/xe-moi nó là xe-moi
+            _type = Utils.CIntDef(Request["type"]);
+            _catSeoUrl = Utils.CStrDef(Request.QueryString["curl"]);
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,61 +36,83 @@ namespace OneTach
                     if (!string.IsNullOrEmpty(_configs.ToList()[0].CONFIG_FAVICON))
                         ltrFavicon.Text = "<link rel='shortcut icon' href='" + PathFiles.GetPathConfigs() + _configs.ToList()[0].CONFIG_FAVICON + "' />";
                 }
-                //1tach chỉ có tin tức nên mình sẽ bỏ sản phẩm
-                UserControl list_news = Page.LoadControl("../UIs/ListNew.ascx") as UserControl;//Danh sách tin
-                UserControl details_news = Page.LoadControl("../UIs/DetailNews.ascx") as UserControl;//Chi tiết tin
 
-                switch (_type)
+                UserControl listNews = Page.LoadControl("../UIs/ListNew.ascx") as UserControl;//Danh sách tin
+                UserControl detailsNews = Page.LoadControl("../UIs/DetailNews.ascx") as UserControl;//Chi tiết tin
+                UserControl listPro = Page.LoadControl("../UIs/ListProfessional.ascx") as UserControl;//Danh sách chuyên gia
+                UserControl listBus = Page.LoadControl("../UIs/ListBusiness.ascx") as UserControl;//Danh sách doanh nghiệp
+                UserControl listDebate = Page.LoadControl("../UIs/ListDebate.ascx") as UserControl;//Danh sách tranh luận
+                UserControl listVote = Page.LoadControl("../UIs/ListVotes.ascx") as UserControl;//Danh sách vote
+
+                switch (_catSeoUrl)
                 {
-                    case 3:
-                        if (getsession.check_CatorNews(_catSeoUrl))
+                    case "chuyen-gia":
+                        phdMain.Controls.Add(listPro);
+                        break;
+                    case "doanh-nghiep":
+                        phdMain.Controls.Add(listBus);
+                        break;
+                    case "tranh-luan":
+                        phdMain.Controls.Add(listDebate);
+                        break;
+                    case "bau-chon":
+                        phdMain.Controls.Add(listVote);
+                        break;
+                    default:
+                        switch (_type)
                         {
-                            getsession.LoadNewsInfo(_catSeoUrl);
-                            Bind_meta_tags_news();
-                            int iCatType = getsession.Getcat_type(_catSeoUrl);
-                            if (iCatType == 1)
-                            {
-                                //phdMain.Controls.Add(prodetails);
-                            }
-                            else
-                            {
-                                phdMain.Controls.Add(details_news);
-                            }
-                        }
-                        else
-                        {
-                            if (!getsession.check_catExits(_catSeoUrl))
-                            {
-                                err = true;
-                            }
-                            else
-                            {
-                                getsession.LoadCatInfo(_catSeoUrl);
-                                Bind_meta_tags_cat();
-                                int iCatType = Utils.CIntDef(Session["Cat_type"]);
-                                if (Utils.CIntDef(Session["Cat_showitem"]) == 1)
+                            case 3:
+                                if (getsession.check_CatorNews(_catSeoUrl))
                                 {
+                                    getsession.LoadNewsInfo(_catSeoUrl);
+                                    Bind_meta_tags_news();
+                                    int iCatType = getsession.Getcat_type(_catSeoUrl);
                                     if (iCatType == 1)
                                     {
                                         //phdMain.Controls.Add(prodetails);
                                     }
                                     else
-                                        phdMain.Controls.Add(details_news);
-                                }
-                                else if (iCatType == 1)
-                                {
-                                    //phdMain.Controls.Add(list_pro);
+                                    {
+                                        phdMain.Controls.Add(detailsNews);
+                                    }
                                 }
                                 else
                                 {
-                                    phdMain.Controls.Add(list_news);
+                                    if (!getsession.check_catExits(_catSeoUrl))
+                                    {
+                                        err = true;
+                                    }
+                                    else
+                                    {
+                                        getsession.LoadCatInfo(_catSeoUrl);
+                                        Bind_meta_tags_cat();
+                                        int iCatType = Utils.CIntDef(Session["Cat_type"]);
+                                        if (Utils.CIntDef(Session["Cat_showitem"]) == 1)
+                                        {
+                                            if (iCatType == 1)
+                                            {
+                                                //phdMain.Controls.Add(prodetails);
+                                            }
+                                            else
+                                                phdMain.Controls.Add(detailsNews);
+                                        }
+                                        else if (iCatType == 1)
+                                        {
+                                            //phdMain.Controls.Add(list_pro);
+                                        }
+                                        else
+                                        {
+                                            phdMain.Controls.Add(listNews);
+                                        }
+                                    }
                                 }
-                            }
+                                break;
+                            default:
+                                Response.Redirect("/");
+                                break;
                         }
                         break;
-                    default:
-                        Response.Redirect("/");
-                        break;
+
                 }
             }
             catch (Exception ex)

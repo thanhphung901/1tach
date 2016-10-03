@@ -49,7 +49,7 @@ namespace vpro.eshop.cpanel.Components
             rbl.DataBind();
             rbl.SelectedIndex = 0;
         }
-        public static List<string[]> listAds()
+        public static List<string[]> ListAds()
         {
             List<string[]> l = new List<string[]> 
             { 
@@ -61,7 +61,7 @@ namespace vpro.eshop.cpanel.Components
         public static void createItemAdPos(ref RadioButtonList rbl)
         {
 
-            List<string[]> l = listAds();
+            List<string[]> l = ListAds();
             rbl.DataSource = from obj in l
                              select new
                              {

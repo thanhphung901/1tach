@@ -45,26 +45,26 @@ namespace vpro.eshop.cpanel.UIs
                 }
             }
         }
-        public IQueryable loadmenuRank2(object id)
+        public IQueryable LoadmenuRank2(object id)
         {
             int menuid = Utils.CIntDef(id);
             var list = db.MENUs.Where(n => n.MENU_PARENT_ID == menuid && n.MENU_ACTIVE == 1);
             return list.ToList().Count > 0 ? list : null;
         }
-        public string getActiveMenu(object catid)
+        public string GetActiveMenu(object catid)
         {
             string url = Request.RawUrl;
-            int _menuid = 0;
-            int _catidmenu = Utils.CIntDef(catid);
+            int menuid = 0;
+            int catidmenu = Utils.CIntDef(catid);
             var list = db.MENUs.Where(n => url.IndexOf(n.MENU_LINK)!=-1).ToList();
             if (list.Count > 0)
             {
                 if (list[0].MENU_RANK > 1)
-                    _menuid = Utils.CIntDef(list[0].MENU_PARENT_ID);
+                    menuid = Utils.CIntDef(list[0].MENU_PARENT_ID);
                 else
-                    _menuid = list[0].ID;
+                    menuid = list[0].ID;
             }
-            if (_menuid==_catidmenu)
+            if (menuid==catidmenu)
                 return "in";
             return "";
         }

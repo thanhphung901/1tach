@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="happybuy2_com_vn" Class="dbVuonRauVietDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="happybuy2_com_vnConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="webtot24h_com_db" Class="dbVuonRauVietDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=webtot24h_com_db;Persist Security Info=True;User ID=sa" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="webtot24h_com_dbConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ESHOP_AD_ITEM" Member="ESHOP_AD_ITEMs">
     <Type Name="ESHOP_AD_ITEM">
       <Column Name="AD_ITEM_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -652,6 +652,43 @@
       <Column Name="MENU_PARENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MENU_ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MENU_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_USER" Member="TBL_USERs">
+    <Type Name="TBL_USER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_VOTE_NEWS" Member="TBL_VOTE_NEWs">
+    <Type Name="TBL_VOTE_NEW">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VotedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_VOTE_COMMENT" Member="TBL_VOTE_COMMENTs">
+    <Type Name="TBL_VOTE_COMMENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VoteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_NEWS_CONTENT" Member="TBL_NEWS_CONTENTs">
+    <Type Name="TBL_NEWS_CONTENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Value ]" Member="Value_" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.fClearUnicode" Method="fClearUnicode" IsComposable="true">

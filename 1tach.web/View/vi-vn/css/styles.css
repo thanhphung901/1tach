@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 html, body {
 	margin: 0;
 	padding: 0;
@@ -411,7 +411,7 @@ a:hover {
 	font-family: Arial, Helvetica, sans-serif !important;
 	font-weight: 400;
 	line-height: 140%;
-	color: #333;
+	/*color: #333;*/
 	font-weight: bold;
 	font-size: 1.1em;
 }
@@ -1469,4 +1469,8 @@ p.lbl {
 	text-align: center;
 	display: inline-block;
 	margin: 0 auto
+}
+#Header_pnLogined{
+    color: #404D56;
+    text-align: right;
 }

@@ -12,7 +12,7 @@ namespace Model.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,17 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.28.248.1;Initial Catalog=ipinternational_com_vn;Persist Security " +
-            "Info=True;User ID=ipinternational;Password=cG8ckhD79y")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
+        public string happybuy2_com_vnConnectionString {
+            get {
+                return ((string)(this["happybuy2_com_vnConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string ipinternational_com_vnConnectionString {
             get {
                 return ((string)(this["ipinternational_com_vnConnectionString"]));
@@ -37,8 +46,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dichvuchothue_com_vn;Persist Security Info=Tr" +
-            "ue;User ID=dichvuchothue;Password=v2qHkgP2EA")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string chuyenchothue_comConnectionString {
             get {
                 return ((string)(this["chuyenchothue_comConnectionString"]));
@@ -48,8 +56,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=vanmatbich_com;Persist Security Info=True;Use" +
-            "r ID=congnghiep;Password=UG8P7hz3yk")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string tuvannetviet_comConnectionString {
             get {
                 return ((string)(this["tuvannetviet_comConnectionString"]));
@@ -59,8 +66,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=maynganhcongnghiep_com;Persist Security Info=" +
-            "True;User ID=maynganhcongnghiep;Password=AtQuwp2DXY")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string chuyenchothue_comConnectionString1 {
             get {
                 return ((string)(this["chuyenchothue_comConnectionString1"]));
@@ -70,8 +76,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dolotgiasi_vn;Persist Security Info=True;User" +
-            " ID=dolotgiasi;Password=CCA66Xx26tbCwPc")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string chuyenchothue_comConnectionString2 {
             get {
                 return ((string)(this["chuyenchothue_comConnectionString2"]));
@@ -81,8 +86,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=linhkiendocmientrung_com_vn;Persist Security " +
-            "Info=True;User ID=namtam;Password=9HvZX2d89Q")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string vanmatbich_comConnectionString {
             get {
                 return ((string)(this["vanmatbich_comConnectionString"]));
@@ -92,8 +96,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=shopbacsi_com;Persist Security Info=True;User" +
-            " ID=shopbacsi;Password=wrB2Q2f83y")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string vanmatbich_comConnectionString1 {
             get {
                 return ((string)(this["vanmatbich_comConnectionString1"]));
@@ -103,8 +106,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=happybuy_com_vn;Persist Security Info=True;Us" +
-            "er ID=happybuy;Password=p6Kg2bQdr2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string vanmatbich_comConnectionString2 {
             get {
                 return ((string)(this["vanmatbich_comConnectionString2"]));
@@ -114,8 +116,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=beta.happybuy.com.vn;Initial Catalog=happybuy_com_vn;Persist Security" +
-            " Info=True;User ID=happybuy;Password=p6Kg2bQdr2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string happybuy_com_vnConnectionString {
             get {
                 return ((string)(this["happybuy_com_vnConnectionString"]));
@@ -125,8 +126,7 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.28.248.1;Initial Catalog=happybuy_com_vn;Persist Security Info=Tr" +
-            "ue;User ID=truongnt;Password=GFHkpgp73P")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
         public string vanmatbich_comConnectionString3 {
             get {
                 return ((string)(this["vanmatbich_comConnectionString3"]));
@@ -136,10 +136,11 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER002-PC;Initial Catalog=KLN;Integrated Security=True")]
-        public string happybuy2_com_vnConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=webtot24h_com_db;Persist Security Info=True;U" +
+            "ser ID=sa;Password=123456")]
+        public string webtot24h_com_dbConnectionString {
             get {
-                return ((string)(this["happybuy2_com_vnConnectionString"]));
+                return ((string)(this["webtot24h_com_dbConnectionString"]));
             }
         }
     }

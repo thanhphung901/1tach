@@ -54,6 +54,7 @@
     <Compile Include="checkProperties.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Encryption.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Get_session.cs" />
     <Compile Include="Home.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Register_email.cs" />
     <Compile Include="Search_result.cs" />
     <Compile Include="Sitemap.cs" />
+    <Compile Include="TBL_USER.cs" />
     <Compile Include="Userinfo.cs" />
     <Compile Include="Weblink.cs" />
   </ItemGroup>

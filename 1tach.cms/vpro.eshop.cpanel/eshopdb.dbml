@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="webtot24h_com_db" Class="eshopdbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=THANH\SQL2014;Initial Catalog=webtot24h_com_db;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="happybuy2_com_vnConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=webtot24h_com_db;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="happybuy2_com_vnConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ESHOP_AD_ITEM" Member="ESHOP_AD_ITEMs">
     <Type Name="ESHOP_AD_ITEM">
       <Column Name="AD_ITEM_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -668,6 +668,33 @@
       <Column Name="EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DIEN_THOAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_VOTE_COMMENT" Member="TBL_VOTE_COMMENTs">
+    <Type Name="TBL_VOTE_COMMENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VoteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_NEWS_CONTENT" Member="TBL_NEWS_CONTENTs">
+    <Type Name="TBL_NEWS_CONTENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Value ]" Member="Value_" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_VOTE_NEWS" Member="TBL_VOTE_NEWs">
+    <Type Name="TBL_VOTE_NEW">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="VotedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.fClearUnicode" Method="fClearUnicode" IsComposable="true">
