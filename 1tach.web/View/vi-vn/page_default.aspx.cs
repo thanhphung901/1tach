@@ -52,12 +52,6 @@ namespace OneTach
                     case "doanh-nghiep":
                         phdMain.Controls.Add(listBus);
                         break;
-                    case "tranh-luan":
-                        phdMain.Controls.Add(listDebate);
-                        break;
-                    case "bau-chon":
-                        phdMain.Controls.Add(listVote);
-                        break;
                     default:
                         switch (_type)
                         {
@@ -98,7 +92,11 @@ namespace OneTach
                                         }
                                         else if (iCatType == 1)
                                         {
-                                            //phdMain.Controls.Add(list_pro);
+                                            phdMain.Controls.Add(listVote);
+                                        }
+                                        else if (iCatType == 2)
+                                        {
+                                            phdMain.Controls.Add(listDebate);
                                         }
                                         else
                                         {

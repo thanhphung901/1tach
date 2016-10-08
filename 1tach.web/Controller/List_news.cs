@@ -179,7 +179,7 @@ namespace Controller
                 throw;
             }
         }
-        public List<News_details_entity> Load_listnews_byTypeInNews(int _Catid)
+        public List<News_details_entity> Load_listnews_byTypeInNews(int _Type)
         {
             try
             {
@@ -187,24 +187,8 @@ namespace Controller
                 var list = (from a in db.ESHOP_NEWS_CATs
                             join b in db.ESHOP_NEWs on a.NEWS_ID equals b.NEWS_ID
                             join c in db.ESHOP_CATEGORies on a.CAT_ID equals c.CAT_ID
-                            where b.NEWS_TYPE.Value == _Catid
-                            select new { b.NEWS_ID, b.NEWS_TITLE, b.NEWS_IMAGE3, b.NEWS_DESC, b.NEWS_SEO_URL, b.NEWS_URL, b.NEWS_ORDER, b.NEWS_ORDER_PERIOD, b.NEWS_PUBLISHDATE, c.CAT_SEO_URL, c.CAT_ID }).OrderByDescending(n => n.NEWS_PUBLISHDATE).OrderByDescending(n => n.NEWS_ORDER).ToList();
-                foreach (var i in list)
-                {
-                    News_details_entity pro = new News_details_entity();
-                    pro.NEWS_ID = i.NEWS_ID;
-                    pro.NEWS_TITLE = i.NEWS_TITLE;
-                    pro.NEWS_IMAGE3 = i.NEWS_IMAGE3;
-                    pro.NEWS_DESC = i.NEWS_DESC;
-                    pro.NEWS_SEO_URL = i.NEWS_SEO_URL;
-                    pro.NEWS_URL = i.NEWS_URL;
-                    pro.NEWS_ORDER = Utils.CIntDef(i.NEWS_ORDER);
-                    pro.NEWS_ORDER_PERIOD = Utils.CIntDef(i.NEWS_ORDER_PERIOD);
-                    pro.NEWS_PUBLISHDATE = Utils.CDateDef(i.NEWS_PUBLISHDATE, DateTime.Now);
-                    pro.CAT_SEO_URL = i.CAT_SEO_URL;
-                    pro.CAT_ID = i.CAT_ID;
-                    l.Add(pro);
-                }
+                            where b.NEWS_TYPE.Value == _Type
+                            select b).OrderByDescending(n => n.NEWS_PUBLISHDATE).OrderByDescending(n => n.NEWS_ORDER).ToList();
 
                 return l;
 
