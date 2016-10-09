@@ -22,13 +22,31 @@ namespace OneTach.vi_vn {
         protected global::System.Web.UI.WebControls.Literal ltrFavicon;
         
         /// <summary>
-        /// ddlCategory control.
+        /// btnLuu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
+        protected global::System.Web.UI.WebControls.LinkButton btnLuu;
+        
+        /// <summary>
+        /// scrpt1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scrpt1;
+        
+        /// <summary>
+        /// pnContentUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel pnContentUpdate;
         
         /// <summary>
         /// txtTitle control.
@@ -49,6 +67,15 @@ namespace OneTach.vi_vn {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
+        
+        /// <summary>
         /// txtDesc control.
         /// </summary>
         /// <remarks>
@@ -56,24 +83,6 @@ namespace OneTach.vi_vn {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDesc;
-        
-        /// <summary>
-        /// scrpt1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager scrpt1;
-        
-        /// <summary>
-        /// pnContentUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel pnContentUpdate;
         
         /// <summary>
         /// lstContentNews control.
@@ -139,6 +148,15 @@ namespace OneTach.vi_vn {
         protected global::System.Web.UI.WebControls.LinkButton btnThemLuaChon;
         
         /// <summary>
+        /// ddlCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
+        
+        /// <summary>
         /// radType control.
         /// </summary>
         /// <remarks>
@@ -146,6 +164,96 @@ namespace OneTach.vi_vn {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radType;
+        
+        /// <summary>
+        /// trUploadImage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trUploadImage3;
+        
+        /// <summary>
+        /// fileImage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile fileImage3;
+        
+        /// <summary>
+        /// trImage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trImage3;
+        
+        /// <summary>
+        /// hplImage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplImage3;
+        
+        /// <summary>
+        /// Image3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Image3;
+        
+        /// <summary>
+        /// trUploadImage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trUploadImage2;
+        
+        /// <summary>
+        /// fileImage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile fileImage2;
+        
+        /// <summary>
+        /// trImage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trImage2;
+        
+        /// <summary>
+        /// hplImage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplImage2;
+        
+        /// <summary>
+        /// Image2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Image2;
         
         /// <summary>
         /// rblStatus control.

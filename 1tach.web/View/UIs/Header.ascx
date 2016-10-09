@@ -99,9 +99,9 @@
                         <b>
                             <asp:Label runat="server" ID="lblEmail"></asp:Label>
                         </b>&nbsp;&nbsp;|&nbsp;&nbsp;
-                        <a href="/dang-bai.html" class="btnDangbai"><i class="material-icons">mode_edit</i>&nbsp;Đăng bài mới</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                        <a href="#modalChangePassword" class="btnDoiMatKhau modal-trigger"><i class="material-icons">loop</i>&nbsp;Đổi mật khẩu</a>
-                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="/dang-bai.html" class="btnDangbai"><i class="material-icons">mode_edit</i>&nbsp;Đăng bài mới</a>&nbsp;&nbsp;<%--|&nbsp;&nbsp;--%>
+                        <%--<a href="#modalChangePassword" class="btnDoiMatKhau modal-trigger"><i class="material-icons">loop</i>&nbsp;Đổi mật khẩu</a>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;--%>
                         <asp:LinkButton runat="server" ID="btnThoat" OnClick="btnThoat_OnClick"><i class="material-icons">power_settings_new</i>&nbsp;Thoát</asp:LinkButton>
                     </span>
                 </div>

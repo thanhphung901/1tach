@@ -234,44 +234,43 @@ namespace OneTach.vi_vn
                 //get image
                 string News_Image2;
 
-                //if (trUploadImage2.Visible == true)
-                //{
-                //    if (fileImage2.PostedFile != null)
-                //    {
-                //        News_Image2 = Path.GetFileName(fileImage2.PostedFile.FileName);
-                //    }
-                //    else
-                //    {
-                //        News_Image2 = "";
-                //    }
-                //}
-                //else
-                //{
-                //    News_Image2 = hplImage2.Text;
-                //}
+                if (trUploadImage2.Visible == true)
+                {
+                    if (fileImage2.PostedFile != null)
+                    {
+                        News_Image2 = Path.GetFileName(fileImage2.PostedFile.FileName);
+                    }
+                    else
+                    {
+                        News_Image2 = "";
+                    }
+                }
+                else
+                {
+                    News_Image2 = hplImage2.Text;
+                }
 
-                //string News_Image3;
+                string News_Image3;
 
-                //if (trUploadImage3.Visible == true)
-                //{
-                //    if (fileImage3.PostedFile != null)
-                //    {
-                //        News_Image3 = Path.GetFileName(fileImage3.PostedFile.FileName);
-                //    }
-                //    else
-                //    {
-                //        News_Image3 = "";
-                //    }
-                //}
-                //else
-                //{
-                //    News_Image3 = hplImage3.Text;
-                //}
+                if (trUploadImage3.Visible == true)
+                {
+                    if (fileImage3.PostedFile != null)
+                    {
+                        News_Image3 = Path.GetFileName(fileImage3.PostedFile.FileName);
+                    }
+                    else
+                    {
+                        News_Image3 = "";
+                    }
+                }
+                else
+                {
+                    News_Image3 = hplImage3.Text;
+                }
                 if (CheckError())
                 {
                     if (m_news_id == 0)
                     {
-
                         //insert
                         ESHOP_NEW news_insert = new ESHOP_NEW();
 
@@ -345,40 +344,41 @@ namespace OneTach.vi_vn
                             }
                         }
 
-                        strLink = string.IsNullOrEmpty(strLink) ? "news.aspx?type=" + _type + "&news_id=" + m_news_id : strLink;
+                        //strLink = string.IsNullOrEmpty(strLink) ? "news.aspx?type=" + _type + "&news_id=" + m_news_id : strLink;
+                        strLink = txtSeoUrl.Value.Trim() +".html";
                     }
-                    //if (trUploadImage2.Visible)
-                    //{
-                    //    if (!string.IsNullOrEmpty(fileImage2.PostedFile.FileName))
-                    //    {
-                    //        string pathfile = Server.MapPath("/data/news/" + m_news_id);
-                    //        string fullpathfile = pathfile + "/" + News_Image2;
+                    if (trUploadImage2.Visible)
+                    {
+                        if (!string.IsNullOrEmpty(fileImage2.PostedFile.FileName))
+                        {
+                            string pathfile = Server.MapPath("/data/news/" + m_news_id);
+                            string fullpathfile = pathfile + "/" + News_Image2;
 
-                    //        if (!Directory.Exists(pathfile))
-                    //        {
-                    //            Directory.CreateDirectory(pathfile);
-                    //        }
+                            if (!Directory.Exists(pathfile))
+                            {
+                                Directory.CreateDirectory(pathfile);
+                            }
 
-                    //        fileImage2.PostedFile.SaveAs(fullpathfile);
-                    //    }
-                    //}
+                            fileImage2.PostedFile.SaveAs(fullpathfile);
+                        }
+                    }
 
-                    //if (trUploadImage3.Visible)
-                    //{
-                    //    if (!string.IsNullOrEmpty(fileImage3.PostedFile.FileName))
-                    //    {
-                    //        string pathfile = Server.MapPath("/data/news/" + m_news_id);
-                    //        string fullpathfile = pathfile + "/" + News_Image3;
+                    if (trUploadImage3.Visible)
+                    {
+                        if (!string.IsNullOrEmpty(fileImage3.PostedFile.FileName))
+                        {
+                            string pathfile = Server.MapPath("/data/news/" + m_news_id);
+                            string fullpathfile = pathfile + "/" + News_Image3;
 
-                    //        if (!Directory.Exists(pathfile))
-                    //        {
-                    //            Directory.CreateDirectory(pathfile);
-                    //        }
+                            if (!Directory.Exists(pathfile))
+                            {
+                                Directory.CreateDirectory(pathfile);
+                            }
 
-                    //        fileImage3.PostedFile.SaveAs(fullpathfile);
-                    //    }
+                            fileImage3.PostedFile.SaveAs(fullpathfile);
+                        }
 
-                    //}
+                    }
                 }
 
             }
@@ -455,20 +455,29 @@ namespace OneTach.vi_vn
             //}
             return true;
         }
-        
+
         #endregion
 
         #region button Function
         protected void btnboxChuDe_OnClick(object sender, EventArgs e)
         {
             NewsContent con = new NewsContent(0);
+
             _lstNewsContent = GetListContent();
             _lstNewsContent.Add(con);
             lstContentNews.DataSource = null;
 
             lstContentNews.DataSource = _lstNewsContent;
             lstContentNews.DataBind();
+            KeepImage();
         }
+
+        private void KeepImage()
+        {
+            HtmlInputFile image1 = fileImage3;
+            fileImage3 = image1;
+        }
+
         protected void btnThemDoanVan_OnClick(object sender, EventArgs e)
         {
             NewsContent con = new NewsContent(1);
@@ -717,10 +726,6 @@ namespace OneTach.vi_vn
         }
         #endregion
 
-        protected void lstContentNews_OnItemCommand(object sender, ListViewCommandEventArgs e)
-        {
-        }
-
         protected void radType_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             switch (radType.SelectedValue)
@@ -748,6 +753,27 @@ namespace OneTach.vi_vn
                 default:
                     break;
             }
+        }
+
+        protected void btnDelete2_OnClick(object sender, ImageClickEventArgs e)
+        {
+        }
+
+        protected void btnDelete3_OnClick(object sender, ImageClickEventArgs e)
+        {
+        }
+
+        protected void OnClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void btnLuu_OnClick(object sender, EventArgs e)
+        {
+            if (CheckExitsLink(txtSeoUrl.Value))
+                lblError.Text = "Đã tồn tại Seo Url, vui lòng nhập Seo Url khác cho tin.";
+            else
+                SaveInfo();
         }
     }
 }

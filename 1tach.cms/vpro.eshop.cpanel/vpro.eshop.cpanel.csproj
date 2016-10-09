@@ -272,10 +272,8 @@
     <Content Include="page\config_map.aspx" />
     <Content Include="page\config_footer.aspx" />
     <Content Include="page\config_meta.aspx" />
-    <Content Include="page\tuvan.aspx" />
     <Content Include="page\contact.aspx" />
     <Content Include="page\contact_config.aspx" />
-    <Content Include="page\tuvan_list.aspx" />
     <Content Include="page\contact_list.aspx" />
     <Content Include="page\customer.aspx" />
     <Content Include="page\customer_list.aspx" />
@@ -606,13 +604,6 @@
     <Compile Include="page\config_meta.aspx.designer.cs">
       <DependentUpon>config_meta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="page\tuvan.aspx.cs">
-      <DependentUpon>tuvan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="page\tuvan.aspx.designer.cs">
-      <DependentUpon>tuvan.aspx</DependentUpon>
-    </Compile>
     <Compile Include="page\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -626,13 +617,6 @@
     </Compile>
     <Compile Include="page\contact_config.aspx.designer.cs">
       <DependentUpon>contact_config.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="page\tuvan_list.aspx.cs">
-      <DependentUpon>tuvan_list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="page\tuvan_list.aspx.designer.cs">
-      <DependentUpon>tuvan_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\contact_list.aspx.cs">
       <DependentUpon>contact_list.aspx</DependentUpon>

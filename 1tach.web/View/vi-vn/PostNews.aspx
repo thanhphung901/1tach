@@ -29,57 +29,147 @@
 
     <div class="content">
         <div class="container">
+            <div class="col s12">
+                <asp:LinkButton runat="server" CssClass="btn waves-effect waves-light" ID="btnLuu" OnClick="btnLuu_OnClick">
+                    Lưu
+                    <i class="material-icons left">save</i>
+                </asp:LinkButton>
+                <a class="btn waves-effect red" href="/">Hủy
+                </a>
+            </div>
             <!-- InstanceBeginEditable name="content" -->
             <div class="post" style="padding: 2em 0">
-                <div class="row">
-                    <div class="col s8 main-col">
-                        <div class="row">
-                            <div class="input-field çol s12">
-                                <label>Chọn danh mục</label><br />
-                                <br />
-                                <asp:DropDownList ID="ddlCategory" runat="server" class="form-control">
-                                </asp:DropDownList>
+                <asp:ScriptManager runat="server" ID="scrpt1"></asp:ScriptManager>
+                <asp:UpdatePanel runat="server" ID="pnContentUpdate">
+                    <ContentTemplate>
+                        <div class="col s12">
+                            <div class="header">
+                                Nội dung bài viết
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input type="text" name="txtTitle" id="txtTitle" runat="server" class="form-control"
-                                    onkeyup="ParseText(this);" onblur="ParseText(this);" />
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Vui lòng nhập tên tiêu đề"
-                                    Text="Vui lòng nhập tiêu đề" ControlToValidate="txtTitle" CssClass="label label-danger"
-                                    ValidationGroup="G1"></asp:RequiredFieldValidator>
-                                <label for='<%=txtSeoTitle.ClientID %>'>Tiêu đề</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <textarea id="txtDesc" runat="server" class="validate materialize-textarea" onkeyup="ParseDesc(this);"
-                                    onblur="ParseDesc(this);"></textarea>
-                                <label for='<%=txtDesc.ClientID %>'>Mô tả ngắn</label>
-                            </div>
-                        </div>
-                        <asp:ScriptManager runat="server" ID="scrpt1"></asp:ScriptManager>
-                        <asp:UpdatePanel runat="server" ID="pnContentUpdate">
-                            <ContentTemplate>
-                                <%--<div class="row">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title" id="H2">Thông tin hình ảnh</h3>
+                            <div class="main-col">
+                                <div class="row">
+                                    <div class="col s8">
+                                        <div class="input-field col s12">
+                                            <input type="text" name="txtTitle" id="txtTitle" runat="server" class="form-control"
+                                                onkeyup="ParseText(this);" onblur="ParseText(this);" />
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Vui lòng nhập tên tiêu đề"
+                                                Text="Vui lòng nhập tiêu đề" ControlToValidate="txtTitle" CssClass="label label-danger"
+                                                ValidationGroup="G1"></asp:RequiredFieldValidator>
+                                            <label for='<%=txtSeoTitle.ClientID %>'>Tiêu đề</label>
+                                            <asp:Label ID="lblError" runat="server" CssClass="label label-danger"></asp:Label>
                                         </div>
-                                        <div class="panel-body">
+                                        <div class="input-field col s12">
+                                            <textarea id="txtDesc" runat="server" class="validate materialize-textarea" onkeyup="ParseDesc(this);"
+                                                onblur="ParseDesc(this);"></textarea>
+                                            <label for='<%=txtDesc.ClientID %>'>Mô tả ngắn</label>
+                                        </div>
+                                        <div class="col s12" id="pnNoiDung">
+                                            <div class="col s12">
+                                                <h3>Nội dung chính</h3>
+                                            </div>
+                                            <div class="col s12">
+                                                <asp:ListView runat="server" ID="lstContentNews" OnItemCommand="lstContent_OnItemCommand" ChildrenAsTriggers="true" UpdateMode="Conditional">
+                                                    <LayoutTemplate>
+                                                        <ul class="col-md-12 col-lg-12 col-sm-12" style="list-style: none">
+                                                            <li runat="server" id="itemPlaceholder"></li>
+                                                        </ul>
+                                                    </LayoutTemplate>
+                                                    <ItemTemplate>
+                                                        <li style="border-bottom: 1px dashed #ccc; margin: 5px; padding: 20px 0px">
+                                                            <asp:LinkButton runat="server" CssClass="btnXoa" OnClientClick="scrollToBottom();"
+                                                                ID="btnXoa" CommandName="XoaDong" CommandArgument='<%# Eval("Id") %>'> x </asp:LinkButton>
+                                                            <asp:HiddenField runat="server" ID="hdType" Value='<%# Eval("Type") %>' />
+                                                            <asp:Panel runat="server" CssClass="row" ID="pnBoxChuDe" Visible='<%#int.Parse(Eval("Type").ToString()) == 0 %>'>
+                                                                <label>Chủ đề</label>
+                                                                <asp:TextBox runat="server" ID="txtBoxChuDe" CssClass="form-control" Text='<%#Eval("Paragraph") %>'></asp:TextBox>
+                                                            </asp:Panel>
+                                                            <asp:Panel runat="server" CssClass="row" ID="pnPara" Visible='<%#int.Parse(Eval("Type").ToString()) == 1 %>'>
+                                                                <label>Tiêu đề</label>
+                                                                <asp:TextBox runat="server" ID="txtTitlePara" CssClass="form-control" Text='<%# Eval("Title") %>'></asp:TextBox>
+                                                                <label>Nội dung</label>
+                                                                <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" ID="txtNoiDung" CssClass="materialize-textarea" Text='<%#Eval("Paragraph") %>'></asp:TextBox>
+                                                            </asp:Panel>
+                                                            <asp:Panel runat="server" CssClass="row" ID="pnImage" Visible='<%#int.Parse(Eval("Type").ToString()) == 2 %>'>
+                                                                <label>Chọn ảnh</label>
+
+                                                                <input id="avatarUpload" type="file" name="file" accept="image/gif, image/jpeg, image/png" onchange="previewFile(this)" runat="server" />
+                                                                <%--<asp:FileUpload ID="avatarUpload" runat="server" />--%>
+                                                                <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%#Eval("Image") %>' style="width: 200px" />
+                                                                <asp:TextBox ID="hdImage" Style="display: none" runat="server" CssClass="valueImg" Text='<%#Eval("Image") %>' />
+                                                            </asp:Panel>
+                                                            <asp:Panel runat="server" CssClass="row" ID="pnBox" Visible='<%#int.Parse(Eval("Type").ToString()) == 3 %>'>
+                                                                <label>Nội dung trong hộp</label>
+                                                                <asp:TextBox runat="server" TextMode="MultiLine" Text='<%#Eval("Box") %>' Rows="3" ID="txtBox" CssClass="materialize-textarea"></asp:TextBox>
+                                                            </asp:Panel>
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:ListView>
+                                                <asp:ListView runat="server" ID="lstContentVote" OnItemCommand="lstContentVote_OnItemCommand" ChildrenAsTriggers="true" UpdateMode="Conditional">
+                                                    <LayoutTemplate>
+                                                        <ul class="col-md-12 col-lg-12 col-sm-12">
+                                                            <li runat="server" id="itemPlaceholder"></li>
+                                                        </ul>
+                                                    </LayoutTemplate>
+                                                    <ItemTemplate>
+                                                        <li style="border-bottom: 1px dashed #ccc; margin: 5px; padding: 20px 0px">
+                                                            <asp:LinkButton runat="server" CssClass="btnXoa"
+                                                                ID="btnXoa" OnClientClick="scrollToBottom();" CommandName="XoaDong" CommandArgument='<%# Eval("ID") %>'> x </asp:LinkButton>
+
+                                                            <asp:HiddenField runat="server" ID="hdID" Value='<%#Eval("ID") %>' />
+                                                            <asp:HiddenField runat="server" ID="hdVoteCount" Value='<%#Eval("VotedCount") %>' />
+
+                                                            <label>Chọn ảnh</label>
+                                                            <input id="avatarUpload" type="file" name="file" accept="image/gif, image/jpeg, image/png" onchange="previewFile(this)" runat="server" />
+                                                            <%--<asp:FileUpload ID="avatarUpload" runat="server" />--%>
+                                                            <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%#Eval("Image") %>' style="width: 200px" /><br />
+                                                            <asp:TextBox ID="hdImage" Style="display: none" runat="server" CssClass="valueImg" Text='<%#Eval("Image") %>' />
+
+                                                            <label>Nội dung</label>
+                                                            <asp:TextBox runat="server" Text='<%#Eval("Content") %>' ID="txtContent" CssClass="form-control"></asp:TextBox>
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:ListView>
+                                            </div>
+                                            <div class="col s12" style="margin-top: 20px; padding-top: 10px;">
+                                                <h4>Thêm thành phần bài viết</h4>
+                                                <br/>
+                                                <asp:LinkButton ID="btnboxChuDe" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnboxChuDe_OnClick" runat="server">Box chủ đề</asp:LinkButton>
+                                                <asp:LinkButton ID="btnThemDoanVan" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemDoanVan_OnClick" runat="server">Đoạn văn</asp:LinkButton>
+                                                <asp:LinkButton ID="btnThemHinhAnh" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemHinhAnh_OnClick" runat="server">Hình ảnh</asp:LinkButton>
+                                                <asp:LinkButton ID="btnBox" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnBox_OnClick" runat="server">Box nội dung</asp:LinkButton>
+                                                <asp:LinkButton ID="btnThemLuaChon" Visible="False" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemLuaChon_OnClick" runat="server">Lựa chọn</asp:LinkButton>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s4">
+                                        <div class="çol s12">
+                                            <h3>Danh mục</h3>
+                                            <asp:DropDownList ID="ddlCategory" runat="server" class="form-control">
+                                            </asp:DropDownList>
+                                        </div>
+                                        <div class="col s12">
+                                            <h3>Loại bài viết</h3>
+                                            <asp:RadioButtonList ID="radType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="radType_OnSelectedIndexChanged" RepeatDirection="Vertical">
+                                                <asp:ListItem Selected="True" Text="Tin tức" Value="0"></asp:ListItem>
+                                                <asp:ListItem Text="Bầu chọn" Value="1"></asp:ListItem>
+                                                <asp:ListItem Text="Tranh luận" Value="2"></asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </div>
+                                        <div class="col s12">
+                                            <h3>Thông tin hình ảnh</h3>
                                             <div class="form-group">
                                                 <label class="col-sm-2 control-label">
                                                     Ảnh đại diện</label>
                                                 <div class="col-sm-10">
                                                     <div id="trUploadImage3" runat="server">
                                                         <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;Chọn ảnh
-                                    <input id="fileImage3" type="file" name="fileImage3" size="50" runat="server" visible="True" /></span>
+                                                    <input id="fileImage3" type="file" name="fileImage3" size="50" runat="server" visible="True" /></span>
                                                     </div>
                                                     <div id="trImage3" runat="server">
-                                                        <div class="col-sm-3">
+                                                        <%--<div class="col-sm-3">
                                                             <asp:ImageButton ID="btnDelete3" runat="server" ImageUrl="../images/delete_icon.gif"
                                                                 BorderWidth="0" Width="13px" ToolTip="Xóa hình chi tiết này" OnClick="btnDelete3_OnClick"></asp:ImageButton>
-                                                        </div>
+                                                        </div>--%>
                                                         <div class="col-sm-9 thumbnail">
                                                             <asp:HyperLink runat="server" ID="hplImage3" Target="_blank"></asp:HyperLink><br />
                                                             <img id="Image3" runat="server" alt="" class="img-rounded" />
@@ -96,10 +186,10 @@
                                     <input id="fileImage2" type="file" name="fileImage2" size="50" runat="server" visible="True" /></span>
                                                     </div>
                                                     <div id="trImage2" runat="server">
-                                                        <div class="col-sm-3">
+                                                        <%--<div class="col-sm-3">
                                                             <asp:ImageButton ID="btnDelete2" runat="server" ImageUrl="../images/delete_icon.gif"
                                                                 BorderWidth="0" Width="13px" ToolTip="Xóa hình chi tiết này" OnClick="btnDelete2_OnClick"></asp:ImageButton>
-                                                        </div>
+                                                        </div>--%>
                                                         <div class="col-sm-9 thumbnail">
                                                             <asp:HyperLink runat="server" ID="hplImage2" Target="_blank"></asp:HyperLink><br />
                                                             <img id="Image2" runat="server" alt="" class="img-rounded" />
@@ -109,191 +199,101 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>--%>
-                                <div class="row" id="pnNoiDung">
-                                    <div class="col s12">
-                                        <h2><b>NỘI DUNG CHÍNH</b></h2>
-                                    </div>
-                                    <div class="col s12">
-                                        <asp:ListView runat="server" ID="lstContentNews" OnItemCommand="lstContentNews_OnItemCommand" ChildrenAsTriggers="true" UpdateMode="Conditional">
-                                            <LayoutTemplate>
-                                                <ul class="col-md-12 col-lg-12 col-sm-12" style="list-style: none">
-                                                    <li runat="server" id="itemPlaceholder"></li>
-                                                </ul>
-                                            </LayoutTemplate>
-                                            <ItemTemplate>
-                                                <li style="border-bottom: 1px dashed #ccc; margin: 5px; padding: 20px 0px">
-                                                    <asp:LinkButton runat="server" CssClass="btnXoa"  OnClientClick="scrollToBottom();"
-                                                        ID="btnXoa" CommandName="XoaDong" CommandArgument='<%# Eval("Id") %>'> x </asp:LinkButton>
-                                                    <asp:HiddenField runat="server" ID="hdType" Value='<%# Eval("Type") %>' />
-                                                    <asp:Panel runat="server" CssClass="row" ID="pnBoxChuDe" Visible='<%#int.Parse(Eval("Type").ToString()) == 0 %>'>
-                                                        <label>Chủ đề</label>
-                                                        <asp:TextBox runat="server" ID="txtBoxChuDe" CssClass="form-control" Text='<%#Eval("Paragraph") %>'></asp:TextBox>
-                                                    </asp:Panel>
-                                                    <asp:Panel runat="server" CssClass="row" ID="pnPara" Visible='<%#int.Parse(Eval("Type").ToString()) == 1 %>'>
-                                                        <label>Tiêu đề</label>
-                                                        <asp:TextBox runat="server" ID="txtTitlePara" CssClass="form-control" Text='<%# Eval("Title") %>'></asp:TextBox>
-                                                        <label>Nội dung</label>
-                                                        <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" ID="txtNoiDung" CssClass="materialize-textarea" Text='<%#Eval("Paragraph") %>'></asp:TextBox>
-                                                    </asp:Panel>
-                                                    <asp:Panel runat="server" CssClass="row" ID="pnImage" Visible='<%#int.Parse(Eval("Type").ToString()) == 2 %>'>
-                                                        <label>Chọn ảnh</label>
-
-                                                        <input id="avatarUpload" type="file" name="file" accept="image/gif, image/jpeg, image/png" onchange="previewFile(this)" runat="server" />
-                                                        <%--<asp:FileUpload ID="avatarUpload" runat="server" />--%>
-                                                        <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%#Eval("Image") %>' style="width: 200px" />
-                                                        <asp:TextBox ID="hdImage" Style="display: none" runat="server" CssClass="valueImg" Text='<%#Eval("Image") %>' />
-                                                    </asp:Panel>
-                                                    <asp:Panel runat="server" CssClass="row" ID="pnBox" Visible='<%#int.Parse(Eval("Type").ToString()) == 3 %>'>
-                                                        <label>Nội dung trong hộp</label>
-                                                        <asp:TextBox runat="server" TextMode="MultiLine" Text='<%#Eval("Box") %>' Rows="3" ID="txtBox" CssClass="materialize-textarea"></asp:TextBox>
-                                                    </asp:Panel>
-                                                </li>
-                                            </ItemTemplate>
-                                        </asp:ListView>
-                                        <asp:ListView runat="server" ID="lstContentVote" OnItemCommand="lstContentVote_OnItemCommand" ChildrenAsTriggers="true" UpdateMode="Conditional">
-                                            <LayoutTemplate>
-                                                <ul class="col-md-12 col-lg-12 col-sm-12">
-                                                    <li runat="server" id="itemPlaceholder"></li>
-                                                </ul>
-                                            </LayoutTemplate>
-                                            <ItemTemplate>
-                                                <li style="border-bottom: 1px dashed #ccc; margin: 5px; padding: 20px 0px">
-                                                    <asp:LinkButton runat="server" CssClass="btnXoa"
-                                                        ID="btnXoa" OnClientClick="scrollToBottom();" CommandName="XoaDong" CommandArgument='<%# Eval("ID") %>'> x </asp:LinkButton>
-
-                                                    <asp:HiddenField runat="server" ID="hdID" Value='<%#Eval("ID") %>' />
-                                                    <asp:HiddenField runat="server" ID="hdVoteCount" Value='<%#Eval("VotedCount") %>' />
-
-                                                    <label>Chọn ảnh</label>
-                                                    <input id="avatarUpload" type="file" name="file" accept="image/gif, image/jpeg, image/png" onchange="previewFile(this)" runat="server" />
-                                                    <%--<asp:FileUpload ID="avatarUpload" runat="server" />--%>
-                                                    <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%#Eval("Image") %>' style="width: 200px" /><br />
-                                                    <asp:TextBox ID="hdImage" Style="display: none" runat="server" CssClass="valueImg" Text='<%#Eval("Image") %>' />
-
-                                                    <label>Nội dung</label>
-                                                    <asp:TextBox runat="server" Text='<%#Eval("Content") %>' ID="txtContent" CssClass="form-control"></asp:TextBox>
-                                                </li>
-                                            </ItemTemplate>
-                                        </asp:ListView>
-                                    </div>
-                                    <div class="col s12">
-                                        <asp:LinkButton ID="btnboxChuDe" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnboxChuDe_OnClick" runat="server">Box chủ đề</asp:LinkButton>
-                                        <asp:LinkButton ID="btnThemDoanVan" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemDoanVan_OnClick" runat="server">Đoạn văn</asp:LinkButton>
-                                        <asp:LinkButton ID="btnThemHinhAnh" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemHinhAnh_OnClick" runat="server">Hình ảnh</asp:LinkButton>
-                                        <asp:LinkButton ID="btnBox" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnBox_OnClick" runat="server">Box nội dung</asp:LinkButton>
-                                        <asp:LinkButton ID="btnThemLuaChon" Visible="False" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemLuaChon_OnClick" runat="server">Lựa chọn</asp:LinkButton>
-                                    </div>
-                                </div>
-
-                            </ContentTemplate>
-                            <Triggers>
-                            </Triggers>
-                        </asp:UpdatePanel>
-                    </div>
-                    <div class="col s4">
-                        <div class="sub-col row">
-                            <div class="header">
-                                Thông tin bài viết
-                            </div>
-                            <div>
-                                <div class="col s12">
-                                    <h3>Loại bài viết</h3>
-                                    <asp:RadioButtonList ID="radType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="radType_OnSelectedIndexChanged" RepeatDirection="Horizontal">
-                                        <asp:ListItem Selected="True" Text="Tin tức" Value="0"></asp:ListItem>
-                                        <asp:ListItem Text="Bầu chọn" Value="1"></asp:ListItem>
-                                        <asp:ListItem Text="Tranh luận" Value="2"></asp:ListItem>
-                                    </asp:RadioButtonList>
                                 </div>
                             </div>
                         </div>
-                        <div class="sub-col row">
-                            <div class="header">
-                                Thông tin hiển thị
+                        <div class="col s4" style="display: none">
+                            <div class="sub-col row">
+                                <div class="header">
+                                    Thông tin hiển thị
+                                </div>
+                                <div>
+                                    <div class="col s12">
+                                        <h3>Hiển thị</h3>
+                                        <asp:RadioButtonList ID="rblStatus" runat="server" RepeatDirection="Horizontal">
+                                            <asp:ListItem Text="Không" Value="0"></asp:ListItem>
+                                            <asp:ListItem Selected="True" Text="Có" Value="1"></asp:ListItem>
+                                        </asp:RadioButtonList>
+                                    </div>
+                                    <div class="col s12" style="display: none">
+                                        <h3>Hiển thị trang chủ</h3>
+                                        <asp:RadioButtonList ID="rblNewsPeriod" runat="server" RepeatDirection="Vertical">
+                                            <asp:ListItem Value="1" Text="Tin tức"></asp:ListItem>
+                                            <asp:ListItem Value="2" Text="Tin chuyên gia" Selected="True"></asp:ListItem>
+                                            <asp:ListItem Value="3" Text="Tin doanh nghiệp"></asp:ListItem>
+                                            <asp:ListItem Text="Không" Value="20"></asp:ListItem>
+                                        </asp:RadioButtonList>
+                                    </div>
+                                    <div class="col s12">
+                                        <h3>Hiển thị trong chi tiết</h3>
+                                        <asp:RadioButtonList ID="rblShowDetail" runat="server" RepeatColumns="2">
+                                            <asp:ListItem Text="Không" Value="0"></asp:ListItem>
+                                            <asp:ListItem Selected="True" Text="Có" Value="1"></asp:ListItem>
+                                        </asp:RadioButtonList>
+                                    </div>
+                                    <div class="col s12">
+                                        <h3>Cho phép phản hồi</h3>
+                                        <asp:RadioButtonList ID="rblFeefback" runat="server" RepeatColumns="5">
+                                            <asp:ListItem Text="Không" Value="0"></asp:ListItem>
+                                            <asp:ListItem Text="Có" Selected="True" Value="1"></asp:ListItem>
+                                        </asp:RadioButtonList>
+                                    </div>
+                                    <div class="col s12" style="display: none">
+                                        <h3>Ngôn ngữ</h3>
+                                        <asp:RadioButtonList ID="rblLanguage" runat="server" RepeatColumns="5">
+                                        </asp:RadioButtonList>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <div class="col s12">
-                                    <h3>Hiển thị</h3>
-                                    <asp:RadioButtonList ID="rblStatus" runat="server" RepeatDirection="Horizontal">
-                                        <asp:ListItem Text="Không" Value="0"></asp:ListItem>
-                                        <asp:ListItem Selected="True" Text="Có" Value="1"></asp:ListItem>
-                                    </asp:RadioButtonList>
+                            <div class="sub-col row" style="display: none">
+                                <div class="header">
+                                    Seo parameter
                                 </div>
-                                <div class="col s12">
-                                    <h3>Hiển thị trang chủ</h3>
-                                    <asp:RadioButtonList ID="rblNewsPeriod" runat="server" RepeatDirection="Vertical">
-                                        <asp:ListItem Value="1" Text="Tin tức"></asp:ListItem>
-                                        <asp:ListItem Value="2" Text="Tin chuyên gia"></asp:ListItem>
-                                        <asp:ListItem Value="3" Text="Tin doanh nghiệp"></asp:ListItem>
-                                        <asp:ListItem Text="Không" Value="20" Selected="True"></asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </div>
-                                <div class="col s12">
-                                    <h3>Hiển thị trong chi tiết</h3>
-                                    <asp:RadioButtonList ID="rblShowDetail" runat="server" RepeatColumns="2">
-                                        <asp:ListItem Text="Không" Value="0"></asp:ListItem>
-                                        <asp:ListItem Selected="True" Text="Có" Value="1"></asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </div>
-                                <div class="col s12">
-                                    <h3>Cho phép phản hồi</h3>
-                                    <asp:RadioButtonList ID="rblFeefback" runat="server" RepeatColumns="5">
-                                        <asp:ListItem Text="Không" Value="0"></asp:ListItem>
-                                        <asp:ListItem Text="Có" Selected="True" Value="1"></asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </div>
-                                <div class="col s12" style="display: none">
-                                    <h3>Ngôn ngữ</h3>
-                                    <asp:RadioButtonList ID="rblLanguage" runat="server" RepeatColumns="5">
-                                    </asp:RadioButtonList>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sub-col row" style="display: none">
-                            <div class="header">
-                                Seo parameter
-                            </div>
-                            <div class="">
-                                <div class="col s12">
-                                    <div class="panel-body">
-                                        <div class="form-group">
-                                            <label>
-                                                Seo title</label>
-                                            <input type="text" name="txtSeoTitle" id="txtSeoTitle" runat="server" class="form-control" />
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Vui lòng nhập seo title"
-                                                Text="Vui lòng nhập Seo Title" ControlToValidate="txtSeoTitle" CssClass="form-control"
-                                                ValidationGroup="G1"></asp:RequiredFieldValidator>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                Seo url</label>
-                                            <input type="text" name="txtSeoUrl" id="txtSeoUrl" runat="server" class="form-control" />
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Vui lòng nhập Seo Url"
-                                                Text="Vui lòng nhập Seo Url" ControlToValidate="txtSeoUrl" CssClass="form-control"
-                                                ValidationGroup="G1"></asp:RequiredFieldValidator>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                Seo Keyword</label>
-                                            <textarea id="txtSeoKeyword" runat="server" class="form-control"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                Seo Description</label>
-                                            <textarea id="txtSeoDescription" runat="server" class="form-control"></textarea>
+                                <div class="">
+                                    <div class="col s12">
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label>
+                                                    Seo title</label>
+                                                <input type="text" name="txtSeoTitle" id="txtSeoTitle" runat="server" class="form-control" />
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Vui lòng nhập seo title"
+                                                    Text="Vui lòng nhập Seo Title" ControlToValidate="txtSeoTitle" CssClass="form-control"
+                                                    ValidationGroup="G1"></asp:RequiredFieldValidator>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    Seo url</label>
+                                                <input type="text" name="txtSeoUrl" id="txtSeoUrl" runat="server" class="form-control" />
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Vui lòng nhập Seo Url"
+                                                    Text="Vui lòng nhập Seo Url" ControlToValidate="txtSeoUrl" CssClass="form-control"
+                                                    ValidationGroup="G1"></asp:RequiredFieldValidator>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    Seo Keyword</label>
+                                                <textarea id="txtSeoKeyword" runat="server" class="form-control"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    Seo Description</label>
+                                                <textarea id="txtSeoDescription" runat="server" class="form-control"></textarea>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </ContentTemplate>
+                    <Triggers>
+                    </Triggers>
+                </asp:UpdatePanel>
             </div>
+
             <style>
                 select {
                     display: block;
                     margin: 3px;
-                    width: 95%;
+                    width: 98%;
                 }
 
                 label {
@@ -345,11 +345,12 @@
                     text-align: center;
                 }
 
-                .sub-col {
+                .sub-col, .main-col {
                     border: 1px solid #404D56;
+                    padding: 10px;
                 }
 
-                    .sub-col h3 {
+                    .sub-col h3, .main-col h3 {
                         font-size: 16px;
                         padding-top: 10px;
                         font-weight: bold;
@@ -433,11 +434,6 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
-        $(document)
-            .ready(function () {
-                scrollToBottom();
-            });
 
         function scrollToBottom() {
             var t = $('#pnNoiDung');
