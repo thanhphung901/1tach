@@ -90,18 +90,12 @@ namespace Model
     partial void InsertESHOP_MAIL_RECIVE(ESHOP_MAIL_RECIVE instance);
     partial void UpdateESHOP_MAIL_RECIVE(ESHOP_MAIL_RECIVE instance);
     partial void DeleteESHOP_MAIL_RECIVE(ESHOP_MAIL_RECIVE instance);
-    partial void InsertESHOP_NEW(ESHOP_NEW instance);
-    partial void UpdateESHOP_NEW(ESHOP_NEW instance);
-    partial void DeleteESHOP_NEW(ESHOP_NEW instance);
     partial void InsertESHOP_NEWS_ATT(ESHOP_NEWS_ATT instance);
     partial void UpdateESHOP_NEWS_ATT(ESHOP_NEWS_ATT instance);
     partial void DeleteESHOP_NEWS_ATT(ESHOP_NEWS_ATT instance);
     partial void InsertESHOP_NEWS_CAT(ESHOP_NEWS_CAT instance);
     partial void UpdateESHOP_NEWS_CAT(ESHOP_NEWS_CAT instance);
     partial void DeleteESHOP_NEWS_CAT(ESHOP_NEWS_CAT instance);
-    partial void InsertESHOP_NEWS_COMMENT(ESHOP_NEWS_COMMENT instance);
-    partial void UpdateESHOP_NEWS_COMMENT(ESHOP_NEWS_COMMENT instance);
-    partial void DeleteESHOP_NEWS_COMMENT(ESHOP_NEWS_COMMENT instance);
     partial void InsertESHOP_NEWS_IMAGE(ESHOP_NEWS_IMAGE instance);
     partial void UpdateESHOP_NEWS_IMAGE(ESHOP_NEWS_IMAGE instance);
     partial void DeleteESHOP_NEWS_IMAGE(ESHOP_NEWS_IMAGE instance);
@@ -171,6 +165,12 @@ namespace Model
     partial void InsertTBL_NEWS_LIKE(TBL_NEWS_LIKE instance);
     partial void UpdateTBL_NEWS_LIKE(TBL_NEWS_LIKE instance);
     partial void DeleteTBL_NEWS_LIKE(TBL_NEWS_LIKE instance);
+    partial void InsertESHOP_NEW(ESHOP_NEW instance);
+    partial void UpdateESHOP_NEW(ESHOP_NEW instance);
+    partial void DeleteESHOP_NEW(ESHOP_NEW instance);
+    partial void InsertESHOP_NEWS_COMMENT(ESHOP_NEWS_COMMENT instance);
+    partial void UpdateESHOP_NEWS_COMMENT(ESHOP_NEWS_COMMENT instance);
+    partial void DeleteESHOP_NEWS_COMMENT(ESHOP_NEWS_COMMENT instance);
     #endregion
 		
 		public dbVuonRauVietDataContext() : 
@@ -363,14 +363,6 @@ namespace Model
 			}
 		}
 		
-		public System.Data.Linq.Table<ESHOP_NEW> ESHOP_NEWs
-		{
-			get
-			{
-				return this.GetTable<ESHOP_NEW>();
-			}
-		}
-		
 		public System.Data.Linq.Table<ESHOP_NEWS_ATT> ESHOP_NEWS_ATTs
 		{
 			get
@@ -384,14 +376,6 @@ namespace Model
 			get
 			{
 				return this.GetTable<ESHOP_NEWS_CAT>();
-			}
-		}
-		
-		public System.Data.Linq.Table<ESHOP_NEWS_COMMENT> ESHOP_NEWS_COMMENTs
-		{
-			get
-			{
-				return this.GetTable<ESHOP_NEWS_COMMENT>();
 			}
 		}
 		
@@ -576,6 +560,22 @@ namespace Model
 			get
 			{
 				return this.GetTable<TBL_NEWS_LIKE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ESHOP_NEW> ESHOP_NEWs
+		{
+			get
+			{
+				return this.GetTable<ESHOP_NEW>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ESHOP_NEWS_COMMENT> ESHOP_NEWS_COMMENTs
+		{
+			get
+			{
+				return this.GetTable<ESHOP_NEWS_COMMENT>();
 			}
 		}
 		
@@ -7317,1292 +7317,6 @@ namespace Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ESHOP_NEWS")]
-	public partial class ESHOP_NEW : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _NEWS_ID;
-		
-		private System.Nullable<int> _USER_ID;
-		
-		private string _NEWS_CODE;
-		
-		private string _NEWS_TITLE;
-		
-		private string _NEWS_DESC;
-		
-		private string _NEWS_SEO_KEYWORD;
-		
-		private string _NEWS_SEO_DESC;
-		
-		private string _NEWS_SEO_URL;
-		
-		private string _NEWS_SEO_TITLE;
-		
-		private string _NEWS_FILEHTML;
-		
-		private System.Nullable<System.DateTime> _NEWS_PUBLISHDATE;
-		
-		private System.Nullable<System.DateTime> _NEWS_UPDATE;
-		
-		private string _NEWS_URL;
-		
-		private string _NEWS_TARGET;
-		
-		private System.Nullable<int> _NEWS_SHOWTYPE;
-		
-		private System.Nullable<int> _NEWS_SHOWINDETAIL;
-		
-		private System.Nullable<int> _NEWS_FEEDBACKTYPE;
-		
-		private System.Nullable<int> _NEWS_TYPE;
-		
-		private System.Nullable<int> _NEWS_LANGUAGE;
-		
-		private System.Nullable<int> _NEWS_PRINTTYPE;
-		
-		private System.Nullable<int> _NEWS_COUNT;
-		
-		private System.Nullable<int> _NEWS_PERIOD;
-		
-		private System.Nullable<int> _NEWS_ORDER_PERIOD;
-		
-		private System.Nullable<int> _NEWS_ORDER;
-		
-		private string _NEWS_IMAGE1;
-		
-		private string _NEWS_IMAGE2;
-		
-		private string _NEWS_IMAGE3;
-		
-		private string _NEWS_IMAGE4;
-		
-		private string _NEWS_IMAGE5;
-		
-		private string _NEWS_FIELD1;
-		
-		private string _NEWS_FIELD2;
-		
-		private string _NEWS_FIELD3;
-		
-		private string _NEWS_FIELD4;
-		
-		private string _NEWS_FIELD5;
-		
-		private System.Nullable<int> _NEWS_SENDEMAIL;
-		
-		private System.Nullable<System.DateTime> _NEWS_SENDDATE;
-		
-		private System.Nullable<decimal> _NEWS_PRICE1;
-		
-		private System.Nullable<decimal> _NEWS_PRICE2;
-		
-		private System.Nullable<decimal> _NEWS_PRICE3;
-		
-		private System.Nullable<int> _UNIT_ID1;
-		
-		private System.Nullable<int> _UNIT_ID2;
-		
-		private System.Nullable<int> _UNIT_ID3;
-		
-		private string _NEWS_PACKAGE;
-		
-		private string _NEWS_KEYWORD_ASCII;
-		
-		private string _NEWS_VIDEO_URL;
-		
-		private EntitySet<ESHOP_BASKET> _ESHOP_BASKETs;
-		
-		private EntitySet<ESHOP_NEWS_ATT> _ESHOP_NEWS_ATTs;
-		
-		private EntitySet<ESHOP_NEWS_CAT> _ESHOP_NEWS_CATs;
-		
-		private EntitySet<ESHOP_NEWS_COMMENT> _ESHOP_NEWS_COMMENTs;
-		
-		private EntitySet<ESHOP_NEWS_IMAGE> _ESHOP_NEWS_IMAGEs;
-		
-		private EntitySet<ESHOP_ORDER_ITEM> _ESHOP_ORDER_ITEMs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnNEWS_IDChanging(int value);
-    partial void OnNEWS_IDChanged();
-    partial void OnUSER_IDChanging(System.Nullable<int> value);
-    partial void OnUSER_IDChanged();
-    partial void OnNEWS_CODEChanging(string value);
-    partial void OnNEWS_CODEChanged();
-    partial void OnNEWS_TITLEChanging(string value);
-    partial void OnNEWS_TITLEChanged();
-    partial void OnNEWS_DESCChanging(string value);
-    partial void OnNEWS_DESCChanged();
-    partial void OnNEWS_SEO_KEYWORDChanging(string value);
-    partial void OnNEWS_SEO_KEYWORDChanged();
-    partial void OnNEWS_SEO_DESCChanging(string value);
-    partial void OnNEWS_SEO_DESCChanged();
-    partial void OnNEWS_SEO_URLChanging(string value);
-    partial void OnNEWS_SEO_URLChanged();
-    partial void OnNEWS_SEO_TITLEChanging(string value);
-    partial void OnNEWS_SEO_TITLEChanged();
-    partial void OnNEWS_FILEHTMLChanging(string value);
-    partial void OnNEWS_FILEHTMLChanged();
-    partial void OnNEWS_PUBLISHDATEChanging(System.Nullable<System.DateTime> value);
-    partial void OnNEWS_PUBLISHDATEChanged();
-    partial void OnNEWS_UPDATEChanging(System.Nullable<System.DateTime> value);
-    partial void OnNEWS_UPDATEChanged();
-    partial void OnNEWS_URLChanging(string value);
-    partial void OnNEWS_URLChanged();
-    partial void OnNEWS_TARGETChanging(string value);
-    partial void OnNEWS_TARGETChanged();
-    partial void OnNEWS_SHOWTYPEChanging(System.Nullable<int> value);
-    partial void OnNEWS_SHOWTYPEChanged();
-    partial void OnNEWS_SHOWINDETAILChanging(System.Nullable<int> value);
-    partial void OnNEWS_SHOWINDETAILChanged();
-    partial void OnNEWS_FEEDBACKTYPEChanging(System.Nullable<int> value);
-    partial void OnNEWS_FEEDBACKTYPEChanged();
-    partial void OnNEWS_TYPEChanging(System.Nullable<int> value);
-    partial void OnNEWS_TYPEChanged();
-    partial void OnNEWS_LANGUAGEChanging(System.Nullable<int> value);
-    partial void OnNEWS_LANGUAGEChanged();
-    partial void OnNEWS_PRINTTYPEChanging(System.Nullable<int> value);
-    partial void OnNEWS_PRINTTYPEChanged();
-    partial void OnNEWS_COUNTChanging(System.Nullable<int> value);
-    partial void OnNEWS_COUNTChanged();
-    partial void OnNEWS_PERIODChanging(System.Nullable<int> value);
-    partial void OnNEWS_PERIODChanged();
-    partial void OnNEWS_ORDER_PERIODChanging(System.Nullable<int> value);
-    partial void OnNEWS_ORDER_PERIODChanged();
-    partial void OnNEWS_ORDERChanging(System.Nullable<int> value);
-    partial void OnNEWS_ORDERChanged();
-    partial void OnNEWS_IMAGE1Changing(string value);
-    partial void OnNEWS_IMAGE1Changed();
-    partial void OnNEWS_IMAGE2Changing(string value);
-    partial void OnNEWS_IMAGE2Changed();
-    partial void OnNEWS_IMAGE3Changing(string value);
-    partial void OnNEWS_IMAGE3Changed();
-    partial void OnNEWS_IMAGE4Changing(string value);
-    partial void OnNEWS_IMAGE4Changed();
-    partial void OnNEWS_IMAGE5Changing(string value);
-    partial void OnNEWS_IMAGE5Changed();
-    partial void OnNEWS_FIELD1Changing(string value);
-    partial void OnNEWS_FIELD1Changed();
-    partial void OnNEWS_FIELD2Changing(string value);
-    partial void OnNEWS_FIELD2Changed();
-    partial void OnNEWS_FIELD3Changing(string value);
-    partial void OnNEWS_FIELD3Changed();
-    partial void OnNEWS_FIELD4Changing(string value);
-    partial void OnNEWS_FIELD4Changed();
-    partial void OnNEWS_FIELD5Changing(string value);
-    partial void OnNEWS_FIELD5Changed();
-    partial void OnNEWS_SENDEMAILChanging(System.Nullable<int> value);
-    partial void OnNEWS_SENDEMAILChanged();
-    partial void OnNEWS_SENDDATEChanging(System.Nullable<System.DateTime> value);
-    partial void OnNEWS_SENDDATEChanged();
-    partial void OnNEWS_PRICE1Changing(System.Nullable<decimal> value);
-    partial void OnNEWS_PRICE1Changed();
-    partial void OnNEWS_PRICE2Changing(System.Nullable<decimal> value);
-    partial void OnNEWS_PRICE2Changed();
-    partial void OnNEWS_PRICE3Changing(System.Nullable<decimal> value);
-    partial void OnNEWS_PRICE3Changed();
-    partial void OnUNIT_ID1Changing(System.Nullable<int> value);
-    partial void OnUNIT_ID1Changed();
-    partial void OnUNIT_ID2Changing(System.Nullable<int> value);
-    partial void OnUNIT_ID2Changed();
-    partial void OnUNIT_ID3Changing(System.Nullable<int> value);
-    partial void OnUNIT_ID3Changed();
-    partial void OnNEWS_PACKAGEChanging(string value);
-    partial void OnNEWS_PACKAGEChanged();
-    partial void OnNEWS_KEYWORD_ASCIIChanging(string value);
-    partial void OnNEWS_KEYWORD_ASCIIChanged();
-    partial void OnNEWS_VIDEO_URLChanging(string value);
-    partial void OnNEWS_VIDEO_URLChanged();
-    #endregion
-		
-		public ESHOP_NEW()
-		{
-			this._ESHOP_BASKETs = new EntitySet<ESHOP_BASKET>(new Action<ESHOP_BASKET>(this.attach_ESHOP_BASKETs), new Action<ESHOP_BASKET>(this.detach_ESHOP_BASKETs));
-			this._ESHOP_NEWS_ATTs = new EntitySet<ESHOP_NEWS_ATT>(new Action<ESHOP_NEWS_ATT>(this.attach_ESHOP_NEWS_ATTs), new Action<ESHOP_NEWS_ATT>(this.detach_ESHOP_NEWS_ATTs));
-			this._ESHOP_NEWS_CATs = new EntitySet<ESHOP_NEWS_CAT>(new Action<ESHOP_NEWS_CAT>(this.attach_ESHOP_NEWS_CATs), new Action<ESHOP_NEWS_CAT>(this.detach_ESHOP_NEWS_CATs));
-			this._ESHOP_NEWS_COMMENTs = new EntitySet<ESHOP_NEWS_COMMENT>(new Action<ESHOP_NEWS_COMMENT>(this.attach_ESHOP_NEWS_COMMENTs), new Action<ESHOP_NEWS_COMMENT>(this.detach_ESHOP_NEWS_COMMENTs));
-			this._ESHOP_NEWS_IMAGEs = new EntitySet<ESHOP_NEWS_IMAGE>(new Action<ESHOP_NEWS_IMAGE>(this.attach_ESHOP_NEWS_IMAGEs), new Action<ESHOP_NEWS_IMAGE>(this.detach_ESHOP_NEWS_IMAGEs));
-			this._ESHOP_ORDER_ITEMs = new EntitySet<ESHOP_ORDER_ITEM>(new Action<ESHOP_ORDER_ITEM>(this.attach_ESHOP_ORDER_ITEMs), new Action<ESHOP_ORDER_ITEM>(this.detach_ESHOP_ORDER_ITEMs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int NEWS_ID
-		{
-			get
-			{
-				return this._NEWS_ID;
-			}
-			set
-			{
-				if ((this._NEWS_ID != value))
-				{
-					this.OnNEWS_IDChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_ID = value;
-					this.SendPropertyChanged("NEWS_ID");
-					this.OnNEWS_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", DbType="Int")]
-		public System.Nullable<int> USER_ID
-		{
-			get
-			{
-				return this._USER_ID;
-			}
-			set
-			{
-				if ((this._USER_ID != value))
-				{
-					this.OnUSER_IDChanging(value);
-					this.SendPropertyChanging();
-					this._USER_ID = value;
-					this.SendPropertyChanged("USER_ID");
-					this.OnUSER_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_CODE", DbType="NVarChar(100)")]
-		public string NEWS_CODE
-		{
-			get
-			{
-				return this._NEWS_CODE;
-			}
-			set
-			{
-				if ((this._NEWS_CODE != value))
-				{
-					this.OnNEWS_CODEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_CODE = value;
-					this.SendPropertyChanged("NEWS_CODE");
-					this.OnNEWS_CODEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_TITLE", DbType="NVarChar(300)")]
-		public string NEWS_TITLE
-		{
-			get
-			{
-				return this._NEWS_TITLE;
-			}
-			set
-			{
-				if ((this._NEWS_TITLE != value))
-				{
-					this.OnNEWS_TITLEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_TITLE = value;
-					this.SendPropertyChanged("NEWS_TITLE");
-					this.OnNEWS_TITLEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_DESC", DbType="NVarChar(500)")]
-		public string NEWS_DESC
-		{
-			get
-			{
-				return this._NEWS_DESC;
-			}
-			set
-			{
-				if ((this._NEWS_DESC != value))
-				{
-					this.OnNEWS_DESCChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_DESC = value;
-					this.SendPropertyChanged("NEWS_DESC");
-					this.OnNEWS_DESCChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_KEYWORD", DbType="NVarChar(700)")]
-		public string NEWS_SEO_KEYWORD
-		{
-			get
-			{
-				return this._NEWS_SEO_KEYWORD;
-			}
-			set
-			{
-				if ((this._NEWS_SEO_KEYWORD != value))
-				{
-					this.OnNEWS_SEO_KEYWORDChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SEO_KEYWORD = value;
-					this.SendPropertyChanged("NEWS_SEO_KEYWORD");
-					this.OnNEWS_SEO_KEYWORDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_DESC", DbType="NVarChar(500)")]
-		public string NEWS_SEO_DESC
-		{
-			get
-			{
-				return this._NEWS_SEO_DESC;
-			}
-			set
-			{
-				if ((this._NEWS_SEO_DESC != value))
-				{
-					this.OnNEWS_SEO_DESCChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SEO_DESC = value;
-					this.SendPropertyChanged("NEWS_SEO_DESC");
-					this.OnNEWS_SEO_DESCChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_URL", DbType="NVarChar(250)")]
-		public string NEWS_SEO_URL
-		{
-			get
-			{
-				return this._NEWS_SEO_URL;
-			}
-			set
-			{
-				if ((this._NEWS_SEO_URL != value))
-				{
-					this.OnNEWS_SEO_URLChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SEO_URL = value;
-					this.SendPropertyChanged("NEWS_SEO_URL");
-					this.OnNEWS_SEO_URLChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_TITLE", DbType="NVarChar(500)")]
-		public string NEWS_SEO_TITLE
-		{
-			get
-			{
-				return this._NEWS_SEO_TITLE;
-			}
-			set
-			{
-				if ((this._NEWS_SEO_TITLE != value))
-				{
-					this.OnNEWS_SEO_TITLEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SEO_TITLE = value;
-					this.SendPropertyChanged("NEWS_SEO_TITLE");
-					this.OnNEWS_SEO_TITLEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FILEHTML", DbType="NVarChar(200)")]
-		public string NEWS_FILEHTML
-		{
-			get
-			{
-				return this._NEWS_FILEHTML;
-			}
-			set
-			{
-				if ((this._NEWS_FILEHTML != value))
-				{
-					this.OnNEWS_FILEHTMLChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_FILEHTML = value;
-					this.SendPropertyChanged("NEWS_FILEHTML");
-					this.OnNEWS_FILEHTMLChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PUBLISHDATE", DbType="DateTime")]
-		public System.Nullable<System.DateTime> NEWS_PUBLISHDATE
-		{
-			get
-			{
-				return this._NEWS_PUBLISHDATE;
-			}
-			set
-			{
-				if ((this._NEWS_PUBLISHDATE != value))
-				{
-					this.OnNEWS_PUBLISHDATEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_PUBLISHDATE = value;
-					this.SendPropertyChanged("NEWS_PUBLISHDATE");
-					this.OnNEWS_PUBLISHDATEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_UPDATE", DbType="DateTime")]
-		public System.Nullable<System.DateTime> NEWS_UPDATE
-		{
-			get
-			{
-				return this._NEWS_UPDATE;
-			}
-			set
-			{
-				if ((this._NEWS_UPDATE != value))
-				{
-					this.OnNEWS_UPDATEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_UPDATE = value;
-					this.SendPropertyChanged("NEWS_UPDATE");
-					this.OnNEWS_UPDATEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_URL", DbType="NVarChar(400)")]
-		public string NEWS_URL
-		{
-			get
-			{
-				return this._NEWS_URL;
-			}
-			set
-			{
-				if ((this._NEWS_URL != value))
-				{
-					this.OnNEWS_URLChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_URL = value;
-					this.SendPropertyChanged("NEWS_URL");
-					this.OnNEWS_URLChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_TARGET", DbType="NVarChar(50)")]
-		public string NEWS_TARGET
-		{
-			get
-			{
-				return this._NEWS_TARGET;
-			}
-			set
-			{
-				if ((this._NEWS_TARGET != value))
-				{
-					this.OnNEWS_TARGETChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_TARGET = value;
-					this.SendPropertyChanged("NEWS_TARGET");
-					this.OnNEWS_TARGETChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SHOWTYPE", DbType="Int")]
-		public System.Nullable<int> NEWS_SHOWTYPE
-		{
-			get
-			{
-				return this._NEWS_SHOWTYPE;
-			}
-			set
-			{
-				if ((this._NEWS_SHOWTYPE != value))
-				{
-					this.OnNEWS_SHOWTYPEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SHOWTYPE = value;
-					this.SendPropertyChanged("NEWS_SHOWTYPE");
-					this.OnNEWS_SHOWTYPEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SHOWINDETAIL", DbType="Int")]
-		public System.Nullable<int> NEWS_SHOWINDETAIL
-		{
-			get
-			{
-				return this._NEWS_SHOWINDETAIL;
-			}
-			set
-			{
-				if ((this._NEWS_SHOWINDETAIL != value))
-				{
-					this.OnNEWS_SHOWINDETAILChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SHOWINDETAIL = value;
-					this.SendPropertyChanged("NEWS_SHOWINDETAIL");
-					this.OnNEWS_SHOWINDETAILChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FEEDBACKTYPE", DbType="Int")]
-		public System.Nullable<int> NEWS_FEEDBACKTYPE
-		{
-			get
-			{
-				return this._NEWS_FEEDBACKTYPE;
-			}
-			set
-			{
-				if ((this._NEWS_FEEDBACKTYPE != value))
-				{
-					this.OnNEWS_FEEDBACKTYPEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_FEEDBACKTYPE = value;
-					this.SendPropertyChanged("NEWS_FEEDBACKTYPE");
-					this.OnNEWS_FEEDBACKTYPEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_TYPE", DbType="Int")]
-		public System.Nullable<int> NEWS_TYPE
-		{
-			get
-			{
-				return this._NEWS_TYPE;
-			}
-			set
-			{
-				if ((this._NEWS_TYPE != value))
-				{
-					this.OnNEWS_TYPEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_TYPE = value;
-					this.SendPropertyChanged("NEWS_TYPE");
-					this.OnNEWS_TYPEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_LANGUAGE", DbType="Int")]
-		public System.Nullable<int> NEWS_LANGUAGE
-		{
-			get
-			{
-				return this._NEWS_LANGUAGE;
-			}
-			set
-			{
-				if ((this._NEWS_LANGUAGE != value))
-				{
-					this.OnNEWS_LANGUAGEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_LANGUAGE = value;
-					this.SendPropertyChanged("NEWS_LANGUAGE");
-					this.OnNEWS_LANGUAGEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRINTTYPE", DbType="Int")]
-		public System.Nullable<int> NEWS_PRINTTYPE
-		{
-			get
-			{
-				return this._NEWS_PRINTTYPE;
-			}
-			set
-			{
-				if ((this._NEWS_PRINTTYPE != value))
-				{
-					this.OnNEWS_PRINTTYPEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_PRINTTYPE = value;
-					this.SendPropertyChanged("NEWS_PRINTTYPE");
-					this.OnNEWS_PRINTTYPEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_COUNT", DbType="Int")]
-		public System.Nullable<int> NEWS_COUNT
-		{
-			get
-			{
-				return this._NEWS_COUNT;
-			}
-			set
-			{
-				if ((this._NEWS_COUNT != value))
-				{
-					this.OnNEWS_COUNTChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_COUNT = value;
-					this.SendPropertyChanged("NEWS_COUNT");
-					this.OnNEWS_COUNTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PERIOD", DbType="Int")]
-		public System.Nullable<int> NEWS_PERIOD
-		{
-			get
-			{
-				return this._NEWS_PERIOD;
-			}
-			set
-			{
-				if ((this._NEWS_PERIOD != value))
-				{
-					this.OnNEWS_PERIODChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_PERIOD = value;
-					this.SendPropertyChanged("NEWS_PERIOD");
-					this.OnNEWS_PERIODChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ORDER_PERIOD", DbType="Int")]
-		public System.Nullable<int> NEWS_ORDER_PERIOD
-		{
-			get
-			{
-				return this._NEWS_ORDER_PERIOD;
-			}
-			set
-			{
-				if ((this._NEWS_ORDER_PERIOD != value))
-				{
-					this.OnNEWS_ORDER_PERIODChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_ORDER_PERIOD = value;
-					this.SendPropertyChanged("NEWS_ORDER_PERIOD");
-					this.OnNEWS_ORDER_PERIODChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ORDER", DbType="Int")]
-		public System.Nullable<int> NEWS_ORDER
-		{
-			get
-			{
-				return this._NEWS_ORDER;
-			}
-			set
-			{
-				if ((this._NEWS_ORDER != value))
-				{
-					this.OnNEWS_ORDERChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_ORDER = value;
-					this.SendPropertyChanged("NEWS_ORDER");
-					this.OnNEWS_ORDERChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE1", DbType="NVarChar(400)")]
-		public string NEWS_IMAGE1
-		{
-			get
-			{
-				return this._NEWS_IMAGE1;
-			}
-			set
-			{
-				if ((this._NEWS_IMAGE1 != value))
-				{
-					this.OnNEWS_IMAGE1Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_IMAGE1 = value;
-					this.SendPropertyChanged("NEWS_IMAGE1");
-					this.OnNEWS_IMAGE1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE2", DbType="NVarChar(400)")]
-		public string NEWS_IMAGE2
-		{
-			get
-			{
-				return this._NEWS_IMAGE2;
-			}
-			set
-			{
-				if ((this._NEWS_IMAGE2 != value))
-				{
-					this.OnNEWS_IMAGE2Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_IMAGE2 = value;
-					this.SendPropertyChanged("NEWS_IMAGE2");
-					this.OnNEWS_IMAGE2Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE3", DbType="NVarChar(400)")]
-		public string NEWS_IMAGE3
-		{
-			get
-			{
-				return this._NEWS_IMAGE3;
-			}
-			set
-			{
-				if ((this._NEWS_IMAGE3 != value))
-				{
-					this.OnNEWS_IMAGE3Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_IMAGE3 = value;
-					this.SendPropertyChanged("NEWS_IMAGE3");
-					this.OnNEWS_IMAGE3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE4", DbType="NVarChar(400)")]
-		public string NEWS_IMAGE4
-		{
-			get
-			{
-				return this._NEWS_IMAGE4;
-			}
-			set
-			{
-				if ((this._NEWS_IMAGE4 != value))
-				{
-					this.OnNEWS_IMAGE4Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_IMAGE4 = value;
-					this.SendPropertyChanged("NEWS_IMAGE4");
-					this.OnNEWS_IMAGE4Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE5", DbType="NVarChar(400)")]
-		public string NEWS_IMAGE5
-		{
-			get
-			{
-				return this._NEWS_IMAGE5;
-			}
-			set
-			{
-				if ((this._NEWS_IMAGE5 != value))
-				{
-					this.OnNEWS_IMAGE5Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_IMAGE5 = value;
-					this.SendPropertyChanged("NEWS_IMAGE5");
-					this.OnNEWS_IMAGE5Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD1", DbType="NVarChar(400)")]
-		public string NEWS_FIELD1
-		{
-			get
-			{
-				return this._NEWS_FIELD1;
-			}
-			set
-			{
-				if ((this._NEWS_FIELD1 != value))
-				{
-					this.OnNEWS_FIELD1Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_FIELD1 = value;
-					this.SendPropertyChanged("NEWS_FIELD1");
-					this.OnNEWS_FIELD1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD2", DbType="NVarChar(4000)")]
-		public string NEWS_FIELD2
-		{
-			get
-			{
-				return this._NEWS_FIELD2;
-			}
-			set
-			{
-				if ((this._NEWS_FIELD2 != value))
-				{
-					this.OnNEWS_FIELD2Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_FIELD2 = value;
-					this.SendPropertyChanged("NEWS_FIELD2");
-					this.OnNEWS_FIELD2Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD3", DbType="NVarChar(400)")]
-		public string NEWS_FIELD3
-		{
-			get
-			{
-				return this._NEWS_FIELD3;
-			}
-			set
-			{
-				if ((this._NEWS_FIELD3 != value))
-				{
-					this.OnNEWS_FIELD3Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_FIELD3 = value;
-					this.SendPropertyChanged("NEWS_FIELD3");
-					this.OnNEWS_FIELD3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD4", DbType="NVarChar(400)")]
-		public string NEWS_FIELD4
-		{
-			get
-			{
-				return this._NEWS_FIELD4;
-			}
-			set
-			{
-				if ((this._NEWS_FIELD4 != value))
-				{
-					this.OnNEWS_FIELD4Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_FIELD4 = value;
-					this.SendPropertyChanged("NEWS_FIELD4");
-					this.OnNEWS_FIELD4Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD5", DbType="NVarChar(400)")]
-		public string NEWS_FIELD5
-		{
-			get
-			{
-				return this._NEWS_FIELD5;
-			}
-			set
-			{
-				if ((this._NEWS_FIELD5 != value))
-				{
-					this.OnNEWS_FIELD5Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_FIELD5 = value;
-					this.SendPropertyChanged("NEWS_FIELD5");
-					this.OnNEWS_FIELD5Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SENDEMAIL", DbType="Int")]
-		public System.Nullable<int> NEWS_SENDEMAIL
-		{
-			get
-			{
-				return this._NEWS_SENDEMAIL;
-			}
-			set
-			{
-				if ((this._NEWS_SENDEMAIL != value))
-				{
-					this.OnNEWS_SENDEMAILChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SENDEMAIL = value;
-					this.SendPropertyChanged("NEWS_SENDEMAIL");
-					this.OnNEWS_SENDEMAILChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SENDDATE", DbType="DateTime")]
-		public System.Nullable<System.DateTime> NEWS_SENDDATE
-		{
-			get
-			{
-				return this._NEWS_SENDDATE;
-			}
-			set
-			{
-				if ((this._NEWS_SENDDATE != value))
-				{
-					this.OnNEWS_SENDDATEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_SENDDATE = value;
-					this.SendPropertyChanged("NEWS_SENDDATE");
-					this.OnNEWS_SENDDATEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRICE1", DbType="Money")]
-		public System.Nullable<decimal> NEWS_PRICE1
-		{
-			get
-			{
-				return this._NEWS_PRICE1;
-			}
-			set
-			{
-				if ((this._NEWS_PRICE1 != value))
-				{
-					this.OnNEWS_PRICE1Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_PRICE1 = value;
-					this.SendPropertyChanged("NEWS_PRICE1");
-					this.OnNEWS_PRICE1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRICE2", DbType="Money")]
-		public System.Nullable<decimal> NEWS_PRICE2
-		{
-			get
-			{
-				return this._NEWS_PRICE2;
-			}
-			set
-			{
-				if ((this._NEWS_PRICE2 != value))
-				{
-					this.OnNEWS_PRICE2Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_PRICE2 = value;
-					this.SendPropertyChanged("NEWS_PRICE2");
-					this.OnNEWS_PRICE2Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRICE3", DbType="Money")]
-		public System.Nullable<decimal> NEWS_PRICE3
-		{
-			get
-			{
-				return this._NEWS_PRICE3;
-			}
-			set
-			{
-				if ((this._NEWS_PRICE3 != value))
-				{
-					this.OnNEWS_PRICE3Changing(value);
-					this.SendPropertyChanging();
-					this._NEWS_PRICE3 = value;
-					this.SendPropertyChanged("NEWS_PRICE3");
-					this.OnNEWS_PRICE3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_ID1", DbType="Int")]
-		public System.Nullable<int> UNIT_ID1
-		{
-			get
-			{
-				return this._UNIT_ID1;
-			}
-			set
-			{
-				if ((this._UNIT_ID1 != value))
-				{
-					this.OnUNIT_ID1Changing(value);
-					this.SendPropertyChanging();
-					this._UNIT_ID1 = value;
-					this.SendPropertyChanged("UNIT_ID1");
-					this.OnUNIT_ID1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_ID2", DbType="Int")]
-		public System.Nullable<int> UNIT_ID2
-		{
-			get
-			{
-				return this._UNIT_ID2;
-			}
-			set
-			{
-				if ((this._UNIT_ID2 != value))
-				{
-					this.OnUNIT_ID2Changing(value);
-					this.SendPropertyChanging();
-					this._UNIT_ID2 = value;
-					this.SendPropertyChanged("UNIT_ID2");
-					this.OnUNIT_ID2Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_ID3", DbType="Int")]
-		public System.Nullable<int> UNIT_ID3
-		{
-			get
-			{
-				return this._UNIT_ID3;
-			}
-			set
-			{
-				if ((this._UNIT_ID3 != value))
-				{
-					this.OnUNIT_ID3Changing(value);
-					this.SendPropertyChanging();
-					this._UNIT_ID3 = value;
-					this.SendPropertyChanged("UNIT_ID3");
-					this.OnUNIT_ID3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PACKAGE", DbType="NVarChar(200)")]
-		public string NEWS_PACKAGE
-		{
-			get
-			{
-				return this._NEWS_PACKAGE;
-			}
-			set
-			{
-				if ((this._NEWS_PACKAGE != value))
-				{
-					this.OnNEWS_PACKAGEChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_PACKAGE = value;
-					this.SendPropertyChanged("NEWS_PACKAGE");
-					this.OnNEWS_PACKAGEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_KEYWORD_ASCII", DbType="VarChar(4000)")]
-		public string NEWS_KEYWORD_ASCII
-		{
-			get
-			{
-				return this._NEWS_KEYWORD_ASCII;
-			}
-			set
-			{
-				if ((this._NEWS_KEYWORD_ASCII != value))
-				{
-					this.OnNEWS_KEYWORD_ASCIIChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_KEYWORD_ASCII = value;
-					this.SendPropertyChanged("NEWS_KEYWORD_ASCII");
-					this.OnNEWS_KEYWORD_ASCIIChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_VIDEO_URL", DbType="NVarChar(250)")]
-		public string NEWS_VIDEO_URL
-		{
-			get
-			{
-				return this._NEWS_VIDEO_URL;
-			}
-			set
-			{
-				if ((this._NEWS_VIDEO_URL != value))
-				{
-					this.OnNEWS_VIDEO_URLChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_VIDEO_URL = value;
-					this.SendPropertyChanged("NEWS_VIDEO_URL");
-					this.OnNEWS_VIDEO_URLChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_BASKET", Storage="_ESHOP_BASKETs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
-		public EntitySet<ESHOP_BASKET> ESHOP_BASKETs
-		{
-			get
-			{
-				return this._ESHOP_BASKETs;
-			}
-			set
-			{
-				this._ESHOP_BASKETs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_ATT", Storage="_ESHOP_NEWS_ATTs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
-		public EntitySet<ESHOP_NEWS_ATT> ESHOP_NEWS_ATTs
-		{
-			get
-			{
-				return this._ESHOP_NEWS_ATTs;
-			}
-			set
-			{
-				this._ESHOP_NEWS_ATTs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_CAT", Storage="_ESHOP_NEWS_CATs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
-		public EntitySet<ESHOP_NEWS_CAT> ESHOP_NEWS_CATs
-		{
-			get
-			{
-				return this._ESHOP_NEWS_CATs;
-			}
-			set
-			{
-				this._ESHOP_NEWS_CATs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_COMMENT", Storage="_ESHOP_NEWS_COMMENTs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
-		public EntitySet<ESHOP_NEWS_COMMENT> ESHOP_NEWS_COMMENTs
-		{
-			get
-			{
-				return this._ESHOP_NEWS_COMMENTs;
-			}
-			set
-			{
-				this._ESHOP_NEWS_COMMENTs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_IMAGE", Storage="_ESHOP_NEWS_IMAGEs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
-		public EntitySet<ESHOP_NEWS_IMAGE> ESHOP_NEWS_IMAGEs
-		{
-			get
-			{
-				return this._ESHOP_NEWS_IMAGEs;
-			}
-			set
-			{
-				this._ESHOP_NEWS_IMAGEs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_ORDER_ITEM", Storage="_ESHOP_ORDER_ITEMs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
-		public EntitySet<ESHOP_ORDER_ITEM> ESHOP_ORDER_ITEMs
-		{
-			get
-			{
-				return this._ESHOP_ORDER_ITEMs;
-			}
-			set
-			{
-				this._ESHOP_ORDER_ITEMs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_ESHOP_BASKETs(ESHOP_BASKET entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = this;
-		}
-		
-		private void detach_ESHOP_BASKETs(ESHOP_BASKET entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = null;
-		}
-		
-		private void attach_ESHOP_NEWS_ATTs(ESHOP_NEWS_ATT entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = this;
-		}
-		
-		private void detach_ESHOP_NEWS_ATTs(ESHOP_NEWS_ATT entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = null;
-		}
-		
-		private void attach_ESHOP_NEWS_CATs(ESHOP_NEWS_CAT entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = this;
-		}
-		
-		private void detach_ESHOP_NEWS_CATs(ESHOP_NEWS_CAT entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = null;
-		}
-		
-		private void attach_ESHOP_NEWS_COMMENTs(ESHOP_NEWS_COMMENT entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = this;
-		}
-		
-		private void detach_ESHOP_NEWS_COMMENTs(ESHOP_NEWS_COMMENT entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = null;
-		}
-		
-		private void attach_ESHOP_NEWS_IMAGEs(ESHOP_NEWS_IMAGE entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = this;
-		}
-		
-		private void detach_ESHOP_NEWS_IMAGEs(ESHOP_NEWS_IMAGE entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = null;
-		}
-		
-		private void attach_ESHOP_ORDER_ITEMs(ESHOP_ORDER_ITEM entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = this;
-		}
-		
-		private void detach_ESHOP_ORDER_ITEMs(ESHOP_ORDER_ITEM entity)
-		{
-			this.SendPropertyChanging();
-			entity.ESHOP_NEW = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ESHOP_NEWS_ATT")]
 	public partial class ESHOP_NEWS_ATT : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -9130,373 +7844,6 @@ namespace Model
 					if ((value != null))
 					{
 						value.ESHOP_NEWS_CATs.Add(this);
-						this._NEWS_ID = value.NEWS_ID;
-					}
-					else
-					{
-						this._NEWS_ID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("ESHOP_NEW");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ESHOP_NEWS_COMMENT")]
-	public partial class ESHOP_NEWS_COMMENT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _COMMENT_ID;
-		
-		private string _COMMENT_NAME;
-		
-		private string _COMMENT_EMAIL;
-		
-		private string _COMMENT_CONTENT;
-		
-		private System.Nullable<int> _COMMENT_STATUS;
-		
-		private System.Nullable<int> _CUS_ID;
-		
-		private string _COMMENT_FIELD1;
-		
-		private string _COMMENT_FIELD2;
-		
-		private string _COMMENT_FIELD3;
-		
-		private System.Nullable<int> _NEWS_ID;
-		
-		private System.Nullable<System.DateTime> _COMMENT_PUBLISHDATE;
-		
-		private System.Nullable<int> _COMMENT_CHECK;
-		
-		private EntityRef<ESHOP_NEW> _ESHOP_NEW;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnCOMMENT_IDChanging(int value);
-    partial void OnCOMMENT_IDChanged();
-    partial void OnCOMMENT_NAMEChanging(string value);
-    partial void OnCOMMENT_NAMEChanged();
-    partial void OnCOMMENT_EMAILChanging(string value);
-    partial void OnCOMMENT_EMAILChanged();
-    partial void OnCOMMENT_CONTENTChanging(string value);
-    partial void OnCOMMENT_CONTENTChanged();
-    partial void OnCOMMENT_STATUSChanging(System.Nullable<int> value);
-    partial void OnCOMMENT_STATUSChanged();
-    partial void OnCUS_IDChanging(System.Nullable<int> value);
-    partial void OnCUS_IDChanged();
-    partial void OnCOMMENT_FIELD1Changing(string value);
-    partial void OnCOMMENT_FIELD1Changed();
-    partial void OnCOMMENT_FIELD2Changing(string value);
-    partial void OnCOMMENT_FIELD2Changed();
-    partial void OnCOMMENT_FIELD3Changing(string value);
-    partial void OnCOMMENT_FIELD3Changed();
-    partial void OnNEWS_IDChanging(System.Nullable<int> value);
-    partial void OnNEWS_IDChanged();
-    partial void OnCOMMENT_PUBLISHDATEChanging(System.Nullable<System.DateTime> value);
-    partial void OnCOMMENT_PUBLISHDATEChanged();
-    partial void OnCOMMENT_CHECKChanging(System.Nullable<int> value);
-    partial void OnCOMMENT_CHECKChanged();
-    #endregion
-		
-		public ESHOP_NEWS_COMMENT()
-		{
-			this._ESHOP_NEW = default(EntityRef<ESHOP_NEW>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int COMMENT_ID
-		{
-			get
-			{
-				return this._COMMENT_ID;
-			}
-			set
-			{
-				if ((this._COMMENT_ID != value))
-				{
-					this.OnCOMMENT_IDChanging(value);
-					this.SendPropertyChanging();
-					this._COMMENT_ID = value;
-					this.SendPropertyChanged("COMMENT_ID");
-					this.OnCOMMENT_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_NAME", DbType="NVarChar(400)")]
-		public string COMMENT_NAME
-		{
-			get
-			{
-				return this._COMMENT_NAME;
-			}
-			set
-			{
-				if ((this._COMMENT_NAME != value))
-				{
-					this.OnCOMMENT_NAMEChanging(value);
-					this.SendPropertyChanging();
-					this._COMMENT_NAME = value;
-					this.SendPropertyChanged("COMMENT_NAME");
-					this.OnCOMMENT_NAMEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_EMAIL", DbType="NVarChar(400)")]
-		public string COMMENT_EMAIL
-		{
-			get
-			{
-				return this._COMMENT_EMAIL;
-			}
-			set
-			{
-				if ((this._COMMENT_EMAIL != value))
-				{
-					this.OnCOMMENT_EMAILChanging(value);
-					this.SendPropertyChanging();
-					this._COMMENT_EMAIL = value;
-					this.SendPropertyChanged("COMMENT_EMAIL");
-					this.OnCOMMENT_EMAILChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_CONTENT", DbType="NVarChar(1000)")]
-		public string COMMENT_CONTENT
-		{
-			get
-			{
-				return this._COMMENT_CONTENT;
-			}
-			set
-			{
-				if ((this._COMMENT_CONTENT != value))
-				{
-					this.OnCOMMENT_CONTENTChanging(value);
-					this.SendPropertyChanging();
-					this._COMMENT_CONTENT = value;
-					this.SendPropertyChanged("COMMENT_CONTENT");
-					this.OnCOMMENT_CONTENTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_STATUS", DbType="Int")]
-		public System.Nullable<int> COMMENT_STATUS
-		{
-			get
-			{
-				return this._COMMENT_STATUS;
-			}
-			set
-			{
-				if ((this._COMMENT_STATUS != value))
-				{
-					this.OnCOMMENT_STATUSChanging(value);
-					this.SendPropertyChanging();
-					this._COMMENT_STATUS = value;
-					this.SendPropertyChanged("COMMENT_STATUS");
-					this.OnCOMMENT_STATUSChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CUS_ID", DbType="Int")]
-		public System.Nullable<int> CUS_ID
-		{
-			get
-			{
-				return this._CUS_ID;
-			}
-			set
-			{
-				if ((this._CUS_ID != value))
-				{
-					this.OnCUS_IDChanging(value);
-					this.SendPropertyChanging();
-					this._CUS_ID = value;
-					this.SendPropertyChanged("CUS_ID");
-					this.OnCUS_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_FIELD1", DbType="NVarChar(400)")]
-		public string COMMENT_FIELD1
-		{
-			get
-			{
-				return this._COMMENT_FIELD1;
-			}
-			set
-			{
-				if ((this._COMMENT_FIELD1 != value))
-				{
-					this.OnCOMMENT_FIELD1Changing(value);
-					this.SendPropertyChanging();
-					this._COMMENT_FIELD1 = value;
-					this.SendPropertyChanged("COMMENT_FIELD1");
-					this.OnCOMMENT_FIELD1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_FIELD2", DbType="NVarChar(400)")]
-		public string COMMENT_FIELD2
-		{
-			get
-			{
-				return this._COMMENT_FIELD2;
-			}
-			set
-			{
-				if ((this._COMMENT_FIELD2 != value))
-				{
-					this.OnCOMMENT_FIELD2Changing(value);
-					this.SendPropertyChanging();
-					this._COMMENT_FIELD2 = value;
-					this.SendPropertyChanged("COMMENT_FIELD2");
-					this.OnCOMMENT_FIELD2Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_FIELD3", DbType="NVarChar(400)")]
-		public string COMMENT_FIELD3
-		{
-			get
-			{
-				return this._COMMENT_FIELD3;
-			}
-			set
-			{
-				if ((this._COMMENT_FIELD3 != value))
-				{
-					this.OnCOMMENT_FIELD3Changing(value);
-					this.SendPropertyChanging();
-					this._COMMENT_FIELD3 = value;
-					this.SendPropertyChanged("COMMENT_FIELD3");
-					this.OnCOMMENT_FIELD3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ID", DbType="Int")]
-		public System.Nullable<int> NEWS_ID
-		{
-			get
-			{
-				return this._NEWS_ID;
-			}
-			set
-			{
-				if ((this._NEWS_ID != value))
-				{
-					if (this._ESHOP_NEW.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnNEWS_IDChanging(value);
-					this.SendPropertyChanging();
-					this._NEWS_ID = value;
-					this.SendPropertyChanged("NEWS_ID");
-					this.OnNEWS_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_PUBLISHDATE", DbType="DateTime")]
-		public System.Nullable<System.DateTime> COMMENT_PUBLISHDATE
-		{
-			get
-			{
-				return this._COMMENT_PUBLISHDATE;
-			}
-			set
-			{
-				if ((this._COMMENT_PUBLISHDATE != value))
-				{
-					this.OnCOMMENT_PUBLISHDATEChanging(value);
-					this.SendPropertyChanging();
-					this._COMMENT_PUBLISHDATE = value;
-					this.SendPropertyChanged("COMMENT_PUBLISHDATE");
-					this.OnCOMMENT_PUBLISHDATEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_CHECK", DbType="Int")]
-		public System.Nullable<int> COMMENT_CHECK
-		{
-			get
-			{
-				return this._COMMENT_CHECK;
-			}
-			set
-			{
-				if ((this._COMMENT_CHECK != value))
-				{
-					this.OnCOMMENT_CHECKChanging(value);
-					this.SendPropertyChanging();
-					this._COMMENT_CHECK = value;
-					this.SendPropertyChanged("COMMENT_CHECK");
-					this.OnCOMMENT_CHECKChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_COMMENT", Storage="_ESHOP_NEW", ThisKey="NEWS_ID", OtherKey="NEWS_ID", IsForeignKey=true, DeleteRule="CASCADE")]
-		public ESHOP_NEW ESHOP_NEW
-		{
-			get
-			{
-				return this._ESHOP_NEW.Entity;
-			}
-			set
-			{
-				ESHOP_NEW previousValue = this._ESHOP_NEW.Entity;
-				if (((previousValue != value) 
-							|| (this._ESHOP_NEW.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ESHOP_NEW.Entity = null;
-						previousValue.ESHOP_NEWS_COMMENTs.Remove(this);
-					}
-					this._ESHOP_NEW.Entity = value;
-					if ((value != null))
-					{
-						value.ESHOP_NEWS_COMMENTs.Add(this);
 						this._NEWS_ID = value.NEWS_ID;
 					}
 					else
@@ -10974,9 +9321,9 @@ namespace Model
 		
 		private string _ITEM_FIELD6;
 		
-		private EntityRef<ESHOP_NEW> _ESHOP_NEW;
-		
 		private EntityRef<ESHOP_ORDER> _ESHOP_ORDER;
+		
+		private EntityRef<ESHOP_NEW> _ESHOP_NEW;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -11014,8 +9361,8 @@ namespace Model
 		
 		public ESHOP_ORDER_ITEM()
 		{
-			this._ESHOP_NEW = default(EntityRef<ESHOP_NEW>);
 			this._ESHOP_ORDER = default(EntityRef<ESHOP_ORDER>);
+			this._ESHOP_NEW = default(EntityRef<ESHOP_NEW>);
 			OnCreated();
 		}
 		
@@ -11307,40 +9654,6 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_ORDER_ITEM", Storage="_ESHOP_NEW", ThisKey="NEWS_ID", OtherKey="NEWS_ID", IsForeignKey=true, DeleteRule="CASCADE")]
-		public ESHOP_NEW ESHOP_NEW
-		{
-			get
-			{
-				return this._ESHOP_NEW.Entity;
-			}
-			set
-			{
-				ESHOP_NEW previousValue = this._ESHOP_NEW.Entity;
-				if (((previousValue != value) 
-							|| (this._ESHOP_NEW.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ESHOP_NEW.Entity = null;
-						previousValue.ESHOP_ORDER_ITEMs.Remove(this);
-					}
-					this._ESHOP_NEW.Entity = value;
-					if ((value != null))
-					{
-						value.ESHOP_ORDER_ITEMs.Add(this);
-						this._NEWS_ID = value.NEWS_ID;
-					}
-					else
-					{
-						this._NEWS_ID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("ESHOP_NEW");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_ORDER_ESHOP_ORDER_ITEM", Storage="_ESHOP_ORDER", ThisKey="ORDER_ID", OtherKey="ORDER_ID", IsForeignKey=true, DeleteRule="CASCADE")]
 		public ESHOP_ORDER ESHOP_ORDER
 		{
@@ -11371,6 +9684,40 @@ namespace Model
 						this._ORDER_ID = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("ESHOP_ORDER");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_ORDER_ITEM", Storage="_ESHOP_NEW", ThisKey="NEWS_ID", OtherKey="NEWS_ID", IsForeignKey=true, DeleteRule="CASCADE")]
+		public ESHOP_NEW ESHOP_NEW
+		{
+			get
+			{
+				return this._ESHOP_NEW.Entity;
+			}
+			set
+			{
+				ESHOP_NEW previousValue = this._ESHOP_NEW.Entity;
+				if (((previousValue != value) 
+							|| (this._ESHOP_NEW.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ESHOP_NEW.Entity = null;
+						previousValue.ESHOP_ORDER_ITEMs.Remove(this);
+					}
+					this._ESHOP_NEW.Entity = value;
+					if ((value != null))
+					{
+						value.ESHOP_ORDER_ITEMs.Add(this);
+						this._NEWS_ID = value.NEWS_ID;
+					}
+					else
+					{
+						this._NEWS_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ESHOP_NEW");
 				}
 			}
 		}
@@ -14818,6 +13165,1851 @@ namespace Model
 					this._Type = value;
 					this.SendPropertyChanged("Type");
 					this.OnTypeChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ESHOP_NEWS")]
+	public partial class ESHOP_NEW : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _NEWS_ID;
+		
+		private System.Nullable<int> _USER_ID;
+		
+		private string _NEWS_CODE;
+		
+		private string _NEWS_TITLE;
+		
+		private string _NEWS_DESC;
+		
+		private string _NEWS_SEO_KEYWORD;
+		
+		private string _NEWS_SEO_DESC;
+		
+		private string _NEWS_SEO_URL;
+		
+		private string _NEWS_SEO_TITLE;
+		
+		private string _NEWS_FILEHTML;
+		
+		private System.Nullable<System.DateTime> _NEWS_PUBLISHDATE;
+		
+		private System.Nullable<System.DateTime> _NEWS_UPDATE;
+		
+		private string _NEWS_URL;
+		
+		private string _NEWS_TARGET;
+		
+		private System.Nullable<int> _NEWS_SHOWTYPE;
+		
+		private System.Nullable<int> _NEWS_SHOWINDETAIL;
+		
+		private System.Nullable<int> _NEWS_FEEDBACKTYPE;
+		
+		private System.Nullable<int> _NEWS_TYPE;
+		
+		private System.Nullable<int> _NEWS_LANGUAGE;
+		
+		private System.Nullable<int> _NEWS_PRINTTYPE;
+		
+		private System.Nullable<int> _NEWS_COUNT;
+		
+		private System.Nullable<int> _NEWS_PERIOD;
+		
+		private System.Nullable<int> _NEWS_ORDER_PERIOD;
+		
+		private System.Nullable<int> _NEWS_ORDER;
+		
+		private string _NEWS_IMAGE1;
+		
+		private string _NEWS_IMAGE2;
+		
+		private string _NEWS_IMAGE3;
+		
+		private string _NEWS_IMAGE4;
+		
+		private string _NEWS_IMAGE5;
+		
+		private string _NEWS_FIELD1;
+		
+		private string _NEWS_FIELD2;
+		
+		private string _NEWS_FIELD3;
+		
+		private string _NEWS_FIELD4;
+		
+		private string _NEWS_FIELD5;
+		
+		private System.Nullable<int> _NEWS_SENDEMAIL;
+		
+		private System.Nullable<System.DateTime> _NEWS_SENDDATE;
+		
+		private System.Nullable<decimal> _NEWS_PRICE1;
+		
+		private System.Nullable<decimal> _NEWS_PRICE2;
+		
+		private System.Nullable<decimal> _NEWS_PRICE3;
+		
+		private System.Nullable<int> _UNIT_ID1;
+		
+		private System.Nullable<int> _UNIT_ID2;
+		
+		private System.Nullable<int> _UNIT_ID3;
+		
+		private string _NEWS_PACKAGE;
+		
+		private string _NEWS_KEYWORD_ASCII;
+		
+		private string _NEWS_VIDEO_URL;
+		
+		private System.Nullable<int> _TYPE_OID;
+		
+		private System.Nullable<int> _PROP_ID;
+		
+		private string _NEWS_MAP;
+		
+		private System.Nullable<int> _NEWS_STAR;
+		
+		private System.Nullable<int> _DEBATE_NO;
+		
+		private System.Nullable<int> _DEBATE_YES;
+		
+		private EntitySet<ESHOP_BASKET> _ESHOP_BASKETs;
+		
+		private EntitySet<ESHOP_NEWS_ATT> _ESHOP_NEWS_ATTs;
+		
+		private EntitySet<ESHOP_NEWS_CAT> _ESHOP_NEWS_CATs;
+		
+		private EntitySet<ESHOP_NEWS_IMAGE> _ESHOP_NEWS_IMAGEs;
+		
+		private EntitySet<ESHOP_ORDER_ITEM> _ESHOP_ORDER_ITEMs;
+		
+		private EntitySet<ESHOP_NEWS_COMMENT> _ESHOP_NEWS_COMMENTs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnNEWS_IDChanging(int value);
+    partial void OnNEWS_IDChanged();
+    partial void OnUSER_IDChanging(System.Nullable<int> value);
+    partial void OnUSER_IDChanged();
+    partial void OnNEWS_CODEChanging(string value);
+    partial void OnNEWS_CODEChanged();
+    partial void OnNEWS_TITLEChanging(string value);
+    partial void OnNEWS_TITLEChanged();
+    partial void OnNEWS_DESCChanging(string value);
+    partial void OnNEWS_DESCChanged();
+    partial void OnNEWS_SEO_KEYWORDChanging(string value);
+    partial void OnNEWS_SEO_KEYWORDChanged();
+    partial void OnNEWS_SEO_DESCChanging(string value);
+    partial void OnNEWS_SEO_DESCChanged();
+    partial void OnNEWS_SEO_URLChanging(string value);
+    partial void OnNEWS_SEO_URLChanged();
+    partial void OnNEWS_SEO_TITLEChanging(string value);
+    partial void OnNEWS_SEO_TITLEChanged();
+    partial void OnNEWS_FILEHTMLChanging(string value);
+    partial void OnNEWS_FILEHTMLChanged();
+    partial void OnNEWS_PUBLISHDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnNEWS_PUBLISHDATEChanged();
+    partial void OnNEWS_UPDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnNEWS_UPDATEChanged();
+    partial void OnNEWS_URLChanging(string value);
+    partial void OnNEWS_URLChanged();
+    partial void OnNEWS_TARGETChanging(string value);
+    partial void OnNEWS_TARGETChanged();
+    partial void OnNEWS_SHOWTYPEChanging(System.Nullable<int> value);
+    partial void OnNEWS_SHOWTYPEChanged();
+    partial void OnNEWS_SHOWINDETAILChanging(System.Nullable<int> value);
+    partial void OnNEWS_SHOWINDETAILChanged();
+    partial void OnNEWS_FEEDBACKTYPEChanging(System.Nullable<int> value);
+    partial void OnNEWS_FEEDBACKTYPEChanged();
+    partial void OnNEWS_TYPEChanging(System.Nullable<int> value);
+    partial void OnNEWS_TYPEChanged();
+    partial void OnNEWS_LANGUAGEChanging(System.Nullable<int> value);
+    partial void OnNEWS_LANGUAGEChanged();
+    partial void OnNEWS_PRINTTYPEChanging(System.Nullable<int> value);
+    partial void OnNEWS_PRINTTYPEChanged();
+    partial void OnNEWS_COUNTChanging(System.Nullable<int> value);
+    partial void OnNEWS_COUNTChanged();
+    partial void OnNEWS_PERIODChanging(System.Nullable<int> value);
+    partial void OnNEWS_PERIODChanged();
+    partial void OnNEWS_ORDER_PERIODChanging(System.Nullable<int> value);
+    partial void OnNEWS_ORDER_PERIODChanged();
+    partial void OnNEWS_ORDERChanging(System.Nullable<int> value);
+    partial void OnNEWS_ORDERChanged();
+    partial void OnNEWS_IMAGE1Changing(string value);
+    partial void OnNEWS_IMAGE1Changed();
+    partial void OnNEWS_IMAGE2Changing(string value);
+    partial void OnNEWS_IMAGE2Changed();
+    partial void OnNEWS_IMAGE3Changing(string value);
+    partial void OnNEWS_IMAGE3Changed();
+    partial void OnNEWS_IMAGE4Changing(string value);
+    partial void OnNEWS_IMAGE4Changed();
+    partial void OnNEWS_IMAGE5Changing(string value);
+    partial void OnNEWS_IMAGE5Changed();
+    partial void OnNEWS_FIELD1Changing(string value);
+    partial void OnNEWS_FIELD1Changed();
+    partial void OnNEWS_FIELD2Changing(string value);
+    partial void OnNEWS_FIELD2Changed();
+    partial void OnNEWS_FIELD3Changing(string value);
+    partial void OnNEWS_FIELD3Changed();
+    partial void OnNEWS_FIELD4Changing(string value);
+    partial void OnNEWS_FIELD4Changed();
+    partial void OnNEWS_FIELD5Changing(string value);
+    partial void OnNEWS_FIELD5Changed();
+    partial void OnNEWS_SENDEMAILChanging(System.Nullable<int> value);
+    partial void OnNEWS_SENDEMAILChanged();
+    partial void OnNEWS_SENDDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnNEWS_SENDDATEChanged();
+    partial void OnNEWS_PRICE1Changing(System.Nullable<decimal> value);
+    partial void OnNEWS_PRICE1Changed();
+    partial void OnNEWS_PRICE2Changing(System.Nullable<decimal> value);
+    partial void OnNEWS_PRICE2Changed();
+    partial void OnNEWS_PRICE3Changing(System.Nullable<decimal> value);
+    partial void OnNEWS_PRICE3Changed();
+    partial void OnUNIT_ID1Changing(System.Nullable<int> value);
+    partial void OnUNIT_ID1Changed();
+    partial void OnUNIT_ID2Changing(System.Nullable<int> value);
+    partial void OnUNIT_ID2Changed();
+    partial void OnUNIT_ID3Changing(System.Nullable<int> value);
+    partial void OnUNIT_ID3Changed();
+    partial void OnNEWS_PACKAGEChanging(string value);
+    partial void OnNEWS_PACKAGEChanged();
+    partial void OnNEWS_KEYWORD_ASCIIChanging(string value);
+    partial void OnNEWS_KEYWORD_ASCIIChanged();
+    partial void OnNEWS_VIDEO_URLChanging(string value);
+    partial void OnNEWS_VIDEO_URLChanged();
+    partial void OnTYPE_OIDChanging(System.Nullable<int> value);
+    partial void OnTYPE_OIDChanged();
+    partial void OnPROP_IDChanging(System.Nullable<int> value);
+    partial void OnPROP_IDChanged();
+    partial void OnNEWS_MAPChanging(string value);
+    partial void OnNEWS_MAPChanged();
+    partial void OnNEWS_STARChanging(System.Nullable<int> value);
+    partial void OnNEWS_STARChanged();
+    partial void OnDEBATE_NOChanging(System.Nullable<int> value);
+    partial void OnDEBATE_NOChanged();
+    partial void OnDEBATE_YESChanging(System.Nullable<int> value);
+    partial void OnDEBATE_YESChanged();
+    #endregion
+		
+		public ESHOP_NEW()
+		{
+			this._ESHOP_BASKETs = new EntitySet<ESHOP_BASKET>(new Action<ESHOP_BASKET>(this.attach_ESHOP_BASKETs), new Action<ESHOP_BASKET>(this.detach_ESHOP_BASKETs));
+			this._ESHOP_NEWS_ATTs = new EntitySet<ESHOP_NEWS_ATT>(new Action<ESHOP_NEWS_ATT>(this.attach_ESHOP_NEWS_ATTs), new Action<ESHOP_NEWS_ATT>(this.detach_ESHOP_NEWS_ATTs));
+			this._ESHOP_NEWS_CATs = new EntitySet<ESHOP_NEWS_CAT>(new Action<ESHOP_NEWS_CAT>(this.attach_ESHOP_NEWS_CATs), new Action<ESHOP_NEWS_CAT>(this.detach_ESHOP_NEWS_CATs));
+			this._ESHOP_NEWS_IMAGEs = new EntitySet<ESHOP_NEWS_IMAGE>(new Action<ESHOP_NEWS_IMAGE>(this.attach_ESHOP_NEWS_IMAGEs), new Action<ESHOP_NEWS_IMAGE>(this.detach_ESHOP_NEWS_IMAGEs));
+			this._ESHOP_ORDER_ITEMs = new EntitySet<ESHOP_ORDER_ITEM>(new Action<ESHOP_ORDER_ITEM>(this.attach_ESHOP_ORDER_ITEMs), new Action<ESHOP_ORDER_ITEM>(this.detach_ESHOP_ORDER_ITEMs));
+			this._ESHOP_NEWS_COMMENTs = new EntitySet<ESHOP_NEWS_COMMENT>(new Action<ESHOP_NEWS_COMMENT>(this.attach_ESHOP_NEWS_COMMENTs), new Action<ESHOP_NEWS_COMMENT>(this.detach_ESHOP_NEWS_COMMENTs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int NEWS_ID
+		{
+			get
+			{
+				return this._NEWS_ID;
+			}
+			set
+			{
+				if ((this._NEWS_ID != value))
+				{
+					this.OnNEWS_IDChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_ID = value;
+					this.SendPropertyChanged("NEWS_ID");
+					this.OnNEWS_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", DbType="Int")]
+		public System.Nullable<int> USER_ID
+		{
+			get
+			{
+				return this._USER_ID;
+			}
+			set
+			{
+				if ((this._USER_ID != value))
+				{
+					this.OnUSER_IDChanging(value);
+					this.SendPropertyChanging();
+					this._USER_ID = value;
+					this.SendPropertyChanged("USER_ID");
+					this.OnUSER_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_CODE", DbType="NVarChar(100)")]
+		public string NEWS_CODE
+		{
+			get
+			{
+				return this._NEWS_CODE;
+			}
+			set
+			{
+				if ((this._NEWS_CODE != value))
+				{
+					this.OnNEWS_CODEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_CODE = value;
+					this.SendPropertyChanged("NEWS_CODE");
+					this.OnNEWS_CODEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_TITLE", DbType="NVarChar(300)")]
+		public string NEWS_TITLE
+		{
+			get
+			{
+				return this._NEWS_TITLE;
+			}
+			set
+			{
+				if ((this._NEWS_TITLE != value))
+				{
+					this.OnNEWS_TITLEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_TITLE = value;
+					this.SendPropertyChanged("NEWS_TITLE");
+					this.OnNEWS_TITLEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_DESC", DbType="NVarChar(500)")]
+		public string NEWS_DESC
+		{
+			get
+			{
+				return this._NEWS_DESC;
+			}
+			set
+			{
+				if ((this._NEWS_DESC != value))
+				{
+					this.OnNEWS_DESCChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_DESC = value;
+					this.SendPropertyChanged("NEWS_DESC");
+					this.OnNEWS_DESCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_KEYWORD", DbType="NVarChar(700)")]
+		public string NEWS_SEO_KEYWORD
+		{
+			get
+			{
+				return this._NEWS_SEO_KEYWORD;
+			}
+			set
+			{
+				if ((this._NEWS_SEO_KEYWORD != value))
+				{
+					this.OnNEWS_SEO_KEYWORDChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SEO_KEYWORD = value;
+					this.SendPropertyChanged("NEWS_SEO_KEYWORD");
+					this.OnNEWS_SEO_KEYWORDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_DESC", DbType="NVarChar(500)")]
+		public string NEWS_SEO_DESC
+		{
+			get
+			{
+				return this._NEWS_SEO_DESC;
+			}
+			set
+			{
+				if ((this._NEWS_SEO_DESC != value))
+				{
+					this.OnNEWS_SEO_DESCChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SEO_DESC = value;
+					this.SendPropertyChanged("NEWS_SEO_DESC");
+					this.OnNEWS_SEO_DESCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_URL", DbType="NVarChar(250)")]
+		public string NEWS_SEO_URL
+		{
+			get
+			{
+				return this._NEWS_SEO_URL;
+			}
+			set
+			{
+				if ((this._NEWS_SEO_URL != value))
+				{
+					this.OnNEWS_SEO_URLChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SEO_URL = value;
+					this.SendPropertyChanged("NEWS_SEO_URL");
+					this.OnNEWS_SEO_URLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SEO_TITLE", DbType="NVarChar(500)")]
+		public string NEWS_SEO_TITLE
+		{
+			get
+			{
+				return this._NEWS_SEO_TITLE;
+			}
+			set
+			{
+				if ((this._NEWS_SEO_TITLE != value))
+				{
+					this.OnNEWS_SEO_TITLEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SEO_TITLE = value;
+					this.SendPropertyChanged("NEWS_SEO_TITLE");
+					this.OnNEWS_SEO_TITLEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FILEHTML", DbType="NVarChar(200)")]
+		public string NEWS_FILEHTML
+		{
+			get
+			{
+				return this._NEWS_FILEHTML;
+			}
+			set
+			{
+				if ((this._NEWS_FILEHTML != value))
+				{
+					this.OnNEWS_FILEHTMLChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_FILEHTML = value;
+					this.SendPropertyChanged("NEWS_FILEHTML");
+					this.OnNEWS_FILEHTMLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PUBLISHDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NEWS_PUBLISHDATE
+		{
+			get
+			{
+				return this._NEWS_PUBLISHDATE;
+			}
+			set
+			{
+				if ((this._NEWS_PUBLISHDATE != value))
+				{
+					this.OnNEWS_PUBLISHDATEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_PUBLISHDATE = value;
+					this.SendPropertyChanged("NEWS_PUBLISHDATE");
+					this.OnNEWS_PUBLISHDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_UPDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NEWS_UPDATE
+		{
+			get
+			{
+				return this._NEWS_UPDATE;
+			}
+			set
+			{
+				if ((this._NEWS_UPDATE != value))
+				{
+					this.OnNEWS_UPDATEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_UPDATE = value;
+					this.SendPropertyChanged("NEWS_UPDATE");
+					this.OnNEWS_UPDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_URL", DbType="NVarChar(400)")]
+		public string NEWS_URL
+		{
+			get
+			{
+				return this._NEWS_URL;
+			}
+			set
+			{
+				if ((this._NEWS_URL != value))
+				{
+					this.OnNEWS_URLChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_URL = value;
+					this.SendPropertyChanged("NEWS_URL");
+					this.OnNEWS_URLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_TARGET", DbType="NVarChar(50)")]
+		public string NEWS_TARGET
+		{
+			get
+			{
+				return this._NEWS_TARGET;
+			}
+			set
+			{
+				if ((this._NEWS_TARGET != value))
+				{
+					this.OnNEWS_TARGETChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_TARGET = value;
+					this.SendPropertyChanged("NEWS_TARGET");
+					this.OnNEWS_TARGETChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SHOWTYPE", DbType="Int")]
+		public System.Nullable<int> NEWS_SHOWTYPE
+		{
+			get
+			{
+				return this._NEWS_SHOWTYPE;
+			}
+			set
+			{
+				if ((this._NEWS_SHOWTYPE != value))
+				{
+					this.OnNEWS_SHOWTYPEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SHOWTYPE = value;
+					this.SendPropertyChanged("NEWS_SHOWTYPE");
+					this.OnNEWS_SHOWTYPEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SHOWINDETAIL", DbType="Int")]
+		public System.Nullable<int> NEWS_SHOWINDETAIL
+		{
+			get
+			{
+				return this._NEWS_SHOWINDETAIL;
+			}
+			set
+			{
+				if ((this._NEWS_SHOWINDETAIL != value))
+				{
+					this.OnNEWS_SHOWINDETAILChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SHOWINDETAIL = value;
+					this.SendPropertyChanged("NEWS_SHOWINDETAIL");
+					this.OnNEWS_SHOWINDETAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FEEDBACKTYPE", DbType="Int")]
+		public System.Nullable<int> NEWS_FEEDBACKTYPE
+		{
+			get
+			{
+				return this._NEWS_FEEDBACKTYPE;
+			}
+			set
+			{
+				if ((this._NEWS_FEEDBACKTYPE != value))
+				{
+					this.OnNEWS_FEEDBACKTYPEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_FEEDBACKTYPE = value;
+					this.SendPropertyChanged("NEWS_FEEDBACKTYPE");
+					this.OnNEWS_FEEDBACKTYPEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_TYPE", DbType="Int")]
+		public System.Nullable<int> NEWS_TYPE
+		{
+			get
+			{
+				return this._NEWS_TYPE;
+			}
+			set
+			{
+				if ((this._NEWS_TYPE != value))
+				{
+					this.OnNEWS_TYPEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_TYPE = value;
+					this.SendPropertyChanged("NEWS_TYPE");
+					this.OnNEWS_TYPEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_LANGUAGE", DbType="Int")]
+		public System.Nullable<int> NEWS_LANGUAGE
+		{
+			get
+			{
+				return this._NEWS_LANGUAGE;
+			}
+			set
+			{
+				if ((this._NEWS_LANGUAGE != value))
+				{
+					this.OnNEWS_LANGUAGEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_LANGUAGE = value;
+					this.SendPropertyChanged("NEWS_LANGUAGE");
+					this.OnNEWS_LANGUAGEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRINTTYPE", DbType="Int")]
+		public System.Nullable<int> NEWS_PRINTTYPE
+		{
+			get
+			{
+				return this._NEWS_PRINTTYPE;
+			}
+			set
+			{
+				if ((this._NEWS_PRINTTYPE != value))
+				{
+					this.OnNEWS_PRINTTYPEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_PRINTTYPE = value;
+					this.SendPropertyChanged("NEWS_PRINTTYPE");
+					this.OnNEWS_PRINTTYPEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_COUNT", DbType="Int")]
+		public System.Nullable<int> NEWS_COUNT
+		{
+			get
+			{
+				return this._NEWS_COUNT;
+			}
+			set
+			{
+				if ((this._NEWS_COUNT != value))
+				{
+					this.OnNEWS_COUNTChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_COUNT = value;
+					this.SendPropertyChanged("NEWS_COUNT");
+					this.OnNEWS_COUNTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PERIOD", DbType="Int")]
+		public System.Nullable<int> NEWS_PERIOD
+		{
+			get
+			{
+				return this._NEWS_PERIOD;
+			}
+			set
+			{
+				if ((this._NEWS_PERIOD != value))
+				{
+					this.OnNEWS_PERIODChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_PERIOD = value;
+					this.SendPropertyChanged("NEWS_PERIOD");
+					this.OnNEWS_PERIODChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ORDER_PERIOD", DbType="Int")]
+		public System.Nullable<int> NEWS_ORDER_PERIOD
+		{
+			get
+			{
+				return this._NEWS_ORDER_PERIOD;
+			}
+			set
+			{
+				if ((this._NEWS_ORDER_PERIOD != value))
+				{
+					this.OnNEWS_ORDER_PERIODChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_ORDER_PERIOD = value;
+					this.SendPropertyChanged("NEWS_ORDER_PERIOD");
+					this.OnNEWS_ORDER_PERIODChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ORDER", DbType="Int")]
+		public System.Nullable<int> NEWS_ORDER
+		{
+			get
+			{
+				return this._NEWS_ORDER;
+			}
+			set
+			{
+				if ((this._NEWS_ORDER != value))
+				{
+					this.OnNEWS_ORDERChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_ORDER = value;
+					this.SendPropertyChanged("NEWS_ORDER");
+					this.OnNEWS_ORDERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE1", DbType="NVarChar(400)")]
+		public string NEWS_IMAGE1
+		{
+			get
+			{
+				return this._NEWS_IMAGE1;
+			}
+			set
+			{
+				if ((this._NEWS_IMAGE1 != value))
+				{
+					this.OnNEWS_IMAGE1Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_IMAGE1 = value;
+					this.SendPropertyChanged("NEWS_IMAGE1");
+					this.OnNEWS_IMAGE1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE2", DbType="NVarChar(400)")]
+		public string NEWS_IMAGE2
+		{
+			get
+			{
+				return this._NEWS_IMAGE2;
+			}
+			set
+			{
+				if ((this._NEWS_IMAGE2 != value))
+				{
+					this.OnNEWS_IMAGE2Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_IMAGE2 = value;
+					this.SendPropertyChanged("NEWS_IMAGE2");
+					this.OnNEWS_IMAGE2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE3", DbType="NVarChar(400)")]
+		public string NEWS_IMAGE3
+		{
+			get
+			{
+				return this._NEWS_IMAGE3;
+			}
+			set
+			{
+				if ((this._NEWS_IMAGE3 != value))
+				{
+					this.OnNEWS_IMAGE3Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_IMAGE3 = value;
+					this.SendPropertyChanged("NEWS_IMAGE3");
+					this.OnNEWS_IMAGE3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE4", DbType="NVarChar(400)")]
+		public string NEWS_IMAGE4
+		{
+			get
+			{
+				return this._NEWS_IMAGE4;
+			}
+			set
+			{
+				if ((this._NEWS_IMAGE4 != value))
+				{
+					this.OnNEWS_IMAGE4Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_IMAGE4 = value;
+					this.SendPropertyChanged("NEWS_IMAGE4");
+					this.OnNEWS_IMAGE4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_IMAGE5", DbType="NVarChar(400)")]
+		public string NEWS_IMAGE5
+		{
+			get
+			{
+				return this._NEWS_IMAGE5;
+			}
+			set
+			{
+				if ((this._NEWS_IMAGE5 != value))
+				{
+					this.OnNEWS_IMAGE5Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_IMAGE5 = value;
+					this.SendPropertyChanged("NEWS_IMAGE5");
+					this.OnNEWS_IMAGE5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD1", DbType="NVarChar(400)")]
+		public string NEWS_FIELD1
+		{
+			get
+			{
+				return this._NEWS_FIELD1;
+			}
+			set
+			{
+				if ((this._NEWS_FIELD1 != value))
+				{
+					this.OnNEWS_FIELD1Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_FIELD1 = value;
+					this.SendPropertyChanged("NEWS_FIELD1");
+					this.OnNEWS_FIELD1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD2", DbType="NVarChar(4000)")]
+		public string NEWS_FIELD2
+		{
+			get
+			{
+				return this._NEWS_FIELD2;
+			}
+			set
+			{
+				if ((this._NEWS_FIELD2 != value))
+				{
+					this.OnNEWS_FIELD2Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_FIELD2 = value;
+					this.SendPropertyChanged("NEWS_FIELD2");
+					this.OnNEWS_FIELD2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD3", DbType="NVarChar(400)")]
+		public string NEWS_FIELD3
+		{
+			get
+			{
+				return this._NEWS_FIELD3;
+			}
+			set
+			{
+				if ((this._NEWS_FIELD3 != value))
+				{
+					this.OnNEWS_FIELD3Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_FIELD3 = value;
+					this.SendPropertyChanged("NEWS_FIELD3");
+					this.OnNEWS_FIELD3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD4", DbType="NVarChar(400)")]
+		public string NEWS_FIELD4
+		{
+			get
+			{
+				return this._NEWS_FIELD4;
+			}
+			set
+			{
+				if ((this._NEWS_FIELD4 != value))
+				{
+					this.OnNEWS_FIELD4Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_FIELD4 = value;
+					this.SendPropertyChanged("NEWS_FIELD4");
+					this.OnNEWS_FIELD4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_FIELD5", DbType="NVarChar(400)")]
+		public string NEWS_FIELD5
+		{
+			get
+			{
+				return this._NEWS_FIELD5;
+			}
+			set
+			{
+				if ((this._NEWS_FIELD5 != value))
+				{
+					this.OnNEWS_FIELD5Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_FIELD5 = value;
+					this.SendPropertyChanged("NEWS_FIELD5");
+					this.OnNEWS_FIELD5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SENDEMAIL", DbType="Int")]
+		public System.Nullable<int> NEWS_SENDEMAIL
+		{
+			get
+			{
+				return this._NEWS_SENDEMAIL;
+			}
+			set
+			{
+				if ((this._NEWS_SENDEMAIL != value))
+				{
+					this.OnNEWS_SENDEMAILChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SENDEMAIL = value;
+					this.SendPropertyChanged("NEWS_SENDEMAIL");
+					this.OnNEWS_SENDEMAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_SENDDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NEWS_SENDDATE
+		{
+			get
+			{
+				return this._NEWS_SENDDATE;
+			}
+			set
+			{
+				if ((this._NEWS_SENDDATE != value))
+				{
+					this.OnNEWS_SENDDATEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_SENDDATE = value;
+					this.SendPropertyChanged("NEWS_SENDDATE");
+					this.OnNEWS_SENDDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRICE1", DbType="Money")]
+		public System.Nullable<decimal> NEWS_PRICE1
+		{
+			get
+			{
+				return this._NEWS_PRICE1;
+			}
+			set
+			{
+				if ((this._NEWS_PRICE1 != value))
+				{
+					this.OnNEWS_PRICE1Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_PRICE1 = value;
+					this.SendPropertyChanged("NEWS_PRICE1");
+					this.OnNEWS_PRICE1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRICE2", DbType="Money")]
+		public System.Nullable<decimal> NEWS_PRICE2
+		{
+			get
+			{
+				return this._NEWS_PRICE2;
+			}
+			set
+			{
+				if ((this._NEWS_PRICE2 != value))
+				{
+					this.OnNEWS_PRICE2Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_PRICE2 = value;
+					this.SendPropertyChanged("NEWS_PRICE2");
+					this.OnNEWS_PRICE2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PRICE3", DbType="Money")]
+		public System.Nullable<decimal> NEWS_PRICE3
+		{
+			get
+			{
+				return this._NEWS_PRICE3;
+			}
+			set
+			{
+				if ((this._NEWS_PRICE3 != value))
+				{
+					this.OnNEWS_PRICE3Changing(value);
+					this.SendPropertyChanging();
+					this._NEWS_PRICE3 = value;
+					this.SendPropertyChanged("NEWS_PRICE3");
+					this.OnNEWS_PRICE3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_ID1", DbType="Int")]
+		public System.Nullable<int> UNIT_ID1
+		{
+			get
+			{
+				return this._UNIT_ID1;
+			}
+			set
+			{
+				if ((this._UNIT_ID1 != value))
+				{
+					this.OnUNIT_ID1Changing(value);
+					this.SendPropertyChanging();
+					this._UNIT_ID1 = value;
+					this.SendPropertyChanged("UNIT_ID1");
+					this.OnUNIT_ID1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_ID2", DbType="Int")]
+		public System.Nullable<int> UNIT_ID2
+		{
+			get
+			{
+				return this._UNIT_ID2;
+			}
+			set
+			{
+				if ((this._UNIT_ID2 != value))
+				{
+					this.OnUNIT_ID2Changing(value);
+					this.SendPropertyChanging();
+					this._UNIT_ID2 = value;
+					this.SendPropertyChanged("UNIT_ID2");
+					this.OnUNIT_ID2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_ID3", DbType="Int")]
+		public System.Nullable<int> UNIT_ID3
+		{
+			get
+			{
+				return this._UNIT_ID3;
+			}
+			set
+			{
+				if ((this._UNIT_ID3 != value))
+				{
+					this.OnUNIT_ID3Changing(value);
+					this.SendPropertyChanging();
+					this._UNIT_ID3 = value;
+					this.SendPropertyChanged("UNIT_ID3");
+					this.OnUNIT_ID3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_PACKAGE", DbType="NVarChar(200)")]
+		public string NEWS_PACKAGE
+		{
+			get
+			{
+				return this._NEWS_PACKAGE;
+			}
+			set
+			{
+				if ((this._NEWS_PACKAGE != value))
+				{
+					this.OnNEWS_PACKAGEChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_PACKAGE = value;
+					this.SendPropertyChanged("NEWS_PACKAGE");
+					this.OnNEWS_PACKAGEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_KEYWORD_ASCII", DbType="VarChar(4000)")]
+		public string NEWS_KEYWORD_ASCII
+		{
+			get
+			{
+				return this._NEWS_KEYWORD_ASCII;
+			}
+			set
+			{
+				if ((this._NEWS_KEYWORD_ASCII != value))
+				{
+					this.OnNEWS_KEYWORD_ASCIIChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_KEYWORD_ASCII = value;
+					this.SendPropertyChanged("NEWS_KEYWORD_ASCII");
+					this.OnNEWS_KEYWORD_ASCIIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_VIDEO_URL", DbType="NVarChar(250)")]
+		public string NEWS_VIDEO_URL
+		{
+			get
+			{
+				return this._NEWS_VIDEO_URL;
+			}
+			set
+			{
+				if ((this._NEWS_VIDEO_URL != value))
+				{
+					this.OnNEWS_VIDEO_URLChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_VIDEO_URL = value;
+					this.SendPropertyChanged("NEWS_VIDEO_URL");
+					this.OnNEWS_VIDEO_URLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYPE_OID", DbType="Int")]
+		public System.Nullable<int> TYPE_OID
+		{
+			get
+			{
+				return this._TYPE_OID;
+			}
+			set
+			{
+				if ((this._TYPE_OID != value))
+				{
+					this.OnTYPE_OIDChanging(value);
+					this.SendPropertyChanging();
+					this._TYPE_OID = value;
+					this.SendPropertyChanged("TYPE_OID");
+					this.OnTYPE_OIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROP_ID", DbType="Int")]
+		public System.Nullable<int> PROP_ID
+		{
+			get
+			{
+				return this._PROP_ID;
+			}
+			set
+			{
+				if ((this._PROP_ID != value))
+				{
+					this.OnPROP_IDChanging(value);
+					this.SendPropertyChanging();
+					this._PROP_ID = value;
+					this.SendPropertyChanged("PROP_ID");
+					this.OnPROP_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_MAP", DbType="NVarChar(1000)")]
+		public string NEWS_MAP
+		{
+			get
+			{
+				return this._NEWS_MAP;
+			}
+			set
+			{
+				if ((this._NEWS_MAP != value))
+				{
+					this.OnNEWS_MAPChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_MAP = value;
+					this.SendPropertyChanged("NEWS_MAP");
+					this.OnNEWS_MAPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_STAR", DbType="Int")]
+		public System.Nullable<int> NEWS_STAR
+		{
+			get
+			{
+				return this._NEWS_STAR;
+			}
+			set
+			{
+				if ((this._NEWS_STAR != value))
+				{
+					this.OnNEWS_STARChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_STAR = value;
+					this.SendPropertyChanged("NEWS_STAR");
+					this.OnNEWS_STARChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEBATE_NO", DbType="Int")]
+		public System.Nullable<int> DEBATE_NO
+		{
+			get
+			{
+				return this._DEBATE_NO;
+			}
+			set
+			{
+				if ((this._DEBATE_NO != value))
+				{
+					this.OnDEBATE_NOChanging(value);
+					this.SendPropertyChanging();
+					this._DEBATE_NO = value;
+					this.SendPropertyChanged("DEBATE_NO");
+					this.OnDEBATE_NOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEBATE_YES", DbType="Int")]
+		public System.Nullable<int> DEBATE_YES
+		{
+			get
+			{
+				return this._DEBATE_YES;
+			}
+			set
+			{
+				if ((this._DEBATE_YES != value))
+				{
+					this.OnDEBATE_YESChanging(value);
+					this.SendPropertyChanging();
+					this._DEBATE_YES = value;
+					this.SendPropertyChanged("DEBATE_YES");
+					this.OnDEBATE_YESChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_BASKET", Storage="_ESHOP_BASKETs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
+		public EntitySet<ESHOP_BASKET> ESHOP_BASKETs
+		{
+			get
+			{
+				return this._ESHOP_BASKETs;
+			}
+			set
+			{
+				this._ESHOP_BASKETs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_ATT", Storage="_ESHOP_NEWS_ATTs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
+		public EntitySet<ESHOP_NEWS_ATT> ESHOP_NEWS_ATTs
+		{
+			get
+			{
+				return this._ESHOP_NEWS_ATTs;
+			}
+			set
+			{
+				this._ESHOP_NEWS_ATTs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_CAT", Storage="_ESHOP_NEWS_CATs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
+		public EntitySet<ESHOP_NEWS_CAT> ESHOP_NEWS_CATs
+		{
+			get
+			{
+				return this._ESHOP_NEWS_CATs;
+			}
+			set
+			{
+				this._ESHOP_NEWS_CATs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_IMAGE", Storage="_ESHOP_NEWS_IMAGEs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
+		public EntitySet<ESHOP_NEWS_IMAGE> ESHOP_NEWS_IMAGEs
+		{
+			get
+			{
+				return this._ESHOP_NEWS_IMAGEs;
+			}
+			set
+			{
+				this._ESHOP_NEWS_IMAGEs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_ORDER_ITEM", Storage="_ESHOP_ORDER_ITEMs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
+		public EntitySet<ESHOP_ORDER_ITEM> ESHOP_ORDER_ITEMs
+		{
+			get
+			{
+				return this._ESHOP_ORDER_ITEMs;
+			}
+			set
+			{
+				this._ESHOP_ORDER_ITEMs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_COMMENT", Storage="_ESHOP_NEWS_COMMENTs", ThisKey="NEWS_ID", OtherKey="NEWS_ID")]
+		public EntitySet<ESHOP_NEWS_COMMENT> ESHOP_NEWS_COMMENTs
+		{
+			get
+			{
+				return this._ESHOP_NEWS_COMMENTs;
+			}
+			set
+			{
+				this._ESHOP_NEWS_COMMENTs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_ESHOP_BASKETs(ESHOP_BASKET entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = this;
+		}
+		
+		private void detach_ESHOP_BASKETs(ESHOP_BASKET entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = null;
+		}
+		
+		private void attach_ESHOP_NEWS_ATTs(ESHOP_NEWS_ATT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = this;
+		}
+		
+		private void detach_ESHOP_NEWS_ATTs(ESHOP_NEWS_ATT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = null;
+		}
+		
+		private void attach_ESHOP_NEWS_CATs(ESHOP_NEWS_CAT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = this;
+		}
+		
+		private void detach_ESHOP_NEWS_CATs(ESHOP_NEWS_CAT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = null;
+		}
+		
+		private void attach_ESHOP_NEWS_IMAGEs(ESHOP_NEWS_IMAGE entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = this;
+		}
+		
+		private void detach_ESHOP_NEWS_IMAGEs(ESHOP_NEWS_IMAGE entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = null;
+		}
+		
+		private void attach_ESHOP_ORDER_ITEMs(ESHOP_ORDER_ITEM entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = this;
+		}
+		
+		private void detach_ESHOP_ORDER_ITEMs(ESHOP_ORDER_ITEM entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = null;
+		}
+		
+		private void attach_ESHOP_NEWS_COMMENTs(ESHOP_NEWS_COMMENT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = this;
+		}
+		
+		private void detach_ESHOP_NEWS_COMMENTs(ESHOP_NEWS_COMMENT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ESHOP_NEW = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ESHOP_NEWS_COMMENT")]
+	public partial class ESHOP_NEWS_COMMENT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _COMMENT_ID;
+		
+		private string _COMMENT_NAME;
+		
+		private string _COMMENT_EMAIL;
+		
+		private string _COMMENT_CONTENT;
+		
+		private System.Nullable<int> _COMMENT_STATUS;
+		
+		private System.Nullable<int> _CUS_ID;
+		
+		private System.Nullable<int> _NEWS_ID;
+		
+		private System.Nullable<System.DateTime> _COMMENT_PUBLISHDATE;
+		
+		private System.Nullable<int> _COMMENT_CHECK;
+		
+		private string _COMMENT_TITLE;
+		
+		private System.Nullable<int> _COMMENT_TYPE;
+		
+		private System.Nullable<int> _COMMENT_LIKE;
+		
+		private System.Nullable<int> _COMMENT_RANK;
+		
+		private System.Nullable<int> _COMMENT_PARENT_ID;
+		
+		private EntityRef<ESHOP_NEW> _ESHOP_NEW;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCOMMENT_IDChanging(int value);
+    partial void OnCOMMENT_IDChanged();
+    partial void OnCOMMENT_NAMEChanging(string value);
+    partial void OnCOMMENT_NAMEChanged();
+    partial void OnCOMMENT_EMAILChanging(string value);
+    partial void OnCOMMENT_EMAILChanged();
+    partial void OnCOMMENT_CONTENTChanging(string value);
+    partial void OnCOMMENT_CONTENTChanged();
+    partial void OnCOMMENT_STATUSChanging(System.Nullable<int> value);
+    partial void OnCOMMENT_STATUSChanged();
+    partial void OnCUS_IDChanging(System.Nullable<int> value);
+    partial void OnCUS_IDChanged();
+    partial void OnNEWS_IDChanging(System.Nullable<int> value);
+    partial void OnNEWS_IDChanged();
+    partial void OnCOMMENT_PUBLISHDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnCOMMENT_PUBLISHDATEChanged();
+    partial void OnCOMMENT_CHECKChanging(System.Nullable<int> value);
+    partial void OnCOMMENT_CHECKChanged();
+    partial void OnCOMMENT_TITLEChanging(string value);
+    partial void OnCOMMENT_TITLEChanged();
+    partial void OnCOMMENT_TYPEChanging(System.Nullable<int> value);
+    partial void OnCOMMENT_TYPEChanged();
+    partial void OnCOMMENT_LIKEChanging(System.Nullable<int> value);
+    partial void OnCOMMENT_LIKEChanged();
+    partial void OnCOMMENT_RANKChanging(System.Nullable<int> value);
+    partial void OnCOMMENT_RANKChanged();
+    partial void OnCOMMENT_PARENT_IDChanging(System.Nullable<int> value);
+    partial void OnCOMMENT_PARENT_IDChanged();
+    #endregion
+		
+		public ESHOP_NEWS_COMMENT()
+		{
+			this._ESHOP_NEW = default(EntityRef<ESHOP_NEW>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int COMMENT_ID
+		{
+			get
+			{
+				return this._COMMENT_ID;
+			}
+			set
+			{
+				if ((this._COMMENT_ID != value))
+				{
+					this.OnCOMMENT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_ID = value;
+					this.SendPropertyChanged("COMMENT_ID");
+					this.OnCOMMENT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_NAME", DbType="NVarChar(400)")]
+		public string COMMENT_NAME
+		{
+			get
+			{
+				return this._COMMENT_NAME;
+			}
+			set
+			{
+				if ((this._COMMENT_NAME != value))
+				{
+					this.OnCOMMENT_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_NAME = value;
+					this.SendPropertyChanged("COMMENT_NAME");
+					this.OnCOMMENT_NAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_EMAIL", DbType="NVarChar(400)")]
+		public string COMMENT_EMAIL
+		{
+			get
+			{
+				return this._COMMENT_EMAIL;
+			}
+			set
+			{
+				if ((this._COMMENT_EMAIL != value))
+				{
+					this.OnCOMMENT_EMAILChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_EMAIL = value;
+					this.SendPropertyChanged("COMMENT_EMAIL");
+					this.OnCOMMENT_EMAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_CONTENT", DbType="NVarChar(1000)")]
+		public string COMMENT_CONTENT
+		{
+			get
+			{
+				return this._COMMENT_CONTENT;
+			}
+			set
+			{
+				if ((this._COMMENT_CONTENT != value))
+				{
+					this.OnCOMMENT_CONTENTChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_CONTENT = value;
+					this.SendPropertyChanged("COMMENT_CONTENT");
+					this.OnCOMMENT_CONTENTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_STATUS", DbType="Int")]
+		public System.Nullable<int> COMMENT_STATUS
+		{
+			get
+			{
+				return this._COMMENT_STATUS;
+			}
+			set
+			{
+				if ((this._COMMENT_STATUS != value))
+				{
+					this.OnCOMMENT_STATUSChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_STATUS = value;
+					this.SendPropertyChanged("COMMENT_STATUS");
+					this.OnCOMMENT_STATUSChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CUS_ID", DbType="Int")]
+		public System.Nullable<int> CUS_ID
+		{
+			get
+			{
+				return this._CUS_ID;
+			}
+			set
+			{
+				if ((this._CUS_ID != value))
+				{
+					this.OnCUS_IDChanging(value);
+					this.SendPropertyChanging();
+					this._CUS_ID = value;
+					this.SendPropertyChanged("CUS_ID");
+					this.OnCUS_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NEWS_ID", DbType="Int")]
+		public System.Nullable<int> NEWS_ID
+		{
+			get
+			{
+				return this._NEWS_ID;
+			}
+			set
+			{
+				if ((this._NEWS_ID != value))
+				{
+					if (this._ESHOP_NEW.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnNEWS_IDChanging(value);
+					this.SendPropertyChanging();
+					this._NEWS_ID = value;
+					this.SendPropertyChanged("NEWS_ID");
+					this.OnNEWS_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_PUBLISHDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> COMMENT_PUBLISHDATE
+		{
+			get
+			{
+				return this._COMMENT_PUBLISHDATE;
+			}
+			set
+			{
+				if ((this._COMMENT_PUBLISHDATE != value))
+				{
+					this.OnCOMMENT_PUBLISHDATEChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_PUBLISHDATE = value;
+					this.SendPropertyChanged("COMMENT_PUBLISHDATE");
+					this.OnCOMMENT_PUBLISHDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_CHECK", DbType="Int")]
+		public System.Nullable<int> COMMENT_CHECK
+		{
+			get
+			{
+				return this._COMMENT_CHECK;
+			}
+			set
+			{
+				if ((this._COMMENT_CHECK != value))
+				{
+					this.OnCOMMENT_CHECKChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_CHECK = value;
+					this.SendPropertyChanged("COMMENT_CHECK");
+					this.OnCOMMENT_CHECKChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_TITLE", DbType="NVarChar(550)")]
+		public string COMMENT_TITLE
+		{
+			get
+			{
+				return this._COMMENT_TITLE;
+			}
+			set
+			{
+				if ((this._COMMENT_TITLE != value))
+				{
+					this.OnCOMMENT_TITLEChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_TITLE = value;
+					this.SendPropertyChanged("COMMENT_TITLE");
+					this.OnCOMMENT_TITLEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_TYPE", DbType="Int")]
+		public System.Nullable<int> COMMENT_TYPE
+		{
+			get
+			{
+				return this._COMMENT_TYPE;
+			}
+			set
+			{
+				if ((this._COMMENT_TYPE != value))
+				{
+					this.OnCOMMENT_TYPEChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_TYPE = value;
+					this.SendPropertyChanged("COMMENT_TYPE");
+					this.OnCOMMENT_TYPEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_LIKE", DbType="Int")]
+		public System.Nullable<int> COMMENT_LIKE
+		{
+			get
+			{
+				return this._COMMENT_LIKE;
+			}
+			set
+			{
+				if ((this._COMMENT_LIKE != value))
+				{
+					this.OnCOMMENT_LIKEChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_LIKE = value;
+					this.SendPropertyChanged("COMMENT_LIKE");
+					this.OnCOMMENT_LIKEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_RANK", DbType="Int")]
+		public System.Nullable<int> COMMENT_RANK
+		{
+			get
+			{
+				return this._COMMENT_RANK;
+			}
+			set
+			{
+				if ((this._COMMENT_RANK != value))
+				{
+					this.OnCOMMENT_RANKChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_RANK = value;
+					this.SendPropertyChanged("COMMENT_RANK");
+					this.OnCOMMENT_RANKChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMMENT_PARENT_ID", DbType="Int")]
+		public System.Nullable<int> COMMENT_PARENT_ID
+		{
+			get
+			{
+				return this._COMMENT_PARENT_ID;
+			}
+			set
+			{
+				if ((this._COMMENT_PARENT_ID != value))
+				{
+					this.OnCOMMENT_PARENT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._COMMENT_PARENT_ID = value;
+					this.SendPropertyChanged("COMMENT_PARENT_ID");
+					this.OnCOMMENT_PARENT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ESHOP_NEW_ESHOP_NEWS_COMMENT", Storage="_ESHOP_NEW", ThisKey="NEWS_ID", OtherKey="NEWS_ID", IsForeignKey=true, DeleteRule="CASCADE")]
+		public ESHOP_NEW ESHOP_NEW
+		{
+			get
+			{
+				return this._ESHOP_NEW.Entity;
+			}
+			set
+			{
+				ESHOP_NEW previousValue = this._ESHOP_NEW.Entity;
+				if (((previousValue != value) 
+							|| (this._ESHOP_NEW.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ESHOP_NEW.Entity = null;
+						previousValue.ESHOP_NEWS_COMMENTs.Remove(this);
+					}
+					this._ESHOP_NEW.Entity = value;
+					if ((value != null))
+					{
+						value.ESHOP_NEWS_COMMENTs.Add(this);
+						this._NEWS_ID = value.NEWS_ID;
+					}
+					else
+					{
+						this._NEWS_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ESHOP_NEW");
 				}
 			}
 		}
