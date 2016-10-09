@@ -4,6 +4,29 @@
     <asp:Literal ID="ltrFavicon" runat="server" EnableViewState="false"></asp:Literal>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style type="text/css">
+        .btnXoa {
+            float: right;
+            display: block;
+            top: 0;
+            border-radius: 100%;
+            padding: 5px;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            background: #fff;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+        }
+
+            .btnXoa:hover {
+                border: 1px solid #ff0000;
+                color: #fff;
+                background: #ff0000;
+                text-decoration: none;
+            }
+    </style>
+
     <div class="content">
         <div class="container">
             <!-- InstanceBeginEditable name="content" -->
@@ -12,7 +35,8 @@
                     <div class="col s8 main-col">
                         <div class="row">
                             <div class="input-field çol s12">
-                                <label for='<%=ddlCategory.ClientID %>'>Chọn danh mục</label>
+                                <label>Chọn danh mục</label><br />
+                                <br />
                                 <asp:DropDownList ID="ddlCategory" runat="server" class="form-control">
                                 </asp:DropDownList>
                             </div>
@@ -30,72 +54,142 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="txtDesc" runat="server" class="validate materialize-textarea" onkeyup="ParseDesc(this);"
-                                onblur="ParseDesc(this);"></textarea>
+                                    onblur="ParseDesc(this);"></textarea>
                                 <label for='<%=txtDesc.ClientID %>'>Mô tả ngắn</label>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title" id="H2">Thông tin hình ảnh</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">
-                                            Ảnh đại diện</label>
-                                        <div class="col-sm-10">
-                                            <div id="trUploadImage3" runat="server">
-                                                <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;Chọn ảnh
+                        <asp:ScriptManager runat="server" ID="scrpt1"></asp:ScriptManager>
+                        <asp:UpdatePanel runat="server" ID="pnContentUpdate">
+                            <ContentTemplate>
+                                <%--<div class="row">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title" id="H2">Thông tin hình ảnh</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">
+                                                    Ảnh đại diện</label>
+                                                <div class="col-sm-10">
+                                                    <div id="trUploadImage3" runat="server">
+                                                        <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;Chọn ảnh
                                     <input id="fileImage3" type="file" name="fileImage3" size="50" runat="server" visible="True" /></span>
-                                            </div>
-                                            <div id="trImage3" runat="server">
-                                                <div class="col-sm-3">
-                                                    <asp:ImageButton ID="btnDelete3" runat="server" ImageUrl="../images/delete_icon.gif"
-                                                        BorderWidth="0" Width="13px" ToolTip="Xóa hình chi tiết này" OnClick="btnDelete3_OnClick"></asp:ImageButton>
+                                                    </div>
+                                                    <div id="trImage3" runat="server">
+                                                        <div class="col-sm-3">
+                                                            <asp:ImageButton ID="btnDelete3" runat="server" ImageUrl="../images/delete_icon.gif"
+                                                                BorderWidth="0" Width="13px" ToolTip="Xóa hình chi tiết này" OnClick="btnDelete3_OnClick"></asp:ImageButton>
+                                                        </div>
+                                                        <div class="col-sm-9 thumbnail">
+                                                            <asp:HyperLink runat="server" ID="hplImage3" Target="_blank"></asp:HyperLink><br />
+                                                            <img id="Image3" runat="server" alt="" class="img-rounded" />
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-sm-9 thumbnail">
-                                                    <asp:HyperLink runat="server" ID="hplImage3" Target="_blank"></asp:HyperLink><br />
-                                                    <img id="Image3" runat="server" alt="" class="img-rounded" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">
+                                                    Ảnh lớn</label>
+                                                <div class="col-sm-10">
+                                                    <div id="trUploadImage2" runat="server">
+                                                        <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;Chọn ảnh
+                                    <input id="fileImage2" type="file" name="fileImage2" size="50" runat="server" visible="True" /></span>
+                                                    </div>
+                                                    <div id="trImage2" runat="server">
+                                                        <div class="col-sm-3">
+                                                            <asp:ImageButton ID="btnDelete2" runat="server" ImageUrl="../images/delete_icon.gif"
+                                                                BorderWidth="0" Width="13px" ToolTip="Xóa hình chi tiết này" OnClick="btnDelete2_OnClick"></asp:ImageButton>
+                                                        </div>
+                                                        <div class="col-sm-9 thumbnail">
+                                                            <asp:HyperLink runat="server" ID="hplImage2" Target="_blank"></asp:HyperLink><br />
+                                                            <img id="Image2" runat="server" alt="" class="img-rounded" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">
-                                            Ảnh lớn</label>
-                                        <div class="col-sm-10">
-                                            <div id="trUploadImage2" runat="server">
-                                                <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;Chọn ảnh
-                                    <input id="fileImage2" type="file" name="fileImage2" size="50" runat="server" visible="True" /></span>
-                                            </div>
-                                            <div id="trImage2" runat="server">
-                                                <div class="col-sm-3">
-                                                    <asp:ImageButton ID="btnDelete2" runat="server" ImageUrl="../images/delete_icon.gif"
-                                                        BorderWidth="0" Width="13px" ToolTip="Xóa hình chi tiết này" OnClick="btnDelete2_OnClick"></asp:ImageButton>
-                                                </div>
-                                                <div class="col-sm-9 thumbnail">
-                                                    <asp:HyperLink runat="server" ID="hplImage2" Target="_blank"></asp:HyperLink><br />
-                                                    <img id="Image2" runat="server" alt="" class="img-rounded" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>--%>
+                                <div class="row" id="pnNoiDung">
+                                    <div class="col s12">
+                                        <h2><b>NỘI DUNG CHÍNH</b></h2>
+                                    </div>
+                                    <div class="col s12">
+                                        <asp:ListView runat="server" ID="lstContentNews" OnItemCommand="lstContentNews_OnItemCommand" ChildrenAsTriggers="true" UpdateMode="Conditional">
+                                            <LayoutTemplate>
+                                                <ul class="col-md-12 col-lg-12 col-sm-12" style="list-style: none">
+                                                    <li runat="server" id="itemPlaceholder"></li>
+                                                </ul>
+                                            </LayoutTemplate>
+                                            <ItemTemplate>
+                                                <li style="border-bottom: 1px dashed #ccc; margin: 5px; padding: 20px 0px">
+                                                    <asp:LinkButton runat="server" CssClass="btnXoa"  OnClientClick="scrollToBottom();"
+                                                        ID="btnXoa" CommandName="XoaDong" CommandArgument='<%# Eval("Id") %>'> x </asp:LinkButton>
+                                                    <asp:HiddenField runat="server" ID="hdType" Value='<%# Eval("Type") %>' />
+                                                    <asp:Panel runat="server" CssClass="row" ID="pnBoxChuDe" Visible='<%#int.Parse(Eval("Type").ToString()) == 0 %>'>
+                                                        <label>Chủ đề</label>
+                                                        <asp:TextBox runat="server" ID="txtBoxChuDe" CssClass="form-control" Text='<%#Eval("Paragraph") %>'></asp:TextBox>
+                                                    </asp:Panel>
+                                                    <asp:Panel runat="server" CssClass="row" ID="pnPara" Visible='<%#int.Parse(Eval("Type").ToString()) == 1 %>'>
+                                                        <label>Tiêu đề</label>
+                                                        <asp:TextBox runat="server" ID="txtTitlePara" CssClass="form-control" Text='<%# Eval("Title") %>'></asp:TextBox>
+                                                        <label>Nội dung</label>
+                                                        <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" ID="txtNoiDung" CssClass="materialize-textarea" Text='<%#Eval("Paragraph") %>'></asp:TextBox>
+                                                    </asp:Panel>
+                                                    <asp:Panel runat="server" CssClass="row" ID="pnImage" Visible='<%#int.Parse(Eval("Type").ToString()) == 2 %>'>
+                                                        <label>Chọn ảnh</label>
+
+                                                        <input id="avatarUpload" type="file" name="file" accept="image/gif, image/jpeg, image/png" onchange="previewFile(this)" runat="server" />
+                                                        <%--<asp:FileUpload ID="avatarUpload" runat="server" />--%>
+                                                        <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%#Eval("Image") %>' style="width: 200px" />
+                                                        <asp:TextBox ID="hdImage" Style="display: none" runat="server" CssClass="valueImg" Text='<%#Eval("Image") %>' />
+                                                    </asp:Panel>
+                                                    <asp:Panel runat="server" CssClass="row" ID="pnBox" Visible='<%#int.Parse(Eval("Type").ToString()) == 3 %>'>
+                                                        <label>Nội dung trong hộp</label>
+                                                        <asp:TextBox runat="server" TextMode="MultiLine" Text='<%#Eval("Box") %>' Rows="3" ID="txtBox" CssClass="materialize-textarea"></asp:TextBox>
+                                                    </asp:Panel>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:ListView>
+                                        <asp:ListView runat="server" ID="lstContentVote" OnItemCommand="lstContentVote_OnItemCommand" ChildrenAsTriggers="true" UpdateMode="Conditional">
+                                            <LayoutTemplate>
+                                                <ul class="col-md-12 col-lg-12 col-sm-12">
+                                                    <li runat="server" id="itemPlaceholder"></li>
+                                                </ul>
+                                            </LayoutTemplate>
+                                            <ItemTemplate>
+                                                <li style="border-bottom: 1px dashed #ccc; margin: 5px; padding: 20px 0px">
+                                                    <asp:LinkButton runat="server" CssClass="btnXoa"
+                                                        ID="btnXoa" OnClientClick="scrollToBottom();" CommandName="XoaDong" CommandArgument='<%# Eval("ID") %>'> x </asp:LinkButton>
+
+                                                    <asp:HiddenField runat="server" ID="hdID" Value='<%#Eval("ID") %>' />
+                                                    <asp:HiddenField runat="server" ID="hdVoteCount" Value='<%#Eval("VotedCount") %>' />
+
+                                                    <label>Chọn ảnh</label>
+                                                    <input id="avatarUpload" type="file" name="file" accept="image/gif, image/jpeg, image/png" onchange="previewFile(this)" runat="server" />
+                                                    <%--<asp:FileUpload ID="avatarUpload" runat="server" />--%>
+                                                    <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%#Eval("Image") %>' style="width: 200px" /><br />
+                                                    <asp:TextBox ID="hdImage" Style="display: none" runat="server" CssClass="valueImg" Text='<%#Eval("Image") %>' />
+
+                                                    <label>Nội dung</label>
+                                                    <asp:TextBox runat="server" Text='<%#Eval("Content") %>' ID="txtContent" CssClass="form-control"></asp:TextBox>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:ListView>
+                                    </div>
+                                    <div class="col s12">
+                                        <asp:LinkButton ID="btnboxChuDe" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnboxChuDe_OnClick" runat="server">Box chủ đề</asp:LinkButton>
+                                        <asp:LinkButton ID="btnThemDoanVan" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemDoanVan_OnClick" runat="server">Đoạn văn</asp:LinkButton>
+                                        <asp:LinkButton ID="btnThemHinhAnh" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemHinhAnh_OnClick" runat="server">Hình ảnh</asp:LinkButton>
+                                        <asp:LinkButton ID="btnBox" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnBox_OnClick" runat="server">Box nội dung</asp:LinkButton>
+                                        <asp:LinkButton ID="btnThemLuaChon" Visible="False" OnClientClick="scrollToBottom();" CssClass="waves-effect waves-light btn" OnClick="btnThemLuaChon_OnClick" runat="server">Lựa chọn</asp:LinkButton>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col s12">
-                                <h2><b>NỘI DUNG CHÍNH</b></h2>
-                            </div>
-                        </div>
 
-                        <div class="row ">
-                            <div class="col s12">
-                                <h3>Thêm</h3>
-                            </div>
-
-                            <div class="col s12 coltrol-btn"><a class="waves-effect waves-light btn"><i class="material-icons left">assignment</i>CHỮ</a> <a class="waves-effect waves-light btn"><i class="material-icons left">picture_in_picture</i>HÌNH ẢNH</a> <a class="waves-effect waves-light btn"><i class="material-icons left">play_circle_outline</i>VIDEO</a> </div>
-                        </div>
+                            </ContentTemplate>
+                            <Triggers>
+                            </Triggers>
+                        </asp:UpdatePanel>
                     </div>
                     <div class="col s4">
                         <div class="sub-col row">
@@ -148,7 +242,7 @@
                                         <asp:ListItem Text="Có" Selected="True" Value="1"></asp:ListItem>
                                     </asp:RadioButtonList>
                                 </div>
-                                <div class="col s12">
+                                <div class="col s12" style="display: none">
                                     <h3>Ngôn ngữ</h3>
                                     <asp:RadioButtonList ID="rblLanguage" runat="server" RepeatColumns="5">
                                     </asp:RadioButtonList>
@@ -274,7 +368,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" language="javascript">
+    <script type="text/javascript">
         function ParseText(objsent) {
             ParseUrl(objsent, document.getElementById('<%=txtSeoUrl.ClientID%>'));
             document.getElementById('<%=txtSeoTitle.ClientID%>').value = objsent.value;
@@ -319,6 +413,39 @@
             //cắt bỏ ký tự - ở đầu và cuối chuỗi 
             //eval(obj).value = str.toUpperCase();
             return str;
+        }
+
+        function previewFile(input) {
+            debugger;
+            var preview = $(input).parent().find('.displayImg')[0];
+            var value = $(input).parent().find('.valueImg')[0];
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $(preview)
+                        .attr('Src', e.target.result)
+                        .width(200);
+                    $(value).val(e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $(document)
+            .ready(function () {
+                scrollToBottom();
+            });
+
+        function scrollToBottom() {
+            var t = $('#pnNoiDung');
+            $('html,body').animate({
+                scrollTop: $(t).scrollHeight
+            },
+            'slow');
+            $(t).scrollTop($(t).scrollHeight);
         }
     </script>
 </asp:Content>
