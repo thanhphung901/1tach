@@ -47,14 +47,58 @@ namespace OneTach.vi_vn
             }
             else
             {
-                header.Title = "Enews Standard V1.0";
+                header.Title = "1 tach | Đăng bài";
 
-                headerDes.Content = "Enews Standard V1.0";
+                headerDes.Content = "1 tach | Đăng bài";
                 header.Controls.Add(headerDes);
 
-                headerKey.Content = "Enews Standard V1.0";
+                headerKey.Content = "1 tach | Đăng bài";
                 header.Controls.Add(headerKey);
             }
+        }
+
+        class NewsContent
+        {
+            public int Id { get; set; }
+            public int Type { get; set; }
+            public string Title { get; set; }
+            public string Paragraph { get; set; }
+            public string Image { get; set; }
+            public string Box { get; set; }
+
+            public NewsContent(int _type)
+            {
+                this.Id = 0;
+                this.Type = _type;
+                this.Title = "";
+                this.Box = "";
+                this.Image = "";
+                this.Paragraph = "";
+            }
+        }
+        class VoteContent
+        {
+            public int ID { get; set; }
+            public int NewsID { get; set; }
+            public string Content { get; set; }
+            public string Image { get; set; }
+            public int VotedCount { get; set; }
+            public int Order { get; set; }
+        }
+
+        protected void radType_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnDelete3_OnClick(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void btnDelete2_OnClick(object sender, ImageClickEventArgs e)
+        {
+
         }
     }
 }

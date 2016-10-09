@@ -2,8 +2,6 @@
 
 
 <%@ Register src="UIs/HomeContent.ascx" tagname="HomeContent" tagprefix="uc1" %>
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal ID="ltrFavicon" runat="server" EnableViewState="false"></asp:Literal>
 </asp:Content>

@@ -1,11 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="OneTach.Master.Master" %>
 
-<%@ Register src="../UIs/Header.ascx" tagname="Header" tagprefix="uc1" %>
-<%@ Register src="../UIs/Footer.ascx" tagname="Footer" tagprefix="uc2" %>
+<%@ Register Src="../UIs/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register Src="../UIs/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
 <%@ Register Src="~/UIs/Header.ascx" TagPrefix="uc2" TagName="Header" %>
 <%@ Register Src="~/UIs/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
-
-
 
 <!DOCTYPE html>
 
@@ -14,8 +12,8 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=1200, maximum-scale=1.0, user-scalable=yes" />
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=yes" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link type="text/css" rel="stylesheet" href="/vi-vn/css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="/vi-vn/css/styles.css" />
     <link type="text/css" rel="stylesheet" href="/vi-vn/css/layout.css" />
@@ -27,7 +25,7 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
         <uc1:Footer runat="server" ID="Footer" />
-        
+
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="/vi-vn/js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="/vi-vn/js/materialize.min.js"></script>
@@ -68,6 +66,9 @@
                     maxSlides: 3,
                     moveSlides: 3
                 });
+
+
+                $('.modal-trigger').leanModal();
             });
 
         </script>

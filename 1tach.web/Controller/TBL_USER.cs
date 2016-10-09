@@ -44,5 +44,13 @@ namespace Controller
             HttpContext.Current.Session["User_ID"] = user.ID;
             HttpContext.Current.Session["User_Type"] = user.Type;
         }
+
+        public void Logout()
+        {
+            HttpContext.Current.Session["User_Name"] = null;
+            HttpContext.Current.Session["User_Email"] = null;
+            HttpContext.Current.Session["User_ID"] = null;
+            HttpContext.Current.Session["User_Type"] = null;
+        }
     }
 }

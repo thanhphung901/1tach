@@ -1,7 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="OneTach.UIs.Header" %>
-<style type="text/css">
-  
-</style>
 <div id="main-menu">
     <div class="container">
         <asp:Repeater ID="Rpmenu" runat="server">
@@ -82,10 +79,6 @@
                             </asp:ListView>
                         </marquee>
                     </div>
-                    <asp:Panel runat="server" ID="pnDangBai" Visible="False">
-                        <div class="col col1"><a href="/dang-bai.html" class="btnDangBai"><i class="material-icons">mode_edit</i>&nbsp;ĐĂNG BÀI MỚI</a>
-                            </div>
-                    </asp:Panel>
                 </div>
             </div>
             <asp:Panel runat="server" ID="pnNotLogined" Visible="True">
@@ -94,21 +87,62 @@
                     <a href="dang-nhap.html">Đăng nhập</a>
                 </div>
             </asp:Panel>
-            <asp:Panel runat="server" ID="pnLogined" Visible="False">
-                <div class="col s1 logcol right">
-                    <span style="display: none">Hi,
-                        <asp:Label runat="server" ID="lblEmail"></asp:Label></span>
-                </div>
-            </asp:Panel>
             <div class="col s3 right">
                 <div class="fr search">
                     <input type="text">
                     <a href="" class="btnsr over"></a>
                 </div>
             </div>
+            <asp:Panel runat="server" ID="pnLogined" Visible="False">
+                <div class="col s10 right pnloged">
+                    <span style="display: block">Hi,
+                        <b>
+                            <asp:Label runat="server" ID="lblEmail"></asp:Label>
+                        </b>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="/dang-bai.html" class="btnDangbai"><i class="material-icons">mode_edit</i>&nbsp;Đăng bài mới</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#modalChangePassword" class="btnDoiMatKhau modal-trigger"><i class="material-icons">loop</i>&nbsp;Đổi mật khẩu</a>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <asp:LinkButton runat="server" ID="btnThoat" OnClick="btnThoat_OnClick"><i class="material-icons">power_settings_new</i>&nbsp;Thoát</asp:LinkButton>
+                    </span>
+                </div>
+
+            </asp:Panel>
+            <asp:Panel runat="server" ID="pnDangBai" Visible="False">
+                <div class="col s2 logcol right">
+                </div>
+            </asp:Panel>
         </div>
     </div>
 </nav>
+
+<!-- Modal Trigger -->
+<%--<div id="modalChangePassword" class="modal">
+    <div class="modal-content">
+        <div class="row">
+        <h1>Đổi mật khẩu</h1>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <asp:TextBox ID="txtOldPass" TextMode="Password" runat="server" />
+                        <label for="<%=txtOldPass.ClientID %>" data-error="wrong" data-success="right">Mật khẩu cũ</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <asp:TextBox ID="txtNewPass" TextMode="Password" runat="server" />
+                        <label for="<%=txtNewPass.ClientID %>" data-error="wrong" data-success="right">Mật khẩu mới</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <asp:TextBox ID="txtReNewPass" TextMode="Password" runat="server" />
+                        <label for="<%=txtReNewPass.ClientID %>" data-error="wrong" data-success="right">Nhập lại mật khẩu mới</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>--%>
 <div class="container">
     <ul class="row submenu clearfix">
         <li class="col"><a href="/"><i class="material-icons">home</i>Trang chủ</a></li>
@@ -119,5 +153,4 @@
 
     </ul>
 </div>
-
 <!-- end breadcrumb -->
