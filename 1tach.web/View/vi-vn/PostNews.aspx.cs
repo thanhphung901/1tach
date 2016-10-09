@@ -271,6 +271,7 @@ namespace OneTach.vi_vn
                 {
                     if (m_news_id == 0)
                     {
+                        _type = int.Parse(radType.SelectedValue.ToString());
                         //insert
                         ESHOP_NEW news_insert = new ESHOP_NEW();
 
@@ -293,7 +294,7 @@ namespace OneTach.vi_vn
 
                         //news_insert.UNIT_ID1 = Utils.CIntDef(drNhanHieu.SelectedValue);
                         news_insert.NEWS_LANGUAGE = Utils.CIntDef(rblLanguage.SelectedValue);
-                        news_insert.NEWS_TYPE = _type;
+                        news_insert.NEWS_TYPE = int.Parse(radType.SelectedValue.ToString());
                         news_insert.NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
                         news_insert.NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);
                         //news_insert.NEWS_FIELD1 = Utils.CStrDef(rblField1.SelectedValue);

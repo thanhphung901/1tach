@@ -95,6 +95,7 @@
     <Content Include="Calendar\images\cal_nextMonth.gif" />
     <Content Include="Calendar\images\cal_prevMonth.gif" />
     <Content Include="Calendar\pickerAndCalendar.ascx" />
+    <Content Include="UIs\DetailDebate.ascx" />
     <Content Include="UIs\DetailNews.ascx" />
     <Content Include="UIs\Footer.ascx" />
     <Content Include="UIs\HomeContent.ascx" />
@@ -225,6 +226,13 @@
     </Compile>
     <Compile Include="Master\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DetailDebate.ascx.cs">
+      <DependentUpon>DetailDebate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\DetailDebate.ascx.designer.cs">
+      <DependentUpon>DetailDebate.ascx</DependentUpon>
     </Compile>
     <Compile Include="UIs\DetailNews.ascx.cs">
       <DependentUpon>DetailNews.ascx</DependentUpon>
