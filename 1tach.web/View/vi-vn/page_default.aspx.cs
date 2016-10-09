@@ -39,10 +39,11 @@ namespace OneTach
 
                 UserControl listNews = Page.LoadControl("../UIs/ListNew.ascx") as UserControl;//Danh sách tin
                 UserControl detailsNews = Page.LoadControl("../UIs/DetailNews.ascx") as UserControl;//Chi tiết tin
-                UserControl listPro = Page.LoadControl("../UIs/ListProfessional.ascx") as UserControl;//Danh sách chuyên gia
-                UserControl listBus = Page.LoadControl("../UIs/ListBusiness.ascx") as UserControl;//Danh sách doanh nghiệp
                 UserControl listDebate = Page.LoadControl("../UIs/ListDebate.ascx") as UserControl;//Danh sách tranh luận
                 UserControl listVote = Page.LoadControl("../UIs/ListVotes.ascx") as UserControl;//Danh sách vote
+                UserControl detailsDebate = Page.LoadControl("../UIs/DetailDebate.ascx") as UserControl;//Danh sách vote
+                UserControl listPro = Page.LoadControl("../UIs/ListProfessional.ascx") as UserControl;//Danh sách chuyên gia
+                UserControl listBus = Page.LoadControl("../UIs/ListBusiness.ascx") as UserControl;//Danh sách doanh nghiệp
 
                 switch (_catSeoUrl)
                 {
@@ -51,12 +52,6 @@ namespace OneTach
                         break;
                     case "doanh-nghiep":
                         phdMain.Controls.Add(listBus);
-                        break;
-                    case "tranh-luan":
-                        phdMain.Controls.Add(listDebate);
-                        break;
-                    case "bau-chon":
-                        phdMain.Controls.Add(listVote);
                         break;
                     default:
                         switch (_type)
@@ -98,7 +93,11 @@ namespace OneTach
                                         }
                                         else if (iCatType == 1)
                                         {
-                                            //phdMain.Controls.Add(list_pro);
+                                            phdMain.Controls.Add(listVote);
+                                        }
+                                        else if (iCatType == 2)
+                                        {
+                                            phdMain.Controls.Add(listDebate);
                                         }
                                         else
                                         {

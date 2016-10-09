@@ -232,7 +232,7 @@
                                 Kiểu hiển thị</label>
                             <asp:RadioButtonList ID="rblCatType" runat="server">
                                 <asp:ListItem Text="Tin tức" Value="0" Selected="True"></asp:ListItem>
-                                <asp:ListItem Value="1">Đánh giá</asp:ListItem>
+                                <asp:ListItem Value="1">Bầu chọn</asp:ListItem>
                                 <asp:ListItem Value="2">Tranh luận</asp:ListItem>
                                 <asp:ListItem Text="Khác" Value="99"></asp:ListItem>
                             </asp:RadioButtonList>
