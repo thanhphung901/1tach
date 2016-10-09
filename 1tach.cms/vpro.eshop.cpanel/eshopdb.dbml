@@ -26,17 +26,14 @@
       <Column Name="AD_ITEM_FIELD5" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.ORDER_CONTACT" Member="ORDER_CONTACTs">
-    <Type Name="ORDER_CONTACT">
-      <Column Name="ORDER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ORDER_QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ORDER_USERNAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="ORDER_EMAIL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="ORDER_ADD" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="ORDER_PHONE" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="ORDER_REMARK" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
-      <Column Name="ODER_DATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+  <Table Name="dbo.TBL_VOTE_NEWS" Member="TBL_VOTE_NEWs">
+    <Type Name="TBL_VOTE_NEW">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VotedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ESHOP_AD_ITEM_CAT" Member="ESHOP_AD_ITEM_CATs">
@@ -373,6 +370,12 @@
       <Column Name="NEWS_PACKAGE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="NEWS_KEYWORD_ASCII" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
       <Column Name="NEWS_VIDEO_URL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TYPE_OID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEWS_MAP" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NEWS_STAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DEBATE_NO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DEBATE_YES" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="ESHOP_NEW_ESHOP_BASKET" Member="ESHOP_BASKETs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_BASKET" />
       <Association Name="ESHOP_NEW_ESHOP_NEWS_ATT" Member="ESHOP_NEWS_ATTs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEWS_ATT" />
       <Association Name="ESHOP_NEW_ESHOP_NEWS_CAT" Member="ESHOP_NEWS_CATs" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEWS_CAT" />
@@ -415,12 +418,14 @@
       <Column Name="COMMENT_CONTENT" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
       <Column Name="COMMENT_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CUS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="COMMENT_FIELD1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
-      <Column Name="COMMENT_FIELD2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
-      <Column Name="COMMENT_FIELD3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
       <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="COMMENT_PUBLISHDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="COMMENT_CHECK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMMENT_TITLE" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="COMMENT_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMMENT_LIKE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMMENT_RANK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMMENT_PARENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="ESHOP_NEW_ESHOP_NEWS_COMMENT" Member="ESHOP_NEW" ThisKey="NEWS_ID" OtherKey="NEWS_ID" Type="ESHOP_NEW" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
@@ -550,6 +555,8 @@
       <Column Name="PROP_PARENT_PATH" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
       <Column Name="PROP_PRIORITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="PROP_SHIP_NOTE" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="PRO_IMAGE" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="PRO_PERIOD" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ESHOP_QUOTE_NEWS" Member="ESHOP_QUOTE_NEWs">
@@ -558,6 +565,44 @@
       <Column Name="QUO_EMAIL" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
       <Column Name="QUO_ACTIVE" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
       <Column Name="QUO_PUBLISHDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_ROOM" Member="ESHOP_ROOMs">
+    <Type Name="ESHOP_ROOM">
+      <Column Name="ROOM_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="R_TYPE_OID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROOM_NAME" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ROOM_DESC" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="ROOM_PRICE1" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ROOM_PRICE2" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ROOM_IMAGES" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="ROOM_PUBLISHDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROOM_ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROOM_FILEHTML" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="ROOM_QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROOM_SONGUOI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROOM_TREEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROOM_TIENNGHI" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ROOM_MEMBER" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ROOM_AREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_TYPE_CATEGORIES" Member="ESHOP_TYPE_CATEGORies">
+    <Type Name="ESHOP_TYPE_CATEGORy">
+      <Column Name="TYPE_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYPE_NAME" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="TYPE_ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TYPE_LANGUAGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESHOP_UNITS" Member="ESHOP_UNITs">
+    <Type Name="ESHOP_UNIT">
+      <Column Name="UNIT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UNIT_CODE" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="UNIT_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UNIT_NAME1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UNIT_DESC" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ESHOP_USER" Member="ESHOP_USERs">
@@ -647,34 +692,26 @@
       <Column Name="MENU_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.ESHOP_UNITS" Member="ESHOP_UNITs">
-    <Type Name="ESHOP_UNIT">
-      <Column Name="UNIT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="UNIT_CODE" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
-      <Column Name="UNIT_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="UNIT_NAME1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="UNIT_DESC" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+  <Table Name="dbo.ORDER_CONTACT" Member="ORDER_CONTACTs">
+    <Type Name="ORDER_CONTACT">
+      <Column Name="ORDER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NEWS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDER_USERNAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_EMAIL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_ADD" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_PHONE" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ORDER_REMARK" Type="System.String" DbType="NVarChar(1550)" CanBeNull="true" />
+      <Column Name="ODER_DATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TU_VAN" Member="TU_VANs">
-    <Type Name="TU_VAN">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="LOAI_CT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="TEN_DU_AN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="DIEN_TICH_NHA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="THOI_GIAN_THI_CONG" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="KINH_PHI_DU_KIEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="HO_TEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DIEN_THOAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DATE" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBL_VOTE_COMMENT" Member="TBL_VOTE_COMMENTs">
-    <Type Name="TBL_VOTE_COMMENT">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="VoteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+  <Table Name="dbo.PRO_TYPE" Member="PRO_TYPEs">
+    <Type Name="PRO_TYPE">
+      <Column Name="PRO_TYPE_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TYPE_OID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRO_TYPE_COUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRO_TYPE_LANG" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.TBL_NEWS_CONTENT" Member="TBL_NEWS_CONTENTs">
@@ -687,17 +724,39 @@
       <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TBL_VOTE_NEWS" Member="TBL_VOTE_NEWs">
-    <Type Name="TBL_VOTE_NEW">
+  <Table Name="dbo.TBL_NEWS_LIKE" Member="TBL_NEWS_LIKEs">
+    <Type Name="TBL_NEWS_LIKE">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="NewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_USER" Member="TBL_USERs">
+    <Type Name="TBL_USER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_VOTE_COMMENT" Member="TBL_VOTE_COMMENTs">
+    <Type Name="TBL_VOTE_COMMENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VoteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Image" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
-      <Column Name="VotedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.fClearUnicode" Method="fClearUnicode" IsComposable="true">
+    <Parameter Name="strInput" Type="System.String" DbType="NVarChar(4000)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fClearUnicode" Method="fClearUnicode1" IsComposable="true">
+    <Parameter Name="strInput" Type="System.String" DbType="NVarChar(4000)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fClearUnicode" Method="fClearUnicode2" IsComposable="true">
     <Parameter Name="strInput" Type="System.String" DbType="NVarChar(4000)" />
     <Return Type="System.String" />
   </Function>
