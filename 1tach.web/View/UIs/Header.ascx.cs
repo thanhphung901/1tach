@@ -2,6 +2,7 @@
 using System.Linq;
 using Controller;
 using vpro.functions;
+using Controller;
 
 namespace OneTach.UIs
 {
@@ -11,13 +12,10 @@ namespace OneTach.UIs
         Propertity per = new Propertity();
         Function fun = new Function();
         List_news lnews = new List_news();
+        TBL_USER cont = new TBL_USER();
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["User_Name"] != null)
-            {
-                pnDangBai.Visible = true;
-            }
             if (!IsPostBack)
             {
                 load_logo();
@@ -142,5 +140,11 @@ namespace OneTach.UIs
             return email;
         }
         #endregion
+
+        protected void btnThoat_OnClick(object sender, EventArgs e)
+        {
+            cont.Logout();
+            Response.Redirect("/");
+        }
     }
 }

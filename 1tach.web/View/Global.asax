@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="sanzo.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="OneTach.Global" Language="C#" %>
