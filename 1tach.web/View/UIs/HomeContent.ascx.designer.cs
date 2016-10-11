@@ -13,13 +13,22 @@ namespace OneTach.UIs {
     public partial class HomeContent {
         
         /// <summary>
-        /// lstFeature control.
+        /// rptSlide control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lstFeature;
+        protected global::System.Web.UI.WebControls.Repeater rptSlide;
+        
+        /// <summary>
+        /// rptFeature control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptFeature;
         
         /// <summary>
         /// lstNewsLastest control.
@@ -47,5 +56,32 @@ namespace OneTach.UIs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView lstDebateRight;
+        
+        /// <summary>
+        /// rptRandoms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptRandoms;
+        
+        /// <summary>
+        /// ltl_fanpage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltl_fanpage;
+        
+        /// <summary>
+        /// liLoadData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal liLoadData;
     }
 }

@@ -11,7 +11,10 @@
                             <a href="<%#GetLink(Eval("NEWS_URL"),Eval("NEWS_SEO_URL"))%>" title="<%#Eval("NEWS_TITLE")%>">
                                 <p class="img" style="background-image: url(<%#GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3"))%>)"></p>
                                 <h2 class="tt-post"><%#Eval("NEWS_TITLE")%></h2>
-                                <p class="info_post clearfix"><span class="date"><%#Eval("NEWS_PUBLISHDATE","{0:dd/MM/yyyy}")%></span> <span class="cmm_result">71% chọn YES(doc ra sau)</span> </p>
+                                <p class="info_post clearfix">
+                                    <span class="date"><%#Eval("NEWS_PUBLISHDATE","{0:dd/MM/yyyy}")%></span>
+                                    <%# GetInfoType(Eval("NEWS_TYPE"),Eval("DEBATE_NO"),Eval("DEBATE_YES"))%>
+                                </p>
                             </a>
                         </div>
                     </div>

@@ -7,31 +7,28 @@
                 <div class="slide-post">
                     <div class="slidemain">
                         <ul class="slide1">
-                            <asp:ListView runat="server" ID="lstFeature">
-                                <LayoutTemplate>
-                                    <li id="itemPlaceholder" runat="server"></li>
-                                </LayoutTemplate>
+                            <asp:Repeater ID="rptSlide" runat="server">
                                 <ItemTemplate>
-                                    <li data-bg='<%#Eval("NEWS_IMAGE1") %>'>
+                                    <li style="background-image: url(<%#GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3"))%>)">
                                         <div class="innerli">
-                                            <h3 class="tt-post"><a href='<%#Eval("NEWS_SEO_URL") %>.html'><%#Eval("NEWS_TITLE") %></a></h3>
+                                            <h3 class="tt-post"><a href="<%# GetLinkNew(Eval("NEWS_URL"),Eval("NEWS_SEO_URL")) %>"><%#Eval("NEWS_TITLE") %></a> </h3>
                                             <p class="des-post"><%#Eval("NEWS_DESC") %></p>
                                         </div>
                                     </li>
                                 </ItemTemplate>
-                            </asp:ListView>
+                            </asp:Repeater>
                         </ul>
                     </div>
                     <div id="thumslide" class="clearfix">
-                        <a data-slide-index="0" href=""><span class="innerp">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                        </span></a><a data-slide-index="1" href=""><span class="innerp">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                        </span></a><a data-slide-index="2" href=""><span class="innerp">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                        </span></a><a data-slide-index="3" href=""><span class="innerp">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                        </span></a>
+                        <asp:Repeater ID="rptFeature" runat="server">
+                            <ItemTemplate>
+                                <a data-slide-index="<%# GetNumberSlide()%>" href="">
+                                    <span class="innerp">
+                                        <p class="img" style="background-image: url(<%#GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3"))%>)"></p>
+                                    </span>
+                                </a>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                     <!-- end thumslide -->
                 </div>
@@ -44,7 +41,7 @@
                             <li id="itemPlaceholder" runat="server"></li>
                         </LayoutTemplate>
                         <ItemTemplate>
-                            <li><a href='<%#Eval("NEWS_SEO_URL") %>.html'><%#Eval("NEWS_TITLE") %></a></li>
+                            <li><a href='<%# GetLinkNew(Eval("NEWS_URL"),Eval("NEWS_SEO_URL")) %>' title="<%#Eval("NEWS_TITLE") %>"><%#Eval("NEWS_TITLE") %></a></li>
                         </ItemTemplate>
                     </asp:ListView>
                 </ul>
@@ -64,11 +61,12 @@
                                     </LayoutTemplate>
                                     <ItemTemplate>
                                         <li>
-                                            <a href="" class="clearfix"><span class="cmm_img"></span>
+                                            <a href="<%# GetLinkNew(Eval("NEWS_URL"),Eval("NEWS_SEO_URL")) %>" class="clearfix" title="<%#Eval("NEWS_TITLE") %>">
+                                                <span class="cmm_img"><img src="<%#GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3"))%>" alt="<%#Eval("NEWS_TITLE") %>"/></span>
                                                 <span class="cmm_body">
                                                     <h2><%#Eval("NEWS_TITLE") %></h2>
-                                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                                    <p class="cmm_result">60% chọn YES</p>
+                                                    <p class="cmm_date"></p>
+                                                    
                                                 </span>
                                             </a>
                                         </li>
@@ -86,12 +84,12 @@
                                     </LayoutTemplate>
                                     <ItemTemplate>
                                         <li>
-                                            <a href="" class="clearfix">
-                                                <span class="cmm_img"></span>
+                                            <a href="<%# GetLinkNew(Eval("NEWS_URL"),Eval("NEWS_SEO_URL")) %>" class="clearfix" title="<%#Eval("NEWS_TITLE") %>">
+                                                <span class="cmm_img"><img src="<%#GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3"))%>" alt="<%#Eval("NEWS_TITLE") %>"/></span>
                                                 <span class="cmm_body">
                                                     <h2><%#Eval("NEWS_TITLE") %></h2>
-                                                    <p class="cmm_date">Updated: 23 Hours ago</p>
-                                                    <p class="cmm_result">60% chọn YES</p>
+                                                    <p class="cmm_date"></p>
+                                                    <%# GetDebate(Eval("DEBATE_NO"),Eval("DEBATE_YES"))%>
                                                 </span>
                                             </a>
                                         </li>
@@ -103,583 +101,46 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col s8 posr">
                 <h3 class="ttcate2"><span>Bài ngẫu nhiên</span></h3>
                 <div class="slide slide_rand">
                     <ul class="sld_rand">
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Cáp quang bảo trì Internet đi quốc tế bị ảnh hưởng..</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore..</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
+                        <asp:Repeater ID="rptRandoms" runat="server">
+                            <ItemTemplate>
+                                <li>
+                                    <a href="<%# GetLinkNew(Eval("NEWS_URL"),Eval("NEWS_SEO_URL")) %>" title="<%#Eval("NEWS_TITLE") %>">
+                                        <p class="img" style="background-image: url(<%#GetImageT(Eval("NEWS_ID"),Eval("NEWS_IMAGE3"))%>)"></p>
+                                        <h2 class="tt-pots"><%#Eval("NEWS_TITLE") %></h2>
+                                        <p class="info_post clearfix">
+                                            <%# GetInfoType(Eval("NEWS_TYPE"),Eval("DEBATE_NO"),Eval("DEBATE_YES"))%>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
             </div>
             <div class="col s4">
                 <p class="ttcate2"><span>Fanpage</span></p>
                 <div class="fanpage">
-                    <img src="data/fanpage.jpg" alt="Like fanpage">
-                </div>
-            </div>
-        </div>
-        <!-- end row -->
-        <!--3 lg row-->
-        <div class="row">
-            <div class="col s4">
-                <p class="ttcate2"><span>Kiến thức kinh doanh</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Chiến thắng của ông Donald Trump trong cuộc bầu cử tổng thống Mỹ có thể làm thay đổi nền kinh tế Trung Quốc..</h2>
-                            <p class="info_post clearfix">
-                                <span class="date">Jun 11, 2015</span> <span class="cmm_result
-							txt_red">71% chọn NO</span>
-                            </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img02.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">5 cổ phiếu nào đã tăng giá mạnh nhất từ đầu năm tới nay?</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img03.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Giá dầu đảo chiều giảm do tăng trưởng nhu cầu chậm lại</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-            <div class="col s4">
-                <p class="ttcate2"><span>Không gian đẹp</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Một số ngân hàng đã xin giữ lại cổ tức để tăng vốn, nhằm mục đích bảo đảm hệ số CAR.</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img03.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-
-            <div class="col s4">
-                <p class="ttcate2"><span>Kiến thức y tế</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Cầu Thủ Thiêm 4 sẽ kết nối Khu đô thị mới Thủ Thiêm với khu trung tâm hiện hữu của TP và quận 4, quận 7. </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-        </div>
-        <!-- end row -->
-        <div class="row rowpost">
-            <div class="col s8">
-                <p class="ttcate2"><span>Địa điểm du lịch</span></p>
-                <div class="row">
-                    <div class="col s6">
-                        <div class="fist_post">
-                            <a href="">
-                                <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                                <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                                <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col s6">
-                        <ul class="orther_post">
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- end col -->
-            <div class="col s4  center-align">
-                <p class="ads-gg-right">
-                    <span>Advertisement<br />
-                        336x280 </span>
-                </p>
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- / row -->
-        <div class="row posr">
-            <div class="col s12">
-                <h3 class="ttcate2"><span>Bài ngẫu nhiên</span></h3>
-                <div class="slide slide_rand">
-                    <ul class="sld_rand_2">
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                    </ul>
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <asp:Literal ID="ltl_fanpage" runat="server"></asp:Literal>
                 </div>
             </div>
         </div>
 
-        <!--end 3 lg row-->
-        <!--3 lg row-->
-        <div class="row">
-            <div class="col s4">
-                <p class="ttcate2"><span>Kiến thức kinh doanh</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img02.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img03.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-            <div class="col s4">
-                <p class="ttcate2"><span>Không gian đẹp</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img03.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-
-            <div class="col s4">
-                <p class="ttcate2"><span>Kiến thức y tế</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-        </div>
-        <!-- end row -->
-        <div class="row rowpost">
-            <div class="col s8">
-                <p class="ttcate2"><span>Địa điểm du lịch</span></p>
-                <div class="row">
-                    <div class="col s6">
-                        <div class="fist_post">
-                            <a href="">
-                                <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                                <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                                <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col s6">
-                        <ul class="orther_post">
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- end col -->
-            <div class="col s4  center-align">
-                <p class="ads-gg-right"><span>Advertisement</span> </p>
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- / row -->
-        <div class="row posr">
-            <div class="col s12">
-                <h3 class="ttcate2"><span>Bài ngẫu nhiên</span></h3>
-                <div class="slide slide_rand">
-                    <ul class="sld_rand_2">
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!--end 3 lg row-->
-        <!--3 lg row-->
-        <div class="row">
-            <div class="col s4">
-                <p class="ttcate2"><span>Kiến thức kinh doanh</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img02.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img03.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-            <div class="col s4">
-                <p class="ttcate2"><span>Không gian đẹp</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img03.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-
-            <div class="col s4">
-                <p class="ttcate2"><span>Kiến thức y tế</span></p>
-                <div class="post_col">
-                    <div class="fist_post">
-                        <a href="">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                        </a>
-                    </div>
-                    <ul class="orther_post">
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                        <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                            <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                            <p class="date-post">Updated: 23 Hours ago</p>
-                            <p class="cmm_result">60% chọn YES</p>
-                        </span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end col post -->
-        </div>
-        <!-- end row -->
-        <div class="row rowpost">
-            <div class="col s8">
-                <p class="ttcate2"><span>Địa điểm du lịch</span></p>
-                <div class="row">
-                    <div class="col s6">
-                        <div class="fist_post">
-                            <a href="">
-                                <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                                <h2 class="tt-post">Lectus non rutrum pulvinar urna leo dignissim lorem rutrum pulvinar urna leo dignissim lorem </h2>
-                                <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result txt_red">71% chọn NO</span> </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col s6">
-                        <ul class="orther_post">
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img04.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                            <li><a href="#" class="clearfix"><span class="post_left" style="background-image: url(data/img01.jpg)"></span><span class="post_body">
-                                <h2 class="tt-post">Collectivism ought to be preffered to Individualism</h2>
-                                <p class="date-post">Updated: 23 Hours ago</p>
-                                <p class="cmm_result">60% chọn YES</p>
-                            </span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- end col -->
-            <div class="col s4  center-align">
-                <p class="ads-gg-right"><span>Advertisement</span></p>
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- / row -->
-        <div class="row posr">
-            <div class="col s12">
-                <h3 class="ttcate2"><span>Bài ngẫu nhiên</span></h3>
-                <div class="slide slide_rand">
-                    <ul class="sld_rand_2">
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img02.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img03.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img04.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                        <li><a href="#">
-                            <p class="img" style="background-image: url(data/img01.jpg)"></p>
-                            <h2 class="tt-pots">Lectus non rutrum pulvinar urna leo dignissim lore...</h2>
-                            <p class="info_post clearfix"><span class="date">Jun 11, 2015</span> <span class="cmm_result">70% chọn YES</span> </p>
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--end 3 lg row-->
-
+        <asp:Literal ID="liLoadData" runat="server"></asp:Literal>
     </div>
 </div>

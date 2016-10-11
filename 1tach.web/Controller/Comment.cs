@@ -39,6 +39,7 @@ namespace Controller
                     {
                         updateNew[0].DEBATE_YES = iDebateYes + 1;
                     }
+                    db.SubmitChanges();
                 }
 
                 return true;

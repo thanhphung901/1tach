@@ -52,7 +52,7 @@ namespace OneTach.UIs
         #region Load logo
         protected void load_logo()
         {
-            var _logoSlogan = per.Load_logo_or_sologan("1", 1);
+            var _logoSlogan = per.Load_logo_or_sologan("2", 1);
             if (_logoSlogan.ToList().Count > 0)
             {
                 Rplogo1.DataSource = _logoSlogan;

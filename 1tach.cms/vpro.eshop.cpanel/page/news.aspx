@@ -149,7 +149,7 @@
 
                                                             <input id="avatarUpload" type="file" name="file" accept="image/gif, image/jpeg, image/png" onchange="previewFile(this)" runat="server" />
                                                             <%--<asp:FileUpload ID="avatarUpload" runat="server" />--%>
-                                                            <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%#Eval("Image") %>' style="width: 200px" />
+                                                            <img id="imgUpload" alt="" runat="server" class="displayImg" src='<%# getImg(Eval("Image")) %>' style="width: 200px" />
                                                             <asp:TextBox ID="hdImage" Style="display: none" runat="server" CssClass="valueImg" Text='<%#Eval("Image") %>' />
                                                         </asp:Panel>
                                                         <asp:Panel runat="server" CssClass="row" ID="pnBox" Visible='<%#int.Parse(Eval("Type").ToString()) == 3 %>'>

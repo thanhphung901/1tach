@@ -14,7 +14,10 @@ namespace OneTach.UIs
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
+            {
+                load_logo();
                 Load_Menu1();
+            }
         }
 
         #region funtion
@@ -77,6 +80,22 @@ namespace OneTach.UIs
 
         }
         #endregion
+        #endregion
+
+        #region Load logo
+        protected void load_logo()
+        {
+            var _logoSlogan = per.Load_logo_or_sologan("1", 1);
+            if (_logoSlogan.ToList().Count > 0)
+            {
+                Rplogo1.DataSource = _logoSlogan;
+                Rplogo1.DataBind();
+            }
+        }
+        public string Getbanner(object Banner_type, object Banner_ID, object Banner_Image, object BANNER_DESC)
+        {
+            return fun.Getbanner(Banner_type, Banner_ID, Banner_Image, Utils.CStrDef(BANNER_DESC));
+        }
         #endregion
     }
 }

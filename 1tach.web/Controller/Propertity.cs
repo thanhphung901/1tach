@@ -472,17 +472,17 @@ namespace Controller
 
                     if (str.Count() > 1)
                     {
-                        _result = Convert_Name(str) + "<li><a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a></li>";
+                        _result = Convert_Name(str) + " / <a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a>";
                     }
                     else
                     {
                         if (rausach.ToList()[0].CAT_SHOWITEM > 0)
                         {
-                            _result = "<li><a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a></li>";
+                            _result = " / <a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a>";
                         }
                         else
                         {
-                            _result = "<li><a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a></li>";
+                            _result = " / <a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a>";
                         }
                     }
                 }
@@ -502,98 +502,17 @@ namespace Controller
                         string[] str = cat_parent_path_Max.Split(',');
                         if (str.Count() > 1)
                         {
-                            _result = Convert_Name(str) + "<li><a href='/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a></li>";
+                            _result = Convert_Name(str) + " / <a href='/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a>";
                         }
                         else
                         {
                             if (rausach1.ToList()[0].CAT_SHOWITEM > 0)
                             {
-                                _result = "<li><a href='/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a></li>";
+                                _result = " / <a href='/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a>";
                             }
                             else
                             {
-                                _result = "<li><a href='/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a></li>";
-                            }
-                        }
-
-                    }
-                }
-                return _result;
-            }
-            catch (Exception ex)
-            {
-                clsVproErrorHandler.HandlerError(ex);
-                return "";
-            }
-        }
-        public string Getpathen()
-        {
-            try
-            {
-                string _result = string.Empty;
-                string requesturl = Utils.CStrDef(HttpContext.Current.Request.RawUrl);
-
-                string cat_seo_url = CatChuoiURL(requesturl);
-
-                if (cat_seo_url.Contains("html?p"))
-                {
-                    string[] a = cat_seo_url.Split('?');
-                    cat_seo_url = a[0].Substring(0, a[0].Length - 5);
-                }
-                var rausach = from p in db.ESHOP_CATEGORies
-                              where p.CAT_SEO_URL == cat_seo_url && p.CAT_STATUS == 1
-                              select p;
-
-                if (rausach.ToList().Count > 0)
-                {
-
-                    string cat_parent_path = rausach.ToList()[0].CAT_PARENT_PATH;
-
-                    string[] str = cat_parent_path.Split(',');
-
-                    if (str.Count() > 1)
-                    {
-                        _result = Convert_Name(str) + " » <a href='/en/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a>";
-                    }
-                    else
-                    {
-                        if (rausach.ToList()[0].CAT_SHOWITEM > 0)
-                        {
-                            _result = " » <a href='/en/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a> ";
-                        }
-                        else
-                        {
-                            _result = " » <a href='/en/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a> ";
-                        }
-                    }
-                }
-
-                else
-                {
-                    var rausach1 = (from nc in db.ESHOP_NEWS_CATs
-                                    join c in db.ESHOP_CATEGORies on nc.CAT_ID equals c.CAT_ID
-                                    join n in db.ESHOP_NEWs on nc.NEWS_ID equals n.NEWS_ID
-                                    where n.NEWS_SEO_URL == cat_seo_url && c.CAT_STATUS == 1
-                                    orderby c.CAT_RANK descending
-                                    select c).Take(1);
-                    if (rausach1.ToList().Count > 0)
-                    {
-                        string cat_parent_path_Max = rausach1.ToList()[0].CAT_PARENT_PATH;
-
-                        string[] str = cat_parent_path_Max.Split(',');
-                        if (str.Count() > 1)
-                        {
-                            _result = Convert_Name(str) + " » <a href='/en/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a>";
-                        }
-                        else
-                        {
-                            if (rausach1.ToList()[0].CAT_SHOWITEM > 0)
-                            {
-                                _result = " » <a href='/en/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a> ";
-                            }
-                            else
-                            {
-                                _result = " » <a href='/en/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a> ";
+                                _result = " / <a href='/" + rausach1.ToList()[0].CAT_SEO_URL + ".html'>" + rausach1.ToList()[0].CAT_NAME + "</a>";
                             }
                         }
 
@@ -630,7 +549,7 @@ namespace Controller
                                   select r).ToList();
                     //s += rausach.ToList()[0] + " > ";
                     if(rausach.Count>0)
-                        s += "<li><a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a></li>";
+                        s += " / <a href='/" + rausach.ToList()[0].CAT_SEO_URL + ".html'>" + rausach.ToList()[0].CAT_NAME + "</a>";
                 }
                 return s;
             }
@@ -819,7 +738,22 @@ namespace Controller
                 return null;
             }
         }
+        public List<ESHOP_AD_ITEM> Load_sliderByCatId(int catId, int position, int limit)
+        {
+            try
+            {
+                var list = (from a in db.ESHOP_AD_ITEMs
+                            join b in db.ESHOP_AD_ITEM_CATs on a.AD_ITEM_ID equals b.AD_ITEM_ID
+                            where a.AD_ITEM_POSITION == position && b.CAT_ID == catId
+                            select a).Take(limit).ToList();
+                return list;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
         public List<ESHOP_NEW> GetListNewsByCatID(int Cat_Id, int Period)
         {
             var list = (from a in db.ESHOP_NEWS_CATs

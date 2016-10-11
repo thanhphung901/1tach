@@ -106,16 +106,27 @@ namespace OneTach.UIs
                     lbDate.Text = String.Format("{0:dd/MM/yyyy hh:mm tt}", Utils.CStrDef(news[0].NEWS_PUBLISHDATE));
                     liHtml.Text = ndetail.Showfilehtm(_iNewId);
                     liCount.Text = news[0].NEWS_COUNT + "";
+                    LoadcommentYes(_iNewId);
+                    LoadcommentNo(_iNewId);
 
                     double dDebateNo = Utils.CDblDef(news[0].DEBATE_NO);
                     double dDebateYes = Utils.CDblDef(news[0].DEBATE_YES);
                     double dDebateTotal = dDebateNo + dDebateYes;
-                    double dPerYes = (dDebateTotal / 100) * dDebateYes;
+                    double dPerYes = (dDebateYes / dDebateTotal) * 100;
                     double dPerNo = 100 - dPerYes;
 
-                    liDebate_Yes.Text = dPerYes + "%";
-                    liDebate_No.Text = dPerNo + "%";
-                    liDebate_Per.Text = "<div class='determinate' style='width: " + dPerYes + "%'></div>";
+                    if (dDebateTotal > 0)
+                    {
+                        liDebate_Yes.Text = dPerYes + "%";
+                        liDebate_No.Text = dPerNo + "%";
+                        liDebate_Per.Text = "<div class='determinate' style='width: " + dPerYes + "%'></div>";
+                    }
+                    else
+                    {
+                        liDebate_Yes.Text = "50%";
+                        liDebate_No.Text = "50%";
+                        liDebate_Per.Text = "<div class='determinate' style='width: 50%'></div>";
+                    }
 
                     Tinkhac(_iNewId);
                     Loadimgalbum(_iNewId, 1);
@@ -229,6 +240,7 @@ namespace OneTach.UIs
 
                         string strScript = "<script>";
                         strScript += "alert('Bạn đã gửi bình luận thành công!');";
+                        strScript += "window.location='/" + _sNews_Seo_Url + ".html';";
                         strScript += "</script>";
                         Page.RegisterClientScriptBlock("strScript", strScript);
                     }
@@ -269,6 +281,7 @@ namespace OneTach.UIs
 
                         string strScript = "<script>";
                         strScript += "alert('Bạn đã gửi bình luận thành công!');";
+                        strScript += "window.location='/"+ _sNews_Seo_Url + ".html';";
                         strScript += "</script>";
                         Page.RegisterClientScriptBlock("strScript", strScript);
                     }

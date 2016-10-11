@@ -98,7 +98,8 @@ namespace Controller
                     HttpContext.Current.Session["News_seo_title"] = news.ToList()[0].NEWS_SEO_TITLE;
                     HttpContext.Current.Session["News_url"] = news.ToList()[0].NEWS_URL;
                     HttpContext.Current.Session["News_image3"] = news.ToList()[0].NEWS_IMAGE3;
-                    
+                    HttpContext.Current.Session["News_type"] = news.ToList()[0].NEWS_TYPE;
+
                     #endregion
 
 

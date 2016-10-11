@@ -53,6 +53,40 @@ namespace OneTach.UIs
         {
             return System.Configuration.ConfigurationManager.AppSettings["URLWebsite"] + _sNews_Seo_Url + ".html";
         }
+        private void LoadVote(int _iNewId)
+        {
+            string str = "";
+            var list = db.TBL_NEWS_CONTENTs.Where(n => n.NewsID == _iNewId).ToList();
+            int _count = list.Count;
+            for (int i = 0; i < _count; i++)
+            {
+                int _iTypeVode = Utils.CIntDef(list[i].Type);
+                string _sTitle = list[i].Title;
+                string _sValue = list[i].Value_;
+                if (_iTypeVode == 0)
+                {
+                    str += String.Format("<h2>{0}</h2>", _sValue);
+                }
+                else if (_iTypeVode == 1)
+                {
+                    str += String.Format("<h3>{0}</h3><p class='fstlt'>{1}</p>", _sTitle, _sValue);
+                }
+                else if (_iTypeVode == 2)
+                {
+                    str += String.Format("<div class='center'>{0}</div>", _sValue);
+                }
+                else if (_iTypeVode == 3)
+                {
+                    str += String.Format("<div class='quote-dt'>{0}</div>", _sValue);
+                }
+                else
+                {
+
+                }
+            }
+
+            liLoadData.Text = str;
+        }
         public void getData()
         {
             try
@@ -63,9 +97,9 @@ namespace OneTach.UIs
                     int _iNewId = Utils.CIntDef(news[0].NEWS_ID);
                     lbNewsTitle.Text = Utils.CStrDef(news[0].NEWS_TITLE);
                     lbDate.Text = String.Format("{0:dd/MM/yyyy hh:mm tt}", Utils.CStrDef(news[0].NEWS_PUBLISHDATE));
-                    liHtml.Text = ndetail.Showfilehtm(_iNewId);
+                    
                     liCount.Text = news[0].NEWS_COUNT + "";//So luong nguoi da xem bai nay
-                    //hplViewmore.HRef = ndetail.Get_ViewMore(_iNewId);
+                    
                     Tinkhac(_iNewId);
 
                     var newsType = news[0].NEWS_TYPE;

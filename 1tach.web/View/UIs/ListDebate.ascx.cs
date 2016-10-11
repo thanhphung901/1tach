@@ -98,6 +98,41 @@ namespace OneTach.UIs
                 return null;
             }
         }
+        public string GetInfoType(object NewsType, object DEBATE_NO, object DEBATE_YES)
+        {
+            string str = "";
+            int _NewsType = Utils.CIntDef(NewsType);
+            switch (_NewsType)
+            {
+                case 1:
+                    {
+                        str = "";
+                        break;
+                    }
+                case 2:
+                    {
+                        double dDebateNo = Utils.CDblDef(DEBATE_NO);
+                        double dDebateYes = Utils.CDblDef(DEBATE_YES);
+                        double dDebateTotal = dDebateNo + dDebateYes;
+                        double dPerYes = (dDebateYes / dDebateTotal) * 100;
+                        double dPerNo = 100 - dPerYes;
+                        if (dDebateTotal > 0)
+                        {
+                            if (dPerYes > dPerNo)
+                            {
+                                str = "<span class='cmm_result'>" + dPerYes + "% chọn YES</span>";
+                            }
+                            else
+                            {
+                                str = "<span class='cmm_result txt_red'>" + dPerNo + "% chọn YES</span>";
+                            }
+                        }
+                        break;
+                    }
+                default: str = ""; break;
+            }
+            return str;
+        }
         #endregion
     }
 }

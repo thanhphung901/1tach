@@ -14,5 +14,19 @@ namespace vpro.eshop.cpanel.Components
             string EncryptPass = Convert.ToBase64String(hashedDataBytes);
             return EncryptPass;
         }
+
+        public static string Generate_Random_String(int Length)
+        {
+            string _allowedChars = "abcdefghijk0123456789mnopASXZDCQWERFBTGNYHMUJMIKOLPqrstuvwxyz";
+            Random randNum = new Random();
+            char[] chars = new char[Length];
+            int allowedCharCount = _allowedChars.Length;
+
+            for (int i = 0; i < Length; i++)
+            {
+                chars[i] = _allowedChars[(int)((_allowedChars.Length) * randNum.NextDouble())];
+            }
+            return new string(chars);
+        }
     }
 }

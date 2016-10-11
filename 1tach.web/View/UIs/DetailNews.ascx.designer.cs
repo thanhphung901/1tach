@@ -49,13 +49,13 @@ namespace OneTach.UIs {
         protected global::System.Web.UI.WebControls.Literal lbDate;
         
         /// <summary>
-        /// liHtml control.
+        /// liLoadData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal liHtml;
+        protected global::System.Web.UI.WebControls.Literal liLoadData;
         
         /// <summary>
         /// lstContentNews control.

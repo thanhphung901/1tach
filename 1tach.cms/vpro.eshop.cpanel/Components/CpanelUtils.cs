@@ -54,7 +54,8 @@ namespace vpro.eshop.cpanel.Components
             List<string[]> l = new List<string[]> 
             { 
                 new string[] { "0", "Slider" },
-                new string[] { "1", "Ads right" }
+                new string[] { "1", "Ads right" },
+                new string[] { "2", "Categories" }
             };
             return l;
         }

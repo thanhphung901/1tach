@@ -37,11 +37,14 @@ namespace OneTach
                         ltrFavicon.Text = "<link rel='shortcut icon' href='" + PathFiles.GetPathConfigs() + _configs.ToList()[0].CONFIG_FAVICON + "' />";
                 }
 
+                UserControl listNews_Cat = Page.LoadControl("../UIs/ListNewByCat.ascx") as UserControl;//Danh sách tin theo Chuyên mục
+
                 UserControl listNews = Page.LoadControl("../UIs/ListNew.ascx") as UserControl;//Danh sách tin
                 UserControl detailsNews = Page.LoadControl("../UIs/DetailNews.ascx") as UserControl;//Chi tiết tin
                 UserControl listDebate = Page.LoadControl("../UIs/ListDebate.ascx") as UserControl;//Danh sách tranh luận
                 UserControl listVote = Page.LoadControl("../UIs/ListVotes.ascx") as UserControl;//Danh sách vote
-                UserControl detailsDebate = Page.LoadControl("../UIs/DetailDebate.ascx") as UserControl;//Danh sách vote
+                UserControl detailsDebate = Page.LoadControl("../UIs/DetailDebate.ascx") as UserControl;//Chi tiết tranh luận
+
                 UserControl listPro = Page.LoadControl("../UIs/ListProfessional.ascx") as UserControl;//Danh sách chuyên gia
                 UserControl listBus = Page.LoadControl("../UIs/ListBusiness.ascx") as UserControl;//Danh sách doanh nghiệp
 
@@ -53,6 +56,12 @@ namespace OneTach
                     case "doanh-nghiep":
                         phdMain.Controls.Add(listBus);
                         break;
+                    case "tranh-luan":
+                        phdMain.Controls.Add(listDebate);
+                        break;
+                    case "bau-chon":
+                        phdMain.Controls.Add(listVote);
+                        break;
                     default:
                         switch (_type)
                         {
@@ -61,14 +70,22 @@ namespace OneTach
                                 {
                                     getsession.LoadNewsInfo(_catSeoUrl);
                                     Bind_meta_tags_news();
-                                    int iCatType = getsession.Getcat_type(_catSeoUrl);
-                                    if (iCatType == 1)
+                                    int iNewType = Utils.CIntDef(Session["News_type"]);
+                                    if (iNewType == 0)
                                     {
-                                        //phdMain.Controls.Add(prodetails);
+                                        phdMain.Controls.Add(detailsNews);
+                                    }
+                                    else if (iNewType == 1)
+                                    {
+                                        //phdMain.Controls.Add(detailsNews);
+                                    }
+                                    else if (iNewType == 2)
+                                    {
+                                        phdMain.Controls.Add(detailsDebate);
                                     }
                                     else
                                     {
-                                        phdMain.Controls.Add(detailsNews);
+                                        
                                     }
                                 }
                                 else
@@ -81,27 +98,30 @@ namespace OneTach
                                     {
                                         getsession.LoadCatInfo(_catSeoUrl);
                                         Bind_meta_tags_cat();
-                                        int iCatType = Utils.CIntDef(Session["Cat_type"]);
                                         if (Utils.CIntDef(Session["Cat_showitem"]) == 1)
                                         {
-                                            if (iCatType == 1)
+                                            getsession.LoadNewsInfo(_catSeoUrl);
+                                            int iNewType = Utils.CIntDef(Session["News_type"]);
+                                            if (iNewType == 0)
                                             {
-                                                //phdMain.Controls.Add(prodetails);
+                                                phdMain.Controls.Add(detailsNews);
+                                            }
+                                            else if (iNewType == 1)
+                                            {
+                                                //phdMain.Controls.Add(detailsNews);
+                                            }
+                                            else if (iNewType == 2)
+                                            {
+                                                phdMain.Controls.Add(detailsDebate);
                                             }
                                             else
-                                                phdMain.Controls.Add(detailsNews);
-                                        }
-                                        else if (iCatType == 1)
-                                        {
-                                            phdMain.Controls.Add(listVote);
-                                        }
-                                        else if (iCatType == 2)
-                                        {
-                                            phdMain.Controls.Add(listDebate);
+                                            {
+
+                                            }
                                         }
                                         else
                                         {
-                                            phdMain.Controls.Add(listNews);
+                                            phdMain.Controls.Add(listNews_Cat);
                                         }
                                     }
                                 }

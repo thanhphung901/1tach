@@ -29,50 +29,48 @@
                                             <img src="/vi-vn/images/tw.png"></a> <a href="">
                                                 <img src="/vi-vn/images/gp.png"></a>
                     </div>
-                    <asp:Literal ID="liHtml" runat="server"></asp:Literal>
+                    <asp:Literal ID="liLoadData" runat="server"></asp:Literal>
 
                     <asp:ListView ID="lstContentNews" runat="server">
                         <LayoutTemplate>
                             <div class="block">
-                                <div id="itemPlaceholder" runat="server">
-                                </div>
+                                <span id="itemPlaceholder" runat="server">
+                                </span>
                             </div>
                         </LayoutTemplate>
                         <ItemTemplate>
-                            <div>
-                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 0 %>'>
-                                    <h2><%# Eval("Paragraph")%></h2>
-                                </asp:Panel>
-                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 1 %>'>
-                                    <h3><%# Eval("Title")%></h3>
-                                    <p class="fstlt"><%# Eval("Paragraph")%></p>
-                                    <p></p>
-                                </asp:Panel>
-                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 2 %>'>
-                                    <div class="center">
-                                        <p class="center pst-r">
-                                            <span class="imgsocial">
-                                                <a href="" class="icon_share_img icon_share_img1"></a>
-                                                <a href="" class="icon_share_img icon_share_img2"></a>
-                                                <a href="" class="icon_share_img icon_share_img3"></a>
-                                                <a href="" class="icon_share_img icon_share_img4"></a>
-                                                <a href="" class="icon_share_img icon_share_img5"></a>
-                                                <a href="" class="icon_share_img icon_share_img6"></a>
-                                            </span>
-                                            <img src='<%# Eval("Image")%>' alt="">
-                                        </p>
-                                    </div>
-                                </asp:Panel>
-                                <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 3 %>'>
-                                    <div class="quote-dt">
-                                        <p>
-                                            <q>
-                                                <%# Eval("Box")%>
-                                            </q>
-                                        </p>
-                                    </div>
-                                </asp:Panel>
-                            </div>
+                            <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 0 %>'>
+                                <h2><%# Eval("Paragraph")%></h2>
+                            </asp:Panel>
+                            <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 1 %>'>
+                                <h3><%# Eval("Title")%></h3>
+                                <p class="fstlt"><%# Eval("Paragraph")%></p>
+                                <p></p>
+                            </asp:Panel>
+                            <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 2 %>'>
+                                <div class="center">
+                                    <p class="center pst-r">
+                                        <span class="imgsocial">
+                                            <a href="" class="icon_share_img icon_share_img1"></a>
+                                            <a href="" class="icon_share_img icon_share_img2"></a>
+                                            <a href="" class="icon_share_img icon_share_img3"></a>
+                                            <a href="" class="icon_share_img icon_share_img4"></a>
+                                            <a href="" class="icon_share_img icon_share_img5"></a>
+                                            <a href="" class="icon_share_img icon_share_img6"></a>
+                                        </span>
+                                        <img src='<%# Eval("Image")%>' alt="">
+                                    </p>
+                                </div>
+                            </asp:Panel>
+                            <asp:Panel runat="server" Visible='<%#int.Parse(Eval("Type").ToString()) == 3 %>'>
+                                <div class="quote-dt">
+                                    <p>
+                                        <q>
+                                            <%# Eval("Box")%>
+                                        </q>
+                                    </p>
+                                </div>
+                            </asp:Panel>
                         </ItemTemplate>
                     </asp:ListView>
                     <asp:Panel runat="server" ID="pnForVote">

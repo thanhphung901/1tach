@@ -51,7 +51,13 @@
         </div>
         <div class="row row2_ft">
             <div class="logo_ft col s3">
-                <img src="data/logo.png" alt="">
+                <asp:Repeater ID="Rplogo1" runat="server">
+                    <ItemTemplate>
+                        <a href="/">
+                            <%# Getbanner(Eval("BANNER_TYPE"), Eval("BANNER_ID"), Eval("BANNER_FILE"),Eval("BANNER_DESC"))%>
+                        </a>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
             <div class="col s9">
                 <div class="quote">
