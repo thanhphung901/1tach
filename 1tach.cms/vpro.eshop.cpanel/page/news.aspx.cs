@@ -8,6 +8,8 @@ using vpro.functions;
 using System.Data;
 using System.IO;
 using System.Web.UI.HtmlControls;
+using System.Drawing;
+using vpro.eshop.cpanel.Components;
 
 namespace vpro.eshop.cpanel.page
 {
@@ -448,6 +450,7 @@ namespace vpro.eshop.cpanel.page
                     btnThemDoanVan.Visible = false;
                     btnThemHinhAnh.Visible = false;
                     btnboxChuDe.Visible = false;
+
                     break;
                 // Load kieu tranh luan
                 case 2:
@@ -628,7 +631,7 @@ namespace vpro.eshop.cpanel.page
                             if (_type == 0)
                             {
 
-                                DB.TBL_NEWS_CONTENTs.DeleteAllOnSubmit(DB.TBL_NEWS_CONTENTs.Where(t=>t.NewsID == m_news_id).ToList());
+                                DB.TBL_NEWS_CONTENTs.DeleteAllOnSubmit(DB.TBL_NEWS_CONTENTs.Where(t => t.NewsID == m_news_id).ToList());
                                 DB.SubmitChanges();
                                 SaveNews(m_news_id);
                             }
@@ -961,7 +964,7 @@ namespace vpro.eshop.cpanel.page
         {
             if (e.CommandName == "XoaDong")
             {
-                int i = int.Parse(e.CommandArgument.ToString());
+                int i = Utils.CIntDef(e.Item.DataItemIndex);
                 List<NewsContent> lst = GetListContent();
                 NewsContent news = lst.FirstOrDefault(p => p.Id == i);
                 if (news != null)
@@ -1079,6 +1082,17 @@ namespace vpro.eshop.cpanel.page
         #endregion
 
         #region Save Content function
+        public System.Drawing.Image Base64ToImage(string base64String)
+        {
+            base64String = base64String.Replace("data:image/png;base64,", String.Empty);
+            base64String = base64String.Replace("data:image/jpg;base64,", String.Empty);
+            base64String = base64String.Replace("data:image/jpeg;base64,", String.Empty);
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
+            return image;
+        }
         private void SaveNews(int _m_news_ID)
         {
             List<NewsContent> lst = GetListContent();
@@ -1100,8 +1114,35 @@ namespace vpro.eshop.cpanel.page
                         news.Value_ = con.Paragraph;
                         break;
                     case 2:
-                        news.Value_ = con.Image;
-                        break;
+                        {                            
+                            string sBase64 = Utils.CStrDef(con.Image);
+                            if(sBase64 != "")
+                            {
+                                // Tên file image lấy Id của NewsId + '-' + random
+                                string sNameImage = _m_news_ID + "-" + clsFormat.Generate_Random_String(5);
+                                if (sBase64.Contains("data:image/png;base64"))
+                                {
+                                    sNameImage = sNameImage + ".png";
+                                }
+                                else if (sBase64.Contains("data:image/jpg;base64") || sBase64.Contains("data:image/jpeg;base64"))
+                                {
+                                    sNameImage = sNameImage + ".jpg";
+                                }
+                                else if (sBase64.Contains("data:image/gif;base64"))
+                                {
+                                    sNameImage = sNameImage + ".gif";
+                                }
+                                string pathfile = Server.MapPath("/data/news/" + m_news_id);
+                                string fullpathfile = pathfile + "/" + sNameImage;
+                                if (!Directory.Exists(pathfile))
+                                {
+                                    Directory.CreateDirectory(pathfile);
+                                }
+                                Base64ToImage(sBase64).Save(fullpathfile);
+                                news.Value_ = sNameImage;
+                            }
+                            break;
+                        }
                     case 3:
                         news.Value_ = con.Box;
                         break;
@@ -1136,6 +1177,13 @@ namespace vpro.eshop.cpanel.page
         }
         private void SaveContent()
         {
+        }
+
+        public string getImg(object fileImg)
+        {
+            if (Utils.CStrDef(fileImg) != "")
+                return "/data/news/" + m_news_id + "/" + fileImg;
+            else return "";
         }
         #endregion
     }

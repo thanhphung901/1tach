@@ -54,9 +54,9 @@
                         <label class="col-sm-2 control-label">
                             Logo/Banner</label>
                         <div class="col-sm-10">
-                            <asp:RadioButtonList ID="rblLogoBanner" runat="server" RepeatColumns="5">
+                            <asp:RadioButtonList ID="rblLogoBanner" runat="server" RepeatColumns="2">
                                 <asp:ListItem Selected="True" Text="Logo" Value="1"></asp:ListItem>
-                                <asp:ListItem Text="Logo trích dẫn" Value="2"></asp:ListItem>
+                                <asp:ListItem Text="Banner" Value="2"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
                     </div>
