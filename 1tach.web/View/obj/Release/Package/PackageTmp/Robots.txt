@@ -1,0 +1,5 @@
+﻿# robots.txt User-agent: * Sitemap: http://tenwebsite.com/sitemap.xml
+Disallow: /aspnet_client/ 
+Disallow: /bin/
+Disallow: /cPanel/ 
+Disallow: /Logfiles/ Disallow: /UIs/

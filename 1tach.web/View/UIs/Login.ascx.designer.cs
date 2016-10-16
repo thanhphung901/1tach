@@ -31,6 +31,15 @@ namespace OneTach.UIs {
         protected global::System.Web.UI.WebControls.TextBox txtPass;
         
         /// <summary>
+        /// remember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox remember;
+        
+        /// <summary>
         /// btnSignIn control.
         /// </summary>
         /// <remarks>

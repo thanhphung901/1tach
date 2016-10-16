@@ -1,0 +1,5 @@
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\bin\Release\Model.dll.config
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\bin\Release\Model.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\bin\Release\Model.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\obj\Release\Model.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Model\obj\Release\Model.pdb

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\PUBLISH\OneTach</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/1tach.dll">
+      <publishTime>10/13/2016 02:27:05</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>06/09/2014 10:41:14</publishTime>
+    </File>
+    <File Include="bin/ComponentArt.Web.UI.dll">
+      <publishTime>06/09/2014 10:41:14</publishTime>
+    </File>
+    <File Include="bin/Controller.dll">
+      <publishTime>10/13/2016 02:27:04</publishTime>
+    </File>
+    <File Include="bin/Intelligencia.UrlRewriter.dll">
+      <publishTime>06/09/2014 10:41:14</publishTime>
+    </File>
+    <File Include="bin/Model.dll">
+      <publishTime>10/13/2016 01:35:45</publishTime>
+    </File>
+    <File Include="bin/MSCaptcha.dll">
+      <publishTime>06/09/2014 10:41:14</publishTime>
+    </File>
+    <File Include="bin/vpro.functions.dll">
+      <publishTime>06/07/2014 09:45:19</publishTime>
+    </File>
+    <File Include="Calendar/calendarStyle.css">
+      <publishTime>09/28/2016 18:41:17</publishTime>
+    </File>
+    <File Include="Calendar/images/btn_calendar.gif">
+      <publishTime>09/28/2016 18:41:17</publishTime>
+    </File>
+    <File Include="Calendar/images/cal_nextMonth.gif">
+      <publishTime>09/28/2016 18:41:17</publishTime>
+    </File>
+    <File Include="Calendar/images/cal_prevMonth.gif">
+      <publishTime>09/28/2016 18:41:17</publishTime>
+    </File>
+    <File Include="Calendar/pickerAndCalendar.ascx">
+      <publishTime>09/28/2016 18:52:14</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>10/08/2016 22:30:24</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/09/2016 11:58:16</publishTime>
+    </File>
+    <File Include="Master/Master.Master">
+      <publishTime>10/09/2016 01:48:21</publishTime>
+    </File>
+    <File Include="Robots.txt">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="UIs/DetailDebate.ascx">
+      <publishTime>10/09/2016 11:15:54</publishTime>
+    </File>
+    <File Include="UIs/DetailNews.ascx">
+      <publishTime>10/12/2016 01:03:04</publishTime>
+    </File>
+    <File Include="UIs/Footer.ascx">
+      <publishTime>10/12/2016 01:03:04</publishTime>
+    </File>
+    <File Include="UIs/Header.ascx">
+      <publishTime>10/12/2016 01:03:04</publishTime>
+    </File>
+    <File Include="UIs/HomeContent.ascx">
+      <publishTime>10/12/2016 01:03:04</publishTime>
+    </File>
+    <File Include="UIs/LikeForNews.ascx">
+      <publishTime>10/08/2016 22:35:53</publishTime>
+    </File>
+    <File Include="UIs/ListBusiness.ascx">
+      <publishTime>10/02/2016 23:51:01</publishTime>
+    </File>
+    <File Include="UIs/ListDebate.ascx">
+      <publishTime>10/12/2016 01:03:04</publishTime>
+    </File>
+    <File Include="UIs/ListNew.ascx">
+      <publishTime>10/04/2016 00:20:46</publishTime>
+    </File>
+    <File Include="UIs/ListNewByCat.ascx">
+      <publishTime>10/12/2016 01:03:04</publishTime>
+    </File>
+    <File Include="UIs/ListProfessional.ascx">
+      <publishTime>10/02/2016 23:49:43</publishTime>
+    </File>
+    <File Include="UIs/ListVotes.ascx">
+      <publishTime>10/03/2016 00:05:41</publishTime>
+    </File>
+    <File Include="UIs/Login.ascx">
+      <publishTime>10/13/2016 00:49:28</publishTime>
+    </File>
+    <File Include="UIs/path.ascx">
+      <publishTime>10/01/2016 19:52:52</publishTime>
+    </File>
+    <File Include="UIs/Register.ascx">
+      <publishTime>10/13/2016 02:07:34</publishTime>
+    </File>
+    <File Include="UIs/RightSide.ascx">
+      <publishTime>10/03/2016 00:56:44</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax-customer.aspx">
+      <publishTime>09/28/2016 19:08:00</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Addtocart.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Ajax-prohighlight.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Ajax-scroll.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Ajaxcate.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Ajaxcomplete.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Ajaxlike.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Ajaxsosanh.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Checkvalid.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/Email.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Ajax/login.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/captchr.ashx">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/CImage.aspx">
+      <publishTime>09/28/2016 19:08:00</publishTime>
+    </File>
+    <File Include="vi-vn/Complete-Ajax.asmx">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Complete/jquery-ui-1.10.4.custom.min.css">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/Complete/jquery-ui-1.10.4.custom.min.js">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/contact.aspx">
+      <publishTime>09/28/2016 19:08:00</publishTime>
+    </File>
+    <File Include="vi-vn/css/desktop.css">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/css/layout.css">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/css/materialize.min.css">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/css/mobile.css">
+      <publishTime>09/28/2016 18:41:18</publishTime>
+    </File>
+    <File Include="vi-vn/css/styles.css">
+      <publishTime>10/07/2016 00:10:20</publishTime>
+    </File>
+    <File Include="vi-vn/Home.aspx">
+      <publishTime>09/28/2016 19:08:01</publishTime>
+    </File>
+    <File Include="vi-vn/images/arrow_slide.jpg">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/bg0.jpg">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/bg1.jpg">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/bg2.jpg">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/bg_tth1.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/brnews-bg1.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/btn-slice-blue.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/btn-slice-green.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/btn-slice-lt-lt-blue.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/btn_search.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/dot.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/favicon.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/fb.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/flag.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/gp.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_chuyen_gia.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_doanh_nghiep.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_f/icon_f1.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_f/icon_f2.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_f/icon_f3.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_f/icon_f4.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_f/icon_f5.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_f/icon_f6.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_f/icon_f7.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_q.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_share_img/share_img_01.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_share_img/share_img_02.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_share_img/share_img_03.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_share_img/share_img_04.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_share_img/share_img_05.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_share_img/share_img_06.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/icon_top.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/lk.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/pt.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/tt.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/images/tw.png">
+      <publishTime>10/02/2016 15:16:28</publishTime>
+    </File>
+    <File Include="vi-vn/js/angular.min.js">
+      <publishTime>09/28/2016 18:41:19</publishTime>
+    </File>
+    <File Include="vi-vn/js/jquery-2.1.1.min.js">
+      <publishTime>10/08/2016 23:42:15</publishTime>
+    </File>
+    <File Include="vi-vn/js/jquery.bxslider.js">
+      <publishTime>09/28/2016 18:41:19</publishTime>
+    </File>
+    <File Include="vi-vn/js/main.js">
+      <publishTime>09/28/2016 18:41:19</publishTime>
+    </File>
+    <File Include="vi-vn/js/materialize.min.js">
+      <publishTime>10/08/2016 23:41:06</publishTime>
+    </File>
+    <File Include="vi-vn/Login.aspx">
+      <publishTime>10/02/2016 23:00:39</publishTime>
+    </File>
+    <File Include="vi-vn/modalbox/all_index.css">
+      <publishTime>09/28/2016 18:41:19</publishTime>
+    </File>
+    <File Include="vi-vn/modalbox/login_popup.css">
+      <publishTime>09/28/2016 18:41:19</publishTime>
+    </File>
+    <File Include="vi-vn/page_default.aspx">
+      <publishTime>09/28/2016 19:08:00</publishTime>
+    </File>
+    <File Include="vi-vn/PostNews.aspx">
+      <publishTime>10/09/2016 14:25:17</publishTime>
+    </File>
+    <File Include="vi-vn/Register.aspx">
+      <publishTime>10/09/2016 12:08:42</publishTime>
+    </File>
+    <File Include="vi-vn/ThongBao.aspx">
+      <publishTime>09/28/2016 19:08:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/13/2016 01:35:48</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

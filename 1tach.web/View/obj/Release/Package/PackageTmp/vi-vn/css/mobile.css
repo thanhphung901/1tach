@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+.main_menu li {
+	width: 25%;
+	height: 50px;
+	float: left;
+	background: #3C5B9B;
+	color: #fff
+}
+.main_menu li a {
+    height: 50px;
+    border: 1px solid #36528B;
+    margin: -1px;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    font-size: 1.1em;
+}
+.main_menu li a span {
+ 
+	height: 50px;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 5px;
+	min-width:100%;
+ 
+}
+.container {
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+	max-width: none;
+}
+.submenu {
+	margin: 0;
+	padding: 0;
+}
+.submenu li {
+	margin: 0;
+	padding: 0;
+	width: 50%;
+}
+.submenu li:first-child {
+	width: 100%;
+	padding-right: 48px;
+}
+.container .row {
+	margin: 0;
+	padding: 0;
+}
+.button_scroll2top {
+	bottom: 60px;
+}
+footer {
+	padding: 0;
+	margin: 0;
+}
+.copy {
+	padding-top: 10px;
+	font-size: 10px;
+}
+.detail-news {
+	padding: 10px;
+	font-size: 16px;
+}
+.top-post-dt span i {
+	font-size: 19px;
+	position: relative;
+	top: 5px;
+}
+.quote-dt {
+	padding: 0 10px;
+	padding-bottom: 10px
+}
+.imgsocial {
+	left: 0;
+	display: block !important;
+	height: 100%
+}
+.imgsocial .icon_share_img {
+	height: 20px;
+	width: 20px
+}
+.ads001, .ads002, .ads003 {
+	margin: 10px 5px;
+	text-align: center
+}
+.ads001 img, .ads002 img, .ads003 img {
+	max-width: 100%
+}
+.icon_f:hover span{  line-height: 14px; top: -15px; }
+.navi-icon{ width: 48px;height: 48px; display: inline-block; background: #67B7F7; color: #fff; line-height: 48px	 }
+ 
+.navi-icon-box{position: absolute; top: 0;right: 0;}
+.main_menu {display: none;}

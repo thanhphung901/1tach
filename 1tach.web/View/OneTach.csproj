@@ -104,6 +104,7 @@
     <Content Include="UIs\ListBusiness.ascx" />
     <Content Include="UIs\ListDebate.ascx" />
     <Content Include="UIs\ListNew.ascx" />
+    <Content Include="UIs\ListNewByCat.ascx" />
     <Content Include="UIs\ListProfessional.ascx" />
     <Content Include="UIs\ListVotes.ascx" />
     <Content Include="UIs\Register.ascx" />
@@ -113,6 +114,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Master\Master.Master" />
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\PublishProfiles\OneTach.pubxml" />
     <None Include="Service References\CheckBill\wstrackandtrace.disco" />
     <None Include="Service References\CheckBill\configuration91.svcinfo" />
     <None Include="Service References\CheckBill\configuration.svcinfo" />
@@ -289,6 +291,13 @@
     </Compile>
     <Compile Include="UIs\ListNew.ascx.designer.cs">
       <DependentUpon>ListNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ListNewByCat.ascx.cs">
+      <DependentUpon>ListNewByCat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\ListNewByCat.ascx.designer.cs">
+      <DependentUpon>ListNewByCat.ascx</DependentUpon>
     </Compile>
     <Compile Include="UIs\ListProfessional.ascx.cs">
       <DependentUpon>ListProfessional.ascx</DependentUpon>

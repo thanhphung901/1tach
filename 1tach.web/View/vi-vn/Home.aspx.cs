@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Web;
 using System.Web.UI.HtmlControls;
 using Controller;
 using OneTach.Components;
@@ -46,6 +47,10 @@ namespace OneTach
                 headerKey.Content = "Enews Standard V1.0";
                 header.Controls.Add(headerKey);
             }
+
+            
         }
+
+        
     }
 }

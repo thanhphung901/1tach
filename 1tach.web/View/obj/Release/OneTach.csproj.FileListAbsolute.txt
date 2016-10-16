@@ -1,0 +1,11 @@
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\bin\1tach.dll.config
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\bin\1tach.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\bin\1tach.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\bin\Controller.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\bin\Model.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\bin\Controller.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\bin\Model.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\obj\Release\OneTach.csprojResolveAssemblyReference.cache
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\obj\Release\1tach.dll.licenses
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\obj\Release\1tach.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\View\obj\Release\1tach.pdb

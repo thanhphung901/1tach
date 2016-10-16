@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Model;
 using Controller;
+using OneTach.Components;
 
 namespace OneTach.UIs
 {
@@ -22,7 +24,9 @@ namespace OneTach.UIs
 
         protected void btnSignIn_OnClick(object sender, EventArgs e)
         {
-            if (cont.Login(txtEmail.Text.Trim(), txtPass.Text.Trim()))
+            bool setCookie = false;
+            setCookie = remember.Checked;
+            if (cont.Login(txtEmail.Text.Trim(), txtPass.Text.Trim(), setCookie))
             {
                 Response.Redirect("/");
             }

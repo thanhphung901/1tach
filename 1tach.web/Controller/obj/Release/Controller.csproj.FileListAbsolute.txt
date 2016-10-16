@@ -1,0 +1,8 @@
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Release\Controller.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Release\Controller.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Release\Model.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Release\vpro.functions.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\bin\Release\Model.pdb
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\obj\Release\Controller.csprojResolveAssemblyReference.cache
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\obj\Release\Controller.dll
+E:\Vi Cuong\Dev\Other\1tach\src\1tach.web\Controller\obj\Release\Controller.pdb
